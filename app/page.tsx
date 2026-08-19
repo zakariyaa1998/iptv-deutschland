@@ -29,11 +29,11 @@ export default function Home() {
     <>
       <Hero />
       <StreamingCategories />
+      <PricingPreview />
       <Features />
       <WhyChooseUs />
       <LatestMovies />
       <Devices />
-      <PricingPreview />
       <LiveSports />
       <FAQPreview />
       <ContactCTA />
