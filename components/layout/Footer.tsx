@@ -11,6 +11,9 @@ const footerLinks = {
     { href: "/iptv-service", label: "IPTV Service" },
     { href: "/best-iptv-service", label: "Bester IPTV Anbieter" },
     { href: "/iptv-providers", label: "IPTV Anbieter" },
+    { href: "/iptv-smart-tv", label: "IPTV Smart TV" },
+    { href: "/iptv-fire-tv-stick", label: "IPTV Fire TV Stick" },
+    { href: "/iptv-android-tv", label: "IPTV Android TV" },
   ],
   Support: [
     { href: "/faq", label: "FAQ" },

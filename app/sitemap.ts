@@ -4,18 +4,23 @@ import { blogPosts } from "@/lib/blog-posts";
 const siteUrl = "https://deutschland-iptv.online";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  // Applied to every static route that has no more specific known last-edit date,
+  // so `lastmod` is always present and consistent instead of silently falling back
+  // to an implicit per-build value on some routes but not others.
+  const buildDate = new Date();
+
   const staticRoutes: MetadataRoute.Sitemap = [
-    { url: siteUrl, changeFrequency: "weekly", priority: 1 },
-    { url: `${siteUrl}/plans`, changeFrequency: "monthly", priority: 0.9 },
-    { url: `${siteUrl}/faq`, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${siteUrl}/contact`, changeFrequency: "yearly", priority: 0.6 },
-    { url: `${siteUrl}/blog`, changeFrequency: "weekly", priority: 0.8 },
-    { url: `${siteUrl}/iptv-service`, changeFrequency: "monthly", priority: 0.9 },
-    { url: `${siteUrl}/best-iptv-service`, changeFrequency: "monthly", priority: 0.9 },
-    { url: `${siteUrl}/iptv-providers`, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${siteUrl}/iptv-smart-tv`, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${siteUrl}/iptv-fire-tv-stick`, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${siteUrl}/iptv-android-tv`, changeFrequency: "monthly", priority: 0.7 },
+    { url: siteUrl, lastModified: buildDate, changeFrequency: "weekly", priority: 1 },
+    { url: `${siteUrl}/plans`, lastModified: buildDate, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${siteUrl}/faq`, lastModified: buildDate, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${siteUrl}/contact`, lastModified: buildDate, changeFrequency: "yearly", priority: 0.6 },
+    { url: `${siteUrl}/blog`, lastModified: buildDate, changeFrequency: "weekly", priority: 0.8 },
+    { url: `${siteUrl}/iptv-service`, lastModified: buildDate, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${siteUrl}/best-iptv-service`, lastModified: buildDate, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${siteUrl}/iptv-providers`, lastModified: buildDate, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${siteUrl}/iptv-smart-tv`, lastModified: buildDate, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${siteUrl}/iptv-fire-tv-stick`, lastModified: buildDate, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${siteUrl}/iptv-android-tv`, lastModified: buildDate, changeFrequency: "monthly", priority: 0.7 },
     { url: `${siteUrl}/about`, lastModified: "2026-08-16", changeFrequency: "yearly", priority: 0.6 },
     { url: `${siteUrl}/privacy-policy`, lastModified: "2026-08-16", changeFrequency: "yearly", priority: 0.5 },
     { url: `${siteUrl}/terms`, lastModified: "2026-08-16", changeFrequency: "yearly", priority: 0.5 },

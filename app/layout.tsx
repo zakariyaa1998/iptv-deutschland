@@ -22,6 +22,12 @@ export const metadata: Metadata = {
   },
   description:
     "Deutschland IPTV ist Ihr IPTV Anbieter für Deutschland: Tausende Sender, Filme und Serien in HD, Full HD und 4K – auf jedem Gerät, mit stabilen Servern und persönlichem Support.",
+  // Kept deliberately narrow to the homepage's own primary/secondary keywords
+  // (see docs/seo/keyword-architecture.md). "bester IPTV Anbieter", "IPTV kaufen",
+  // and "IPTV Sender" were previously listed here too, but those are each another
+  // page's assigned primary keyword (/best-iptv-service, /blog/how-to-buy-iptv,
+  // /blog/iptv-channels-guide) — leaving them on the sitewide-default keywords
+  // list was self-inflicted cannibalization at the metadata level.
   keywords: [
     "IPTV Deutschland",
     "IPTV Anbieter",
@@ -30,9 +36,6 @@ export const metadata: Metadata = {
     "IPTV Streaming",
     "IPTV Live TV",
     "IPTV Service",
-    "bester IPTV Anbieter",
-    "IPTV kaufen",
-    "IPTV Sender",
   ],
   alternates: {
     canonical: "/",

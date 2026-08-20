@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
@@ -6,9 +7,11 @@ import { ContactCTA } from "@/components/sections/ContactCTA";
 import { faqCategories } from "@/lib/faq-data";
 
 export const metadata: Metadata = {
-  title: "IPTV FAQ – Häufige Fragen | Deutschland IPTV",
+  // Plain title (no manual brand suffix) — see app/plans/page.tsx for why.
+  title: "IPTV FAQ – Häufige Fragen",
   description:
     "Antworten auf häufige Fragen zu Deutschland IPTV: Abo, unterstützte Geräte, Installation, Zahlung, Laufzeiten und Problemlösungen.",
+  keywords: ["IPTV FAQ", "IPTV Fragen", "IPTV Hilfe"],
   alternates: {
     canonical: "/faq",
   },
@@ -58,9 +61,30 @@ export default function FaqPage() {
           <SectionHeading
             as="h1"
             eyebrow="FAQ"
-            title="Häufig gestellte Fragen"
+            title="IPTV FAQ: Häufig gestellte Fragen"
             description="Finden Sie Antworten zu Abo, Geräten, Zahlung und Support. Ihre Frage ist nicht dabei? Kontaktieren Sie uns direkt."
           />
+
+          <p className="max-w-3xl text-center text-sm leading-relaxed text-muted">
+            Diese FAQ beantwortet die häufigsten Fragen zu Deutschland IPTV direkt. Für einen
+            vollständigen Überblick über unsere Tarife besuchen Sie{" "}
+            <Link href="/plans" className="text-aqua underline underline-offset-4">
+              IPTV Preise
+            </Link>
+            , und für Einrichtungsanleitungen auf Ihrem Gerät{" "}
+            <Link href="/iptv-smart-tv" className="text-aqua underline underline-offset-4">
+              IPTV Smart TV
+            </Link>
+            ,{" "}
+            <Link href="/iptv-fire-tv-stick" className="text-aqua underline underline-offset-4">
+              IPTV Fire TV Stick
+            </Link>{" "}
+            oder{" "}
+            <Link href="/iptv-android-tv" className="text-aqua underline underline-offset-4">
+              IPTV Android TV
+            </Link>
+            .
+          </p>
 
           <div className="flex w-full max-w-3xl flex-col gap-12">
             {faqCategories.map((category) => (

@@ -6,17 +6,20 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { ContactCTA } from "@/components/sections/ContactCTA";
 
+// Primary keyword: "IPTV Fire TV Stick" (commercial: device compatibility +
+// setup overview). Must NOT compete with "IPTV Fire TV Stick installieren"
+// (owned by the deep how-to guide /blog/iptv-fire-tv-stick-setup-guide) or
+// "beste IPTV Geräte 2026" (owned by the cross-device comparison
+// /blog/best-iptv-devices-2026) — see docs/seo/keyword-architecture.md.
 export const metadata: Metadata = {
-  title: "IPTV für Fire TV Stick – Kompatibilität & Setup",
+  title: "IPTV Fire TV Stick – Kompatibilität & Setup",
   description:
-    "IPTV auf dem Fire TV Stick nutzen: Kompatibilität, App-Auswahl und Einrichtung im Überblick — Deutschland IPTV in wenigen Minuten startklar, auf jedem Fire-TV-Modell.",
+    "IPTV Fire TV Stick nutzen: Kompatibilität, App-Auswahl und Einrichtung im Überblick — Deutschland IPTV in wenigen Minuten startklar, auf jedem Fire-TV-Modell.",
   keywords: [
-    "IPTV für Fire TV Stick",
-    "IPTV Firestick",
     "IPTV Fire TV Stick",
-    "IPTV auf Fire TV Stick",
+    "IPTV Firestick",
+    "IPTV für Fire TV Stick",
     "IPTV App Fire TV Stick",
-    "IPTV Service",
   ],
   alternates: {
     canonical: "/iptv-fire-tv-stick",
@@ -26,14 +29,14 @@ export const metadata: Metadata = {
     locale: "de_DE",
     siteName: "Deutschland IPTV",
     url: "/iptv-fire-tv-stick",
-    title: "IPTV für Fire TV Stick – Kompatibilität & Setup",
+    title: "IPTV Fire TV Stick – Kompatibilität & Setup | Deutschland IPTV",
     description: "Wie Deutschland IPTV auf dem Amazon Fire TV Stick läuft — vom Anschließen bis zur ersten Wiedergabe.",
     images: [{ url: "https://deutschland-iptv.online/images/fire-tv-stick.png" }],
   },
   twitter: {
     card: "summary_large_image",
     images: ["https://deutschland-iptv.online/images/fire-tv-stick.png"],
-    title: "IPTV für Fire TV Stick – Kompatibilität & Setup",
+    title: "IPTV Fire TV Stick – Kompatibilität & Setup | Deutschland IPTV",
     description: "Wie Deutschland IPTV auf dem Amazon Fire TV Stick läuft — vom Anschließen bis zur ersten Wiedergabe.",
   },
 };
@@ -85,17 +88,17 @@ export default function IptvFireTvStickPage() {
           <SectionHeading
             as="h1"
             eyebrow="Fire TV Stick"
-            title="IPTV für Fire TV Stick: Einrichtung & Kompatibilität"
+            title="IPTV Fire TV Stick: Einrichtung & Kompatibilität"
             description="Der Fire TV Stick ist einer der beliebtesten IPTV Player überhaupt — günstig, kompakt und in wenigen Minuten startklar."
           />
 
           <div className="mx-auto flex w-full max-w-3xl flex-col gap-10">
             <p className="text-base leading-relaxed text-muted">
-              Der Amazon Fire TV Stick wird einfach in den HDMI-Anschluss Ihres Fernsehers
-              gesteckt und macht daraus im Handumdrehen ein Smart-TV-Erlebnis. Mit einer großen
-              App-Auswahl über den Amazon App Store sowie Sideloading-Tools läuft IPTV auf dem
-              Fire TV Stick zuverlässig und ohne Umstände. Eine allgemeine Einführung zu IPTV
-              finden Sie in unserem Artikel{" "}
+              Der Amazon Fire TV Stick wird einfach in den HDMI-Anschluss Ihres Fernsehers gesteckt
+              und macht daraus im Handumdrehen ein Smart-TV-Erlebnis. Mit einer großen App-Auswahl
+              über den Amazon App Store sowie Sideloading-Tools läuft IPTV auf dem Fire TV Stick
+              zuverlässig und ohne Umstände. Eine allgemeine Einführung zu IPTV finden Sie in unserem
+              Artikel{" "}
               <Link href="/iptv-service" className="text-aqua underline underline-offset-4">
                 IPTV Service
               </Link>
@@ -105,7 +108,7 @@ export default function IptvFireTvStickPage() {
             <div className="relative aspect-[16/9] w-full overflow-hidden rounded-2xl border border-border">
               <Image
                 src="/images/fire-tv-stick.png"
-                alt="IPTV Fire TV Stick im HDMI-Anschluss eines Fernsehers"
+                alt="IPTV Fire TV Stick am HDMI-Anschluss eines Fernsehers"
                 fill
                 loading="lazy"
                 decoding="async"
@@ -128,16 +131,16 @@ export default function IptvFireTvStickPage() {
 
             <section className="flex flex-col gap-4">
               <h2 className="text-2xl font-semibold tracking-tight text-foreground">
-                Einrichtung in Kürze
+                IPTV Fire TV Stick: Einrichtung in Kürze
               </h2>
               <p className="text-base leading-relaxed text-muted">
-                Nach dem Anschließen installieren Sie eine kompatible IPTV App über den
-                integrierten App Store oder eine Downloader-App, geben Ihre Deutschland IPTV
-                Zugangsdaten oder Playlist-URL ein — und schon kann es losgehen. Die vollständige
+                Nach dem Anschließen installieren Sie eine kompatible IPTV App über den integrierten
+                App Store oder eine Downloader-App, geben Ihre Deutschland IPTV Zugangsdaten oder
+                Playlist-URL ein — und schon kann es losgehen. Die vollständige
                 Schritt-für-Schritt-Anleitung mit App-Vergleich und Lösungen für häufige Probleme
                 finden Sie in unserem Artikel{" "}
                 <Link href="/blog/iptv-fire-tv-stick-setup-guide" className="text-aqua underline underline-offset-4">
-                  IPTV auf dem Fire TV Stick installieren
+                  IPTV Fire TV Stick installieren
                 </Link>
                 .
               </p>
@@ -149,8 +152,8 @@ export default function IptvFireTvStickPage() {
               </h2>
               <p className="text-base leading-relaxed text-muted">
                 Für Full-HD-Sender reicht der Standard Fire TV Stick meist aus. Für 4K-Inhalte und
-                flüssigere Wiedergabe empfehlen wir den Fire TV Stick 4K oder 4K Max. Einen
-                Vergleich mit Apple TV und Android-Boxen finden Sie in{" "}
+                flüssigere Wiedergabe empfehlen wir den Fire TV Stick 4K oder 4K Max. Einen Vergleich
+                mit Apple TV und Android-Boxen finden Sie in{" "}
                 <Link
                   href="/blog/best-iptv-devices-2026"
                   className="text-aqua underline underline-offset-4"
@@ -169,7 +172,7 @@ export default function IptvFireTvStickPage() {
                 Nicht jeder IPTV Service läuft gleich stabil auf dem Fire TV Stick. Worauf Sie bei
                 einem Anbieter generell achten sollten, erfahren Sie unter{" "}
                 <Link href="/iptv-providers" className="text-aqua underline underline-offset-4">
-                  IPTV Anbieter
+                  IPTV Anbieter Deutschland
                 </Link>{" "}
                 und in unserem Vergleich{" "}
                 <Link href="/best-iptv-service" className="text-aqua underline underline-offset-4">
@@ -182,17 +185,17 @@ export default function IptvFireTvStickPage() {
             <section className="flex flex-col gap-4">
               <h2 className="text-2xl font-semibold tracking-tight text-foreground">Nicht das Richtige für Sie?</h2>
               <p className="text-base leading-relaxed text-muted">
-                Deutschland IPTV funktioniert genauso gut auf{" "}
+                Deutschland IPTV funktioniert genauso gut auf einem{" "}
                 <Link href="/iptv-smart-tv" className="text-aqua underline underline-offset-4">
-                  Samsung- und LG-Smart-TVs
+                  IPTV Smart TV
                 </Link>{" "}
                 oder einer{" "}
                 <Link href="/iptv-android-tv" className="text-aqua underline underline-offset-4">
-                  Android-TV-Box
-                </Link>
-                . Alle Tarife finden Sie auf unserer{" "}
+                  IPTV Android TV
+                </Link>{" "}
+                Box. Alle Tarife finden Sie auf unserer Seite{" "}
                 <Link href="/plans" className="text-aqua underline underline-offset-4">
-                  Tarifseite
+                  IPTV Preise
                 </Link>
                 .
               </p>

@@ -12,8 +12,11 @@ import { ContactCTA } from "@/components/sections/ContactCTA";
 
 export const metadata: Metadata = {
   title: "IPTV Deutschland – Anbieter für Live-TV & Streaming",
+  // Tightened to ~150 characters and folds in the "IPTV Abo" secondary keyword
+  // per docs/seo/keyword-architecture.md, without repeating "IPTV Anbieter" —
+  // that exact-match term is /iptv-providers' assigned primary keyword.
   description:
-    "IPTV Deutschland: Tausende Sender, Filme und Serien in HD, Full HD und 4K. Deutschland IPTV ist Ihr IPTV Anbieter mit stabilen Servern und persönlichem Support.",
+    "IPTV Deutschland: Tausende Sender, Filme und Serien in HD, Full HD und 4K in einem IPTV Abo. Stabile Server, faire Preise und persönlicher Support.",
   alternates: {
     canonical: "/",
   },

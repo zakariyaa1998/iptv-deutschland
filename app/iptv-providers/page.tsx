@@ -6,17 +6,21 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { ContactCTA } from "@/components/sections/ContactCTA";
 
+// Primary keyword: "IPTV Anbieter Deutschland" (trust validation / commercial
+// investigation — sole owner of the bare "IPTV Anbieter" head term). Must NOT
+// compete with "bester IPTV Anbieter" (owned by /best-iptv-service, quality
+// criteria) or "beste IPTV Anbieter 2026" (owned by the blog pillar
+// /blog/best-iptv-providers-2026) — see docs/seo/keyword-architecture.md.
 export const metadata: Metadata = {
-  title: "IPTV Anbieter Deutschland – Seriös erkennen",
+  title: "IPTV Anbieter Deutschland – Seriöse Anbieter erkennen",
   description:
     "So erkennen Sie einen seriösen IPTV Anbieter in Deutschland: Warnzeichen, Vertrauenssignale und eine Checkliste für Qualität, Support und faire Preise.",
   keywords: [
     "IPTV Anbieter Deutschland",
     "IPTV Anbieter",
-    "IPTV Service Deutschland",
-    "IPTV Dienst Deutschland",
+    "seriöser IPTV Anbieter",
     "IPTV Bewertungen",
-    "IPTV Vergleich",
+    "vertrauenswürdiger IPTV Anbieter",
   ],
   alternates: {
     canonical: "/iptv-providers",
@@ -26,14 +30,14 @@ export const metadata: Metadata = {
     locale: "de_DE",
     siteName: "Deutschland IPTV",
     url: "/iptv-providers",
-    title: "IPTV Anbieter Deutschland – Seriös erkennen",
+    title: "IPTV Anbieter Deutschland – Seriöse Anbieter erkennen | Deutschland IPTV",
     description: "Erkennen Sie die Warnzeichen unseriöser Anbieter und finden Sie einen vertrauenswürdigen IPTV Service.",
     images: [{ url: "https://deutschland-iptv.online/images/streaming-app.png" }],
   },
   twitter: {
     card: "summary_large_image",
     images: ["https://deutschland-iptv.online/images/streaming-app.png"],
-    title: "IPTV Anbieter Deutschland – Seriös erkennen",
+    title: "IPTV Anbieter Deutschland – Seriöse Anbieter erkennen | Deutschland IPTV",
     description: "Erkennen Sie die Warnzeichen unseriöser Anbieter und finden Sie einen vertrauenswürdigen IPTV Service.",
   },
 };
@@ -63,12 +67,12 @@ const checklistQuestions = [
 
 const faqItems = [
   {
-    question: "Wie finde ich einen vertrauenswürdigen IPTV Anbieter?",
+    question: "Wie finde ich einen vertrauenswürdigen IPTV Anbieter in Deutschland?",
     answer:
       "Achten Sie auf direkten, persönlichen Kontakt vor dem Kauf, transparente Preise ohne versteckte Kosten, klare Angaben zu Sendern und Geräten sowie erreichbaren Support nach der Zahlung.",
   },
   {
-    question: "Welche Warnzeichen deuten auf einen unseriösen Anbieter hin?",
+    question: "Welche Warnzeichen deuten auf einen unseriösen IPTV Anbieter hin?",
     answer:
       "Keine Kontaktmöglichkeit vor dem Kauf, eine unklare Preisstruktur, fehlende Informationen zu Inhalten oder Geräten sowie Preise deutlich unter dem Marktdurchschnitt sind typische Warnsignale.",
   },
@@ -107,7 +111,7 @@ export default function IptvProvidersPage() {
             as="h1"
             eyebrow="Anbieterwahl"
             title="IPTV Anbieter Deutschland: Seriöse Anbieter erkennen"
-            description="Der Markt ist groß — diese Warnzeichen und Vertrauenssignale helfen Ihnen bei der Entscheidung."
+            description="Der Markt ist groß — diese Warnzeichen und Vertrauenssignale helfen Ihnen, seriöse IPTV Anbieter von unseriösen zu unterscheiden."
           />
 
           <div className="mx-auto flex w-full max-w-3xl flex-col gap-10">
@@ -126,7 +130,7 @@ export default function IptvProvidersPage() {
             <div className="relative aspect-[16/9] w-full overflow-hidden rounded-2xl border border-border">
               <Image
                 src="/images/streaming-app.png"
-                alt="IPTV Anbieter vergleichen: App-Auswahl auf dem Bildschirm"
+                alt="IPTV Anbieter Deutschland vergleichen: seriöse Anbieter an der App-Auswahl erkennen"
                 fill
                 loading="lazy"
                 decoding="async"
@@ -162,9 +166,9 @@ export default function IptvProvidersPage() {
                 ))}
               </ul>
               <p className="text-base leading-relaxed text-muted">
-                Deutschland IPTV wurde genau nach diesen Grundsätzen aufgebaut: transparente{" "}
+                Deutschland IPTV wurde nach genau diesen Grundsätzen aufgebaut: transparente{" "}
                 <Link href="/plans" className="text-aqua underline underline-offset-4">
-                  Tarife
+                  IPTV Preise
                 </Link>{" "}
                 ohne versteckte Kosten und ein Support-Team, das Sie direkt über{" "}
                 <Link href="/contact" className="text-aqua underline underline-offset-4">
@@ -179,10 +183,10 @@ export default function IptvProvidersPage() {
                 IPTV Anbieter direkt vergleichen
               </h2>
               <p className="text-base leading-relaxed text-muted">
-                Über die Grundregeln hinaus lohnt sich ein direkter Vergleich mehrerer Anbieter
-                anhand derselben Kriterien: Serverstabilität, Senderauswahl, 4K-Qualität, Support
-                und Laufzeiten. Eine ausführliche Checkliste mit direktem Anbietervergleich finden
-                Sie in unserem Artikel{" "}
+                Über die Grundregeln hinaus lohnt sich ein direkter Vergleich mehrerer Anbieter anhand
+                derselben Kriterien: Serverstabilität, Senderauswahl, 4K-Qualität, Support und
+                Laufzeiten. Eine ausführliche Checkliste mit direktem Anbietervergleich finden Sie in
+                unserem Artikel{" "}
                 <Link
                   href="/blog/best-iptv-providers-2026"
                   className="text-aqua underline underline-offset-4"
@@ -216,9 +220,13 @@ export default function IptvProvidersPage() {
                 <Link href="/best-iptv-service" className="text-aqua underline underline-offset-4">
                   Bester IPTV Anbieter
                 </Link>
-                , und allgemeine Antworten in unseren{" "}
+                , allgemeine Antworten in unseren{" "}
                 <Link href="/faq" className="text-aqua underline underline-offset-4">
                   FAQ
+                </Link>
+                , und Antworten zur Rechtslage in unserem Artikel{" "}
+                <Link href="/blog/iptv-legal-guide" className="text-aqua underline underline-offset-4">
+                  Ist IPTV legal?
                 </Link>
                 .
               </p>

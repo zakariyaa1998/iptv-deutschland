@@ -40,15 +40,21 @@ const relatedLandingPages: Record<string, { href: string; label: string }> = {
   "benefits-of-iptv": { href: "/best-iptv-service", label: "Bester IPTV Anbieter" },
   "streaming-trends-2026": { href: "/iptv-service", label: "IPTV Service" },
   "best-iptv-devices-2026": { href: "/iptv-android-tv", label: "IPTV Android TV" },
-  "fix-iptv-buffering-vpn-dns": { href: "/iptv-providers", label: "IPTV Anbieter" },
+  // Labels below realigned to each landing page's current primary keyword
+  // (see docs/seo/keyword-architecture.md) — /iptv-providers' primary is
+  // "IPTV Anbieter Deutschland", not the bare "IPTV Anbieter".
+  "fix-iptv-buffering-vpn-dns": { href: "/iptv-providers", label: "IPTV Anbieter Deutschland" },
   "tivimate-vs-ibo-player": { href: "/iptv-smart-tv", label: "IPTV Smart TV" },
   "sports-streaming-4k-guide": { href: "/best-iptv-service", label: "Bester IPTV Anbieter" },
-  "iptv-troubleshooting-guide": { href: "/iptv-providers", label: "IPTV Anbieter" },
+  "iptv-troubleshooting-guide": { href: "/iptv-providers", label: "IPTV Anbieter Deutschland" },
   "iptv-vs-cable-tv": { href: "/iptv-service", label: "IPTV Service" },
   "iptv-fire-tv-stick-setup-guide": { href: "/iptv-fire-tv-stick", label: "IPTV Fire TV Stick" },
-  "best-iptv-providers-2026": { href: "/iptv-providers", label: "IPTV Anbieter" },
-  "how-to-buy-iptv": { href: "/iptv-providers", label: "IPTV Anbieter" },
+  "best-iptv-providers-2026": { href: "/iptv-providers", label: "IPTV Anbieter Deutschland" },
+  "how-to-buy-iptv": { href: "/iptv-providers", label: "IPTV Anbieter Deutschland" },
   "iptv-channels-guide": { href: "/iptv-service", label: "IPTV Service" },
+  "iptv-test-guide": { href: "/best-iptv-service", label: "Bester IPTV Anbieter" },
+  "iptv-legal-guide": { href: "/iptv-providers", label: "IPTV Anbieter Deutschland" },
+  "best-iptv-apps-2026": { href: "/iptv-android-tv", label: "IPTV Android TV" },
 };
 
 export function generateStaticParams() {

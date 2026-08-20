@@ -10,7 +10,7 @@ type StripItem = { src: string; alt: string };
 // those folders. Folder name is "serian pictures" on disk (not "serien").
 const filmeItems: StripItem[] = Array.from({ length: 10 }, (_, i) => ({
   src: `/images/filme%20pictures/Filme${i + 1}.jpg`,
-  alt: `Filmposter ${i + 1}`,
+  alt: `Filmposter ${i + 1} aus der Deutschland IPTV Filmbibliothek`,
 }));
 
 // File #5 in this folder is actually named "Serirn5.jpg" (typo in the source
@@ -18,13 +18,16 @@ const filmeItems: StripItem[] = Array.from({ length: 10 }, (_, i) => ({
 // filename on disk.
 const serienItems: StripItem[] = [1, 2, 3, 4, 6, 7, 8, 9, 10].map((n) => ({
   src: `/images/serian%20pictures/Serien${n}.jpg`,
-  alt: `Serienposter ${n}`,
+  alt: `Serienposter ${n} aus der Deutschland IPTV Serienbibliothek`,
 }));
-serienItems.splice(4, 0, { src: "/images/serian%20pictures/Serirn5.jpg", alt: "Serienposter 5" });
+serienItems.splice(4, 0, {
+  src: "/images/serian%20pictures/Serirn5.jpg",
+  alt: "Serienposter 5 aus der Deutschland IPTV Serienbibliothek",
+});
 
 const kinderItems: StripItem[] = Array.from({ length: 10 }, (_, i) => ({
   src: `/images/kinder%20pictures/Kinder${i + 1}.jpg`,
-  alt: `Kinderprogramm ${i + 1}`,
+  alt: `Kinderprogramm-Poster ${i + 1} von Deutschland IPTV`,
 }));
 
 // This folder's numbering has a gap — #17 doesn't exist on disk — so it's
@@ -32,7 +35,7 @@ const kinderItems: StripItem[] = Array.from({ length: 10 }, (_, i) => ({
 const sportNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 18, 19, 20, 21];
 const sportItems: StripItem[] = sportNumbers.map((n) => ({
   src: `/images/sport%20picture/Sport${n}.jpg`,
-  alt: `Sportbild ${n}`,
+  alt: `Live-Sport Vorschaubild ${n} von Deutschland IPTV`,
 }));
 
 // Cycles a list until it comfortably exceeds one screen width, so the

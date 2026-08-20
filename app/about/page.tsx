@@ -6,7 +6,8 @@ import { Button } from "@/components/ui/Button";
 import { ContactCTA } from "@/components/sections/ContactCTA";
 
 export const metadata: Metadata = {
-  title: "Über uns | Deutschland IPTV",
+  // Plain title (no manual brand suffix) — see app/plans/page.tsx for why.
+  title: "Über uns",
   description:
     "Lernen Sie Deutschland IPTV kennen: unsere Vision, warum Kunden uns vertrauen, und wie Sie noch heute mit Premium-Streaming starten.",
   alternates: {

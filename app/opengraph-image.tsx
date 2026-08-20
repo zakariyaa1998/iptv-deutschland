@@ -53,7 +53,7 @@ export default function Image() {
           </div>
         </div>
         <div style={{ display: "flex", marginTop: 28, fontSize: 32, color: "#B3B3B3" }}>
-          Premium IPTV Streaming Service
+          Premium IPTV aus Deutschland
         </div>
       </div>
     ),

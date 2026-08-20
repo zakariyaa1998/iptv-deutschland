@@ -7,7 +7,8 @@ import { ContactForm } from "@/components/sections/ContactForm";
 import { WHATSAPP_DEFAULT_LINK } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
-  title: "Kontakt | Deutschland IPTV",
+  // Plain title (no manual brand suffix) — see app/plans/page.tsx for why.
+  title: "Kontakt",
   description:
     "Kontaktieren Sie Deutschland IPTV über WhatsApp oder E-Mail. Unser Support-Team hilft Ihnen schnell und persönlich bei jeder Frage rund um Ihr IPTV Abo.",
   alternates: {

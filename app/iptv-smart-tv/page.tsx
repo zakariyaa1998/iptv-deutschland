@@ -6,17 +6,19 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { ContactCTA } from "@/components/sections/ContactCTA";
 
+// Primary keyword: "IPTV Smart TV" (commercial: device compatibility + setup
+// overview). Must NOT compete with "IPTV auf Smart TV nutzen" (owned by the
+// deep how-to guide /blog/iptv-smart-tv-guide) — see docs/seo/keyword-architecture.md.
 export const metadata: Metadata = {
-  title: "IPTV für Smart TV – Samsung & LG einrichten",
+  title: "IPTV Smart TV – Samsung & LG einrichten",
   description:
-    "IPTV auf dem Smart TV nutzen, ganz ohne Zusatzgerät: So richten Sie Deutschland IPTV auf Samsung- und LG-Fernsehern ein und streamen in Full HD und 4K.",
+    "IPTV Smart TV nutzen, ganz ohne Zusatzgerät: So richten Sie Deutschland IPTV auf Samsung- und LG-Fernsehern ein und streamen in Full HD und 4K.",
   keywords: [
-    "IPTV für Smart TV",
     "IPTV Smart TV",
+    "IPTV für Smart TV",
     "IPTV Samsung TV",
     "IPTV LG TV",
-    "IPTV Service",
-    "TV über Internet schauen",
+    "IPTV Smart TV einrichten",
   ],
   alternates: {
     canonical: "/iptv-smart-tv",
@@ -26,21 +28,21 @@ export const metadata: Metadata = {
     locale: "de_DE",
     siteName: "Deutschland IPTV",
     url: "/iptv-smart-tv",
-    title: "IPTV für Smart TV – Samsung & LG einrichten",
+    title: "IPTV Smart TV – Samsung & LG einrichten | Deutschland IPTV",
     description: "Deutschland IPTV auf Samsung- und LG-Smart-TVs nutzen — Kompatibilität und Einrichtung auf einen Blick.",
     images: [{ url: "https://deutschland-iptv.online/images/dashbord.png" }],
   },
   twitter: {
     card: "summary_large_image",
     images: ["https://deutschland-iptv.online/images/dashbord.png"],
-    title: "IPTV für Smart TV – Samsung & LG einrichten",
+    title: "IPTV Smart TV – Samsung & LG einrichten | Deutschland IPTV",
     description: "Deutschland IPTV auf Samsung- und LG-Smart-TVs nutzen — Kompatibilität und Einrichtung auf einen Blick.",
   },
 };
 
 const faqItems = [
   {
-    question: "Kann ich IPTV ohne Zusatzgerät auf meinem Smart TV nutzen?",
+    question: "Kann ich IPTV Smart TV ohne Zusatzgerät nutzen?",
     answer:
       "Ja, sofern Ihr Smart TV einen eigenen App Store besitzt — auf Samsung (Tizen) und LG (webOS) lässt sich eine kompatible IPTV App direkt installieren, ganz ohne Fire TV Stick oder externe Box.",
   },
@@ -83,16 +85,16 @@ export default function IptvSmartTvPage() {
           <SectionHeading
             as="h1"
             eyebrow="Smart TV"
-            title="IPTV für Smart TV: Einrichtung für Samsung & LG"
-            description="Moderne Smart TVs sind ideal für IPTV — ganz ohne zusätzliche Hardware. So funktioniert Deutschland IPTV auf Ihrem Fernseher."
+            title="IPTV Smart TV: Einrichtung für Samsung & LG"
+            description="Moderne Smart TVs sind ideal für IPTV — ganz ohne zusätzliche Hardware. So läuft Deutschland IPTV auf Ihrem Fernseher."
           />
 
           <div className="mx-auto flex w-full max-w-3xl flex-col gap-10">
             <p className="text-base leading-relaxed text-muted">
               Samsung- und LG-Fernseher verfügen über eigene App-Systeme — Tizen beziehungsweise
-              webOS —, über die sich IPTV Smart TV Apps direkt installieren lassen, ganz ohne Fire
-              TV Stick oder externe Box. Die genauen Schritte unterscheiden sich je nach
-              Hersteller leicht. Eine allgemeine Einführung zu IPTV finden Sie in unserem Artikel{" "}
+              webOS —, über die sich eine IPTV Smart TV App direkt installieren lässt, ganz ohne Fire
+              TV Stick oder externe Box. Die genauen Schritte unterscheiden sich je nach Hersteller
+              leicht. Eine allgemeine Einführung zu IPTV finden Sie in unserem Artikel{" "}
               <Link href="/iptv-service" className="text-aqua underline underline-offset-4">
                 IPTV Service
               </Link>
@@ -102,7 +104,7 @@ export default function IptvSmartTvPage() {
             <div className="relative aspect-[16/9] w-full overflow-hidden rounded-2xl border border-border">
               <Image
                 src="/images/dashbord.png"
-                alt="IPTV Smart TV Oberfläche mit Senderübersicht auf einem Samsung-Fernseher"
+                alt="IPTV Smart TV einrichten: Senderübersicht auf einem Samsung-Fernseher"
                 fill
                 loading="lazy"
                 decoding="async"
@@ -117,8 +119,8 @@ export default function IptvSmartTvPage() {
               <div className="flex flex-col gap-3 rounded-2xl border border-border bg-background-elevated p-6">
                 <h3 className="text-lg font-semibold text-foreground">Samsung Smart TV (Tizen)</h3>
                 <p className="text-sm leading-relaxed text-muted">
-                  Laden Sie eine kompatible IPTV App direkt aus dem integrierten Samsung App
-                  Store herunter. Geben Sie anschließend die von Deutschland IPTV bereitgestellten
+                  Laden Sie eine kompatible IPTV App direkt aus dem integrierten Samsung App Store
+                  herunter. Geben Sie anschließend die von Deutschland IPTV bereitgestellten
                   Zugangsdaten oder die Playlist-URL ein — die Senderliste lädt automatisch.
                 </p>
               </div>
@@ -126,23 +128,23 @@ export default function IptvSmartTvPage() {
               <div className="flex flex-col gap-3 rounded-2xl border border-border bg-background-elevated p-6">
                 <h3 className="text-lg font-semibold text-foreground">LG Smart TV (webOS)</h3>
                 <p className="text-sm leading-relaxed text-muted">
-                  Bei webOS-Geräten funktioniert die Einrichtung nach demselben Prinzip über den
-                  LG Content Store. Die App-Verfügbarkeit kann je nach Modelljahr variieren —
-                  unser Support-Team empfiehlt Ihnen nach Ihrer Bestellung die passende Option für
-                  Ihr Gerät.
+                  Bei webOS-Geräten funktioniert die Einrichtung nach demselben Prinzip über den LG
+                  Content Store. Die App-Verfügbarkeit kann je nach Modelljahr variieren — unser
+                  Support-Team empfiehlt Ihnen nach Ihrer Bestellung die passende Option für Ihr
+                  Gerät.
                 </p>
               </div>
             </section>
 
             <section className="flex flex-col gap-4">
               <h2 className="text-2xl font-semibold tracking-tight text-foreground">
-                Für die beste Bildqualität
+                Für die beste Bildqualität auf dem Smart TV
               </h2>
               <p className="text-base leading-relaxed text-muted">
-                Für ein stabiles Streaming-Erlebnis empfehlen wir eine LAN-Kabelverbindung statt
-                WLAN sowie das Deaktivieren unnötiger Bildverarbeitungsfunktionen in den
-                TV-Einstellungen. Eine ausführliche Anleitung mit weiteren Optimierungstipps
-                finden Sie in unserem Artikel{" "}
+                Für ein stabiles Streaming-Erlebnis empfehlen wir eine LAN-Kabelverbindung statt WLAN
+                sowie das Deaktivieren unnötiger Bildverarbeitungsfunktionen in den TV-Einstellungen.
+                Eine ausführliche Schritt-für-Schritt-Anleitung mit weiteren Optimierungstipps finden
+                Sie in unserem Artikel{" "}
                 <Link href="/blog/iptv-smart-tv-guide" className="text-aqua underline underline-offset-4">
                   IPTV auf dem Smart TV nutzen
                 </Link>
@@ -155,10 +157,10 @@ export default function IptvSmartTvPage() {
                 Den richtigen Anbieter für Ihren Smart TV finden
               </h2>
               <p className="text-base leading-relaxed text-muted">
-                Nicht jeder IPTV Service läuft auf jedem Fernsehermodell gleich gut. Worauf Sie
-                bei einem Anbieter generell achten sollten, erfahren Sie unter{" "}
+                Nicht jeder IPTV Service läuft auf jedem Fernsehermodell gleich gut. Worauf Sie bei
+                einem Anbieter generell achten sollten, erfahren Sie unter{" "}
                 <Link href="/iptv-providers" className="text-aqua underline underline-offset-4">
-                  IPTV Anbieter
+                  IPTV Anbieter Deutschland
                 </Link>{" "}
                 und in unserem Vergleich{" "}
                 <Link href="/best-iptv-service" className="text-aqua underline underline-offset-4">
@@ -175,15 +177,15 @@ export default function IptvSmartTvPage() {
               <p className="text-base leading-relaxed text-muted">
                 Deutschland IPTV läuft genauso zuverlässig auf einem{" "}
                 <Link href="/iptv-fire-tv-stick" className="text-aqua underline underline-offset-4">
-                  Fire TV Stick
+                  IPTV Fire TV Stick
                 </Link>{" "}
                 oder einer{" "}
                 <Link href="/iptv-android-tv" className="text-aqua underline underline-offset-4">
-                  Android-TV-Box
-                </Link>
-                . Den passenden Tarif zum Einstieg finden Sie auf unserer{" "}
+                  IPTV Android TV
+                </Link>{" "}
+                Box. Den passenden Tarif zum Einstieg finden Sie auf unserer Seite{" "}
                 <Link href="/plans" className="text-aqua underline underline-offset-4">
-                  Tarifseite
+                  IPTV Preise
                 </Link>
                 .
               </p>

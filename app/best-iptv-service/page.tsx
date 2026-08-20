@@ -6,17 +6,22 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { ContactCTA } from "@/components/sections/ContactCTA";
 
+// Primary keyword: "bester IPTV Anbieter" (evergreen quality-criteria comparison).
+// Must NOT compete with "IPTV Anbieter Deutschland" (owned by /iptv-providers,
+// trust/scam-avoidance angle) or "beste IPTV Anbieter 2026" (owned by the blog
+// pillar /blog/best-iptv-providers-2026, the dated, deepest comparison asset) —
+// see docs/seo/keyword-architecture.md. This page stays evergreen and criteria-
+// focused rather than a dated, exhaustive comparison.
 export const metadata: Metadata = {
-  title: "Bester IPTV Anbieter – Qualitätskriterien 2026",
+  title: "Bester IPTV Anbieter – Qualitätskriterien im Überblick",
   description:
-    "Was macht den besten IPTV Anbieter aus? Serverstabilität, Preise, Support und Gerätekompatibilität im Überblick, inklusive Checkliste.",
+    "Woran erkennt man den besten IPTV Anbieter? Serverstabilität, faire Preise, Support und Gerätekompatibilität — die Kriterien im Überblick, mit Checkliste.",
   keywords: [
     "bester IPTV Anbieter",
     "beste IPTV Anbieter",
     "bester IPTV Anbieter Deutschland",
+    "IPTV Qualitätsmerkmale",
     "IPTV Anbieter Vergleich",
-    "IPTV Vergleich",
-    "Premium IPTV",
   ],
   alternates: {
     canonical: "/best-iptv-service",
@@ -26,14 +31,14 @@ export const metadata: Metadata = {
     locale: "de_DE",
     siteName: "Deutschland IPTV",
     url: "/best-iptv-service",
-    title: "Bester IPTV Anbieter – Qualitätskriterien 2026",
+    title: "Bester IPTV Anbieter – Qualitätskriterien im Überblick | Deutschland IPTV",
     description: "Die wichtigsten Qualitätskriterien für IPTV — und wie Deutschland IPTV sie erfüllt.",
     images: [{ url: "https://deutschland-iptv.online/images/streaming-tipps.png" }],
   },
   twitter: {
     card: "summary_large_image",
     images: ["https://deutschland-iptv.online/images/streaming-tipps.png"],
-    title: "Bester IPTV Anbieter – Qualitätskriterien 2026",
+    title: "Bester IPTV Anbieter – Qualitätskriterien im Überblick | Deutschland IPTV",
     description: "Die wichtigsten Qualitätskriterien für IPTV — und wie Deutschland IPTV sie erfüllt.",
   },
 };
@@ -47,12 +52,12 @@ const criteria = [
   {
     title: "Transparente Preise, keine versteckten Kosten",
     description:
-      "Klare Laufzeiten und feste Preise statt Kleingedrucktem. Jeder Deutschland IPTV Tarif ist vollständig auf unserer Tarifseite einsehbar.",
+      "Klare Laufzeiten und feste Preise statt Kleingedrucktem. Jeder Deutschland IPTV Tarif ist vollständig auf unserer Seite IPTV Preise einsehbar.",
   },
   {
     title: "Große Sender- und Inhaltsvielfalt",
     description:
-      "Tausende Sender in HD, Full HD und 4K sowie eine umfangreiche VOD-Bibliothek — das ist unser Maßstab für einen Premium-Anbieter.",
+      "30.000+ Sender in HD, Full HD und 4K sowie eine umfangreiche VOD-Bibliothek — das ist unser Maßstab für einen Premium-Anbieter.",
   },
   {
     title: "Echter, erreichbarer Support",
@@ -132,10 +137,14 @@ export default function BestIptvServicePage() {
 
           <div className="mx-auto flex w-full max-w-3xl flex-col gap-10">
             <p className="text-base leading-relaxed text-muted">
-              „Der beste IPTV Anbieter“ bedeutet für jeden Nutzer etwas anderes — doch einige
-              Faktoren entscheiden in fast jedem Vergleich über die Qualität eines Anbieters. Wir
-              zeigen, worauf es wirklich ankommt und wie Deutschland IPTV diese Kriterien in der
-              Praxis umsetzt. Eine allgemeine Einführung zum Thema finden Sie in unserem Artikel{" "}
+              „Der beste IPTV Anbieter“ bedeutet für jeden Nutzer etwas anderes — doch einige Faktoren
+              entscheiden in fast jedem Vergleich über die tatsächliche Qualität. Diese Seite zeigt die
+              Kriterien selbst, unabhängig von Jahr oder Einzelanbieter. Wer stattdessen mehrere
+              konkrete Anbieter direkt gegenüberstellen möchte, findet das in unserem Artikel{" "}
+              <Link href="/blog/best-iptv-providers-2026" className="text-aqua underline underline-offset-4">
+                Beste IPTV Anbieter 2026
+              </Link>
+              . Eine allgemeine Einführung zum Thema IPTV liefert unsere Seite{" "}
               <Link href="/iptv-service" className="text-aqua underline underline-offset-4">
                 IPTV Service
               </Link>
@@ -145,7 +154,7 @@ export default function BestIptvServicePage() {
             <div className="relative aspect-[16/9] w-full overflow-hidden rounded-2xl border border-border">
               <Image
                 src="/images/streaming-tipps.png"
-                alt="Bester IPTV Anbieter: Tipps zum Erkennen eines Premium-Anbieters"
+                alt="Bester IPTV Anbieter erkennen: Qualitätsmerkmale eines Premium-Anbieters im Überblick"
                 fill
                 loading="lazy"
                 decoding="async"
@@ -171,16 +180,18 @@ export default function BestIptvServicePage() {
                 Bester IPTV Anbieter: So vergleichen Sie richtig
               </h2>
               <p className="text-base leading-relaxed text-muted">
-                Ein strukturierter Vergleich zahlt sich immer mehr aus als die Entscheidung allein
-                nach dem Preis. Prüfen Sie Serverstabilität, Senderauswahl, Gerätekompatibilität
-                und Reaktionszeit des Supports gemeinsam — nur so erhalten Sie ein realistisches
-                Bild vom Gesamtpaket. Eine ausführliche Schritt-für-Schritt-Checkliste mit
-                direktem Anbietervergleich finden Sie in unserem Artikel{" "}
-                <Link
-                  href="/blog/best-iptv-providers-2026"
-                  className="text-aqua underline underline-offset-4"
-                >
-                  Beste IPTV Anbieter 2026
+                Ein strukturierter Vergleich zahlt sich immer mehr aus als eine Entscheidung allein
+                nach dem Preis. Prüfen Sie Serverstabilität, Senderauswahl, Gerätekompatibilität und
+                Reaktionszeit des Supports gemeinsam — nur so erhalten Sie ein realistisches Bild vom
+                Gesamtpaket. Für Warnzeichen unseriöser Anbieter und eine Vertrauens-Checkliste lohnt
+                sich zusätzlich ein Blick auf unsere Seite{" "}
+                <Link href="/iptv-providers" className="text-aqua underline underline-offset-4">
+                  IPTV Anbieter Deutschland
+                </Link>
+                . Wie ein aussagekräftiger Test in der Praxis abläuft und worauf Sie dabei achten
+                sollten, erfahren Sie in unserem Artikel{" "}
+                <Link href="/blog/iptv-test-guide" className="text-aqua underline underline-offset-4">
+                  IPTV Test
                 </Link>
                 .
               </p>
@@ -193,18 +204,9 @@ export default function BestIptvServicePage() {
               <p className="text-base leading-relaxed text-muted">
                 Vergleichen Sie unsere{" "}
                 <Link href="/plans" className="text-aqua underline underline-offset-4">
-                  IPTV Tarife
+                  IPTV Preise
                 </Link>{" "}
-                und wählen Sie die Laufzeit, die zu Ihnen passt. Mehr zur Wahl eines
-                vertrauenswürdigen Anbieters finden Sie unter{" "}
-                <Link href="/iptv-providers" className="text-aqua underline underline-offset-4">
-                  IPTV Anbieter
-                </Link>
-                , und für eine allgemeine Einführung in unserem Artikel{" "}
-                <Link href="/iptv-service" className="text-aqua underline underline-offset-4">
-                  IPTV Service
-                </Link>
-                .
+                und wählen Sie die Laufzeit, die zu Ihnen passt.
               </p>
             </section>
 
