@@ -6,7 +6,8 @@ import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { ContactCTA } from "@/components/sections/ContactCTA";
 
 export const metadata: Metadata = {
-  title: "AGB – Allgemeine Geschäftsbedingungen | Deutschland IPTV",
+  // Plain title (no manual brand suffix) — see app/privacy-policy/page.tsx for why.
+  title: "AGB – Allgemeine Geschäftsbedingungen",
   description:
     "Allgemeine Geschäftsbedingungen von Deutschland IPTV: Nutzung des Dienstes, Abo und Zahlung, Haftung, geistiges Eigentum und geltendes Recht.",
   alternates: {

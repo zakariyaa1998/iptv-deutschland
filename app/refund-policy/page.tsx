@@ -7,7 +7,8 @@ import { ContactCTA } from "@/components/sections/ContactCTA";
 import { WHATSAPP_DEFAULT_LINK } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
-  title: "Rückerstattungsrichtlinie | Deutschland IPTV",
+  // Plain title (no manual brand suffix) — see app/privacy-policy/page.tsx for why.
+  title: "Rückerstattungsrichtlinie",
   description:
     "Erfahren Sie, innerhalb welcher Frist und unter welchen Bedingungen Sie bei Deutschland IPTV eine Rückerstattung beantragen können.",
   alternates: {

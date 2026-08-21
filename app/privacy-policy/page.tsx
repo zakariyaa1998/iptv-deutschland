@@ -6,7 +6,12 @@ import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { ContactCTA } from "@/components/sections/ContactCTA";
 
 export const metadata: Metadata = {
-  title: "Datenschutzerklärung | Deutschland IPTV",
+  // Plain title (no manual brand suffix): the root layout's title.template
+  // ("%s | Deutschland IPTV") appends the brand once. Hardcoding the suffix
+  // here too previously produced a doubled "| Deutschland IPTV | Deutschland IPTV"
+  // in the rendered <title> tag. openGraph.title/twitter.title below are unaffected
+  // by the template (they're independent fields), so those keep the suffix.
+  title: "Datenschutzerklärung",
   description:
     "Datenschutzerklärung von Deutschland IPTV: welche Daten wir erheben, wie wir sie verwenden, mit wem wir sie teilen und welche Rechte Sie nach der DSGVO haben.",
   alternates: {

@@ -55,6 +55,13 @@ const relatedLandingPages: Record<string, { href: string; label: string }> = {
   "iptv-test-guide": { href: "/best-iptv-service", label: "Bester IPTV Anbieter" },
   "iptv-legal-guide": { href: "/iptv-providers", label: "IPTV Anbieter Deutschland" },
   "best-iptv-apps-2026": { href: "/iptv-android-tv", label: "IPTV Android TV" },
+  "iptv-android-tv-einrichten": { href: "/iptv-android-tv", label: "IPTV Android TV" },
+  "m3u-playlist-xtream-codes": { href: "/iptv-android-tv", label: "IPTV Android TV" },
+  "iptv-vs-netflix-disney-plus-kosten": { href: "/iptv-service", label: "IPTV Service" },
+  "beste-vpn-fuer-iptv": { href: "/best-iptv-service", label: "Bester IPTV Anbieter" },
+  "gez-rundfunkbeitrag-iptv": { href: "/iptv-providers", label: "IPTV Anbieter Deutschland" },
+  "bundesliga-dazn-sky-iptv-alternative": { href: "/iptv-service", label: "IPTV Service" },
+  "iptv-apple-tv": { href: "/iptv-smart-tv", label: "IPTV Smart TV" },
 };
 
 export function generateStaticParams() {
