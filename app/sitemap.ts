@@ -21,6 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteUrl}/iptv-smart-tv`, lastModified: buildDate, changeFrequency: "monthly", priority: 0.7 },
     { url: `${siteUrl}/iptv-fire-tv-stick`, lastModified: buildDate, changeFrequency: "monthly", priority: 0.7 },
     { url: `${siteUrl}/iptv-android-tv`, lastModified: buildDate, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${siteUrl}/iptv-smarters-pro`, lastModified: buildDate, changeFrequency: "monthly", priority: 0.7 },
     { url: `${siteUrl}/about`, lastModified: "2026-08-16", changeFrequency: "yearly", priority: 0.6 },
     { url: `${siteUrl}/privacy-policy`, lastModified: "2026-08-16", changeFrequency: "yearly", priority: 0.5 },
     { url: `${siteUrl}/terms`, lastModified: "2026-08-16", changeFrequency: "yearly", priority: 0.5 },
