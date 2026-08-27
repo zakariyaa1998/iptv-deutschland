@@ -8,7 +8,7 @@ const footerLinks = {
     { href: "/about", label: "Über uns" },
     { href: "/plans", label: "Preise" },
     { href: "/blog", label: "Blog" },
-    { href: "/iptv-service", label: "IPTV Service" },
+    { href: "/iptv-service", label: "IPTV kaufen" },
     { href: "/best-iptv-service", label: "Bester IPTV Anbieter" },
     { href: "/iptv-providers", label: "IPTV Anbieter" },
     { href: "/iptv-smart-tv", label: "IPTV Smart TV" },

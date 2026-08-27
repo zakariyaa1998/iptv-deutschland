@@ -15,10 +15,11 @@ export const metadata: Metadata = {
     "IPTV Smart TV nutzen, ganz ohne Zusatzgerät: So richten Sie Deutschland IPTV auf Samsung- und LG-Fernsehern ein und streamen in Full HD und 4K.",
   keywords: [
     "IPTV Smart TV",
-    "IPTV für Smart TV",
+    "IPTV auf Smart TV",
+    "IPTV App",
+    "IPTV Player",
     "IPTV Samsung TV",
     "IPTV LG TV",
-    "IPTV Smart TV einrichten",
   ],
   alternates: {
     canonical: "/iptv-smart-tv",
@@ -92,11 +93,11 @@ export default function IptvSmartTvPage() {
           <div className="mx-auto flex w-full max-w-3xl flex-col gap-10">
             <p className="text-base leading-relaxed text-muted">
               Samsung- und LG-Fernseher verfügen über eigene App-Systeme — Tizen beziehungsweise
-              webOS —, über die sich eine IPTV Smart TV App direkt installieren lässt, ganz ohne Fire
-              TV Stick oder externe Box. Die genauen Schritte unterscheiden sich je nach Hersteller
-              leicht. Eine allgemeine Einführung zu IPTV finden Sie in unserem Artikel{" "}
+              webOS —, über die sich eine IPTV Smart TV App (auch IPTV Player genannt) direkt
+              installieren lässt, ganz ohne Fire TV Stick oder externe Box. Die genauen Schritte unterscheiden sich je nach Hersteller
+              leicht. Wie Sie IPTV Deutschland zunächst bestellen, zeigt unsere Seite{" "}
               <Link href="/iptv-service" className="text-aqua underline underline-offset-4">
-                IPTV Service
+                IPTV kaufen
               </Link>
               .
             </p>

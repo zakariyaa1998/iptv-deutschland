@@ -16,9 +16,10 @@ export const metadata: Metadata = {
     "IPTV Android TV und Android-Boxen nutzen: Kompatibilität, APK-Installation und Tipps für flüssiges 4K-Streaming mit Deutschland IPTV.",
   keywords: [
     "IPTV Android TV",
-    "IPTV für Android TV",
-    "IPTV Android Box",
     "IPTV auf Android TV",
+    "IPTV App Android TV",
+    "IPTV Player Android TV",
+    "IPTV Android Box",
   ],
   alternates: {
     canonical: "/iptv-android-tv",
@@ -99,9 +100,9 @@ export default function IptvAndroidTvPage() {
               Android TV und klassische Android-Boxen bieten den größten Funktionsumfang unter den
               IPTV Playern: vollen Zugriff auf den Google Play Store, direkte APK-Installation und
               meist ein besseres Preis-Leistungs-Verhältnis als vergleichbare Markengeräte. Eine
-              allgemeine Einführung zu IPTV finden Sie in unserem Artikel{" "}
+              Wie Sie IPTV Deutschland zunächst bestellen, zeigt unsere Seite{" "}
               <Link href="/iptv-service" className="text-aqua underline underline-offset-4">
-                IPTV Service
+                IPTV kaufen
               </Link>
               .
             </p>

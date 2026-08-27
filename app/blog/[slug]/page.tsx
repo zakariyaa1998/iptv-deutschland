@@ -50,7 +50,7 @@ const relatedLandingPages: Record<string, { href: string; label: string }> = {
   "iptv-vs-cable-tv": { href: "/iptv-service", label: "IPTV Service" },
   "iptv-fire-tv-stick-setup-guide": { href: "/iptv-fire-tv-stick", label: "IPTV Fire TV Stick" },
   "best-iptv-providers-2026": { href: "/iptv-providers", label: "IPTV Anbieter Deutschland" },
-  "how-to-buy-iptv": { href: "/iptv-providers", label: "IPTV Anbieter Deutschland" },
+  "how-to-buy-iptv": { href: "/iptv-service", label: "IPTV kaufen" },
   "iptv-channels-guide": { href: "/iptv-service", label: "IPTV Service" },
   "iptv-test-guide": { href: "/best-iptv-service", label: "Bester IPTV Anbieter" },
   "iptv-legal-guide": { href: "/iptv-providers", label: "IPTV Anbieter Deutschland" },

@@ -1964,12 +1964,12 @@ export const blogPosts: BlogPost[] = [
     slug: "how-to-buy-iptv",
     clusterId: "anbieter",
     category: "Tipps",
-    title: "IPTV kaufen: Der sichere Weg zum passenden Abo",
+    title: "IPTV sicher kaufen: Der Weg zum passenden Abo",
     seoTitle: "IPTV sicher kaufen: Ratgeber 2026",
     metaDescription:
-      "IPTV kaufen: 5 Schritte zum passenden Abo, realistische Preise und wie Sie unseriöse Anbieter erkennen. Der komplette Ratgeber für Einsteiger.",
+      "IPTV sicher kaufen: 5 Schritte zum passenden Abo, realistische Preise und wie Sie unseriöse Anbieter erkennen. Der komplette Ratgeber für Einsteiger.",
     excerpt:
-      "IPTV kaufen leicht gemacht: die 5 wichtigsten Schritte, realistische Preise und worauf Sie für einen sicheren Kauf achten sollten.",
+      "IPTV sicher kaufen leicht gemacht: die 5 wichtigsten Schritte, realistische Preise und worauf Sie für einen sicheren Kauf achten sollten.",
     publishedAt: "2026-08-10",
     readingTimeMinutes: 12,
     gradient: "circuit",
@@ -1978,11 +1978,16 @@ export const blogPosts: BlogPost[] = [
       src: "/images/ALL-DEVICE.jpg",
       alt: "IPTV kaufen: Streaming-Box, Fire TV Stick, Smartphone und Tablet fertig eingerichtet",
     },
+    // Primary keyword softened to "IPTV sicher kaufen" (2026-08 keyword
+    // architecture update): the landing page /iptv-service now owns the bare
+    // "IPTV kaufen" term as its primary, transactional keyword. This post keeps
+    // "IPTV kaufen" only as a secondary/related term so the two pages stop
+    // competing for the same exact-match query — see docs/seo/keyword-architecture.md.
     keywords: [
-      "IPTV kaufen",
+      "IPTV sicher kaufen",
       "IPTV kaufen Anleitung",
       "IPTV Abo kaufen",
-      "IPTV sicher kaufen",
+      "IPTV kaufen",
       "IPTV Preise",
     ],
     tldr: [

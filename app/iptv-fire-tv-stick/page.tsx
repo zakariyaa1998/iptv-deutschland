@@ -17,9 +17,10 @@ export const metadata: Metadata = {
     "IPTV Fire TV Stick nutzen: Kompatibilität, App-Auswahl und Einrichtung im Überblick — Deutschland IPTV in wenigen Minuten startklar, auf jedem Fire-TV-Modell.",
   keywords: [
     "IPTV Fire TV Stick",
+    "IPTV auf Fire TV Stick",
+    "IPTV App Fire TV",
+    "IPTV Player Fire TV",
     "IPTV Firestick",
-    "IPTV für Fire TV Stick",
-    "IPTV App Fire TV Stick",
   ],
   alternates: {
     canonical: "/iptv-fire-tv-stick",
@@ -97,10 +98,10 @@ export default function IptvFireTvStickPage() {
               Der Amazon Fire TV Stick wird einfach in den HDMI-Anschluss Ihres Fernsehers gesteckt
               und macht daraus im Handumdrehen ein Smart-TV-Erlebnis. Mit einer großen App-Auswahl
               über den Amazon App Store sowie Sideloading-Tools läuft IPTV auf dem Fire TV Stick
-              zuverlässig und ohne Umstände. Eine allgemeine Einführung zu IPTV finden Sie in unserem
-              Artikel{" "}
+              zuverlässig und ohne Umstände. Wie Sie IPTV Deutschland zunächst bestellen, zeigt
+              unsere Seite{" "}
               <Link href="/iptv-service" className="text-aqua underline underline-offset-4">
-                IPTV Service
+                IPTV kaufen
               </Link>
               .
             </p>
@@ -123,7 +124,7 @@ export default function IptvFireTvStickPage() {
               </h2>
               <ul className="flex flex-col gap-3 text-base leading-relaxed text-muted">
                 <li>Plug and Play: einfach in den HDMI-Anschluss stecken, keine Installation nötig.</li>
-                <li>Eine große Auswahl an IPTV Apps über den App Store oder eine Downloader-App.</li>
+                <li>Eine große Auswahl an IPTV Apps (IPTV Playern) über den App Store oder eine Downloader-App.</li>
                 <li>Fernbedienung mit Alexa-Sprachsteuerung für einfache Navigation durch EPG und Sender.</li>
                 <li>Erhältlich in mehreren Leistungsstufen — von HD bis 4K Max.</li>
               </ul>

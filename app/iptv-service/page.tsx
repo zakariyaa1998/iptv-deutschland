@@ -6,21 +6,26 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { ContactCTA } from "@/components/sections/ContactCTA";
 
-// Primary keyword: "IPTV Service" (informational-commercial hybrid, brand-anchored).
-// Must NOT compete with "was ist IPTV" (owned by /blog/what-is-iptv-guide) or
-// "IPTV 2026 / IPTV Kosten" (owned by /blog/iptv-guide-2026) — see
-// docs/seo/keyword-architecture.md. This page explains OUR service specifically
-// and routes readers wanting the neutral, from-scratch definition to the blog.
+// Primary keyword: "IPTV kaufen" (clear commercial/transactional intent —
+// re-mapped from the previous "IPTV Service" primary per the 2026-08 keyword
+// architecture update). Secondary: "IPTV Deutschland kaufen", "IPTV Deutschland",
+// "IPTV bestellen". Must NOT compete with "was ist IPTV" (owned by
+// /blog/what-is-iptv-guide), "IPTV 2026 / IPTV Kosten" (owned by
+// /blog/iptv-guide-2026), or the homepage's "IPTV Deutschland" (this page owns
+// the transactional "kaufen" variant, not the bare brand/category term). The
+// blog post /blog/how-to-buy-iptv was retargeted to "IPTV sicher kaufen" so it
+// no longer competes with this page for "IPTV kaufen" — see
+// docs/seo/keyword-architecture.md.
 export const metadata: Metadata = {
-  title: "IPTV Service – So funktioniert IPTV in Deutschland",
+  title: "IPTV kaufen – IPTV Deutschland bestellen",
   description:
-    "IPTV Service von Deutschland IPTV: wie es funktioniert, welche Vorteile es bietet und worauf Sie bei der Anbieterwahl achten sollten. Jetzt informieren.",
+    "IPTV kaufen bei Deutschland IPTV: IPTV Deutschland in wenigen Minuten bestellen. Tausende Sender, Filme und Serien in HD, Full HD und 4K mit persönlichem Support.",
   keywords: [
+    "IPTV kaufen",
+    "IPTV Deutschland kaufen",
+    "IPTV Deutschland",
+    "IPTV bestellen",
     "IPTV Service",
-    "IPTV Dienst",
-    "IPTV Service Deutschland",
-    "TV über Internet schauen",
-    "IPTV ohne Kabel",
   ],
   alternates: {
     canonical: "/iptv-service",
@@ -30,17 +35,17 @@ export const metadata: Metadata = {
     locale: "de_DE",
     siteName: "Deutschland IPTV",
     url: "/iptv-service",
-    title: "IPTV Service – So funktioniert IPTV in Deutschland | Deutschland IPTV",
+    title: "IPTV kaufen – IPTV Deutschland bestellen | Deutschland IPTV",
     description:
-      "Wie unser IPTV Service funktioniert, welche Vorteile er bietet und wie Sie den richtigen Anbieter wählen — verständlich erklärt von Deutschland IPTV.",
+      "IPTV Deutschland kaufen: Ablauf, Inhalte und worauf Sie bei der Anbieterwahl achten sollten — verständlich erklärt von Deutschland IPTV.",
     images: [{ url: "https://deutschland-iptv.online/images/streaming-technologie.png" }],
   },
   twitter: {
     card: "summary_large_image",
     images: ["https://deutschland-iptv.online/images/streaming-technologie.png"],
-    title: "IPTV Service – So funktioniert IPTV in Deutschland | Deutschland IPTV",
+    title: "IPTV kaufen – IPTV Deutschland bestellen | Deutschland IPTV",
     description:
-      "Wie unser IPTV Service funktioniert, welche Vorteile er bietet und wie Sie den richtigen Anbieter wählen — verständlich erklärt von Deutschland IPTV.",
+      "IPTV Deutschland kaufen: Ablauf, Inhalte und worauf Sie bei der Anbieterwahl achten sollten — verständlich erklärt von Deutschland IPTV.",
   },
 };
 
@@ -100,22 +105,24 @@ export default function IptvServicePage() {
         <Container className="flex flex-col items-center gap-14">
           <SectionHeading
             as="h1"
-            eyebrow="IPTV Service"
-            title="IPTV Service: Modernes Fernsehen ohne Kabelanschluss"
-            description="Wie unser IPTV Service funktioniert, was im Abo enthalten ist und wie Sie den richtigen Anbieter für sich finden."
+            eyebrow="IPTV kaufen"
+            title="IPTV kaufen: IPTV Deutschland einfach bestellen"
+            description="So bestellen Sie IPTV Deutschland in wenigen Minuten: Ablauf, Inhalte im Abo und wie Sie den richtigen Anbieter für sich finden."
           />
 
           <div className="mx-auto flex w-full max-w-3xl flex-col gap-10">
             <div className="flex flex-col gap-4 text-base leading-relaxed text-muted">
               <p>
-                Ein IPTV Service überträgt Fernsehen über Ihre bestehende Internetverbindung statt
-                über Kabel, Satellit oder eine Antenne. Wer die reine Definition und Technik dahinter
-                von Grund auf verstehen möchte, findet eine ausführliche Erklärung in unserem Artikel{" "}
+                Wer IPTV kaufen möchte, bestellt kein physisches Produkt, sondern ein Streaming-Abo:
+                IPTV überträgt Fernsehen über Ihre bestehende Internetverbindung statt über Kabel,
+                Satellit oder eine Antenne. Wer die reine Definition und Technik dahinter von Grund
+                auf verstehen möchte, findet eine ausführliche Erklärung in unserem Artikel{" "}
                 <Link href="/blog/what-is-iptv-guide" className="text-aqua underline underline-offset-4">
                   Was ist IPTV?
                 </Link>
-                . Auf dieser Seite geht es konkret um unseren Service: wie er aufgebaut ist, was im
-                Abo enthalten ist und wie Sie ihn auf Ihren Geräten nutzen.
+                . Auf dieser Seite geht es konkret darum, wie Sie IPTV Deutschland bei uns bestellen:
+                wie der Ablauf aussieht, was im Abo enthalten ist und wie Sie es auf Ihren Geräten
+                nutzen.
               </p>
               <p>
                 Deutschland IPTV bündelt Live-TV, eine umfangreiche VOD-Bibliothek und einen
@@ -131,10 +138,10 @@ export default function IptvServicePage() {
 
             <section className="flex flex-col gap-4">
               <h2 className="text-2xl font-semibold tracking-tight text-foreground">
-                Wie funktioniert unser IPTV Service?
+                IPTV bestellen: So läuft der Kauf ab
               </h2>
               <p className="text-base leading-relaxed text-muted">
-                Nach der Anmeldung erhalten Sie persönliche Zugangsdaten oder eine Playlist-URL. Eine
+                Nach der Bestellung erhalten Sie persönliche Zugangsdaten oder eine Playlist-URL. Eine
                 IPTV App auf Ihrem Gerät lädt damit automatisch die Senderliste, den elektronischen
                 Programmführer (EPG) und die VOD-Bibliothek. Technisch betrachtet funktioniert das wie
                 digitaler TV-Empfang, nur vollständig über das offene Internet — ganz ohne Antenne
@@ -229,7 +236,7 @@ export default function IptvServicePage() {
             </section>
 
             <section className="flex flex-col gap-5 rounded-3xl border border-border bg-background-elevated p-7">
-              <h2 className="text-xl font-semibold text-foreground">Häufig gestellte Fragen zum IPTV Service</h2>
+              <h2 className="text-xl font-semibold text-foreground">Häufig gestellte Fragen zum IPTV kaufen</h2>
               <div className="flex flex-col gap-4">
                 {faqItems.map((item) => (
                   <details key={item.question} className="group rounded-xl border border-border bg-background p-5">

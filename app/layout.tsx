@@ -23,14 +23,18 @@ export const metadata: Metadata = {
   description:
     "Deutschland IPTV ist Ihr IPTV Anbieter für Deutschland: Tausende Sender, Filme und Serien in HD, Full HD und 4K – auf jedem Gerät, mit stabilen Servern und persönlichem Support.",
   // Kept deliberately narrow to the homepage's own primary/secondary keywords
-  // (see docs/seo/keyword-architecture.md). "bester IPTV Anbieter", "IPTV kaufen",
-  // and "IPTV Sender" were previously listed here too, but those are each another
-  // page's assigned primary keyword (/best-iptv-service, /blog/how-to-buy-iptv,
-  // /blog/iptv-channels-guide) — leaving them on the sitewide-default keywords
-  // list was self-inflicted cannibalization at the metadata level.
+  // (see docs/seo/keyword-architecture.md, updated 2026-08). "bester IPTV
+  // Anbieter" and "IPTV Sender" stay excluded — those remain another page's
+  // assigned primary keyword (/best-iptv-service and /blog/iptv-channels-guide).
+  // "IPTV kaufen" and "IPTV Deutschland kaufen" were reintroduced as homepage
+  // secondary keywords: the page that now owns "IPTV kaufen" as PRIMARY is the
+  // landing page /iptv-service, not a blog post, so listing it here as a
+  // secondary term is no longer self-inflicted cannibalization.
   keywords: [
     "IPTV Deutschland",
+    "IPTV kaufen",
     "IPTV Anbieter",
+    "IPTV Deutschland kaufen",
     "IPTV Anbieter Deutschland",
     "IPTV Abo",
     "IPTV Streaming",

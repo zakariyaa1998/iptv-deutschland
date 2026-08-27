@@ -18,10 +18,10 @@ export const metadata: Metadata = {
     "Woran erkennt man den besten IPTV Anbieter? Serverstabilität, faire Preise, Support und Gerätekompatibilität — die Kriterien im Überblick, mit Checkliste.",
   keywords: [
     "bester IPTV Anbieter",
-    "beste IPTV Anbieter",
+    "beste IPTV Anbieter Deutschland",
     "bester IPTV Anbieter Deutschland",
-    "IPTV Qualitätsmerkmale",
     "IPTV Anbieter Vergleich",
+    "IPTV Qualitätsmerkmale",
   ],
   alternates: {
     canonical: "/best-iptv-service",
@@ -144,11 +144,11 @@ export default function BestIptvServicePage() {
               <Link href="/blog/best-iptv-providers-2026" className="text-aqua underline underline-offset-4">
                 Beste IPTV Anbieter 2026
               </Link>
-              . Eine allgemeine Einführung zum Thema IPTV liefert unsere Seite{" "}
+              . Wenn Sie bereit sind, direkt zu bestellen, zeigt Ihnen unsere Seite{" "}
               <Link href="/iptv-service" className="text-aqua underline underline-offset-4">
-                IPTV Service
-              </Link>
-              .
+                IPTV kaufen
+              </Link>{" "}
+              den Ablauf.
             </p>
 
             <div className="relative aspect-[16/9] w-full overflow-hidden rounded-2xl border border-border">

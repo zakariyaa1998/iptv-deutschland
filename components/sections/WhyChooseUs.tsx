@@ -48,11 +48,11 @@ export function WhyChooseUs() {
           </h2>
           <p className="text-base leading-relaxed text-white/80 drop-shadow-[0_1px_12px_rgba(0,0,0,0.6)] sm:text-lg">
             Wir haben Deutschland IPTV für Nutzer entwickelt, die Premium-Qualität, Zuverlässigkeit und echten
-            Support erwarten — ganz ohne Kompromisse. Wie unser{" "}
+            Support erwarten — ganz ohne Kompromisse. Wie Sie{" "}
             <Link href="/iptv-service" className="text-aqua underline underline-offset-4 hover:text-aqua-dim">
-              IPTV Service
+              IPTV kaufen
             </Link>{" "}
-            im Detail funktioniert, erfahren Sie auf der verlinkten Seite.
+            können, erfahren Sie auf der verlinkten Seite.
           </p>
         </div>
 
