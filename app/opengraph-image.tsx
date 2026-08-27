@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { LogoMark } from "@/components/logo/LogoMark";
 
 export const size = {
   width: 1200,
@@ -41,12 +42,7 @@ export default function Image() {
               justifyContent: "center",
             }}
           >
-            <svg width="64" height="64" viewBox="0 0 48 48" fill="none">
-              <circle cx="24" cy="24" r="15" stroke="#4BEB1E" strokeWidth="2" />
-              <path d="M32.6 36.29A15 15 0 0 1 24 39" stroke="#DD0000" strokeWidth="2" />
-              <path d="M24 39A15 15 0 0 1 15.4 36.29" stroke="#FFCE00" strokeWidth="2" />
-              <path d="M20 17.5 30.5 24 20 30.5V17.5Z" fill="#4BEB1E" />
-            </svg>
+            <LogoMark size={64} />
           </div>
           <div style={{ display: "flex", fontSize: 84, fontWeight: 700, color: "#FFFFFF" }}>
             Deutschland&nbsp;<span style={{ color: "#4BEB1E" }}>IPTV</span>

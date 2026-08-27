@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { LogoMark } from "@/components/logo/LogoMark";
 
 export const size = {
   width: 512,
@@ -24,12 +25,7 @@ export async function GET() {
           borderRadius: 64,
         }}
       >
-        <svg width="320" height="320" viewBox="0 0 48 48" fill="none">
-          <circle cx="24" cy="24" r="15" stroke="#4BEB1E" strokeWidth="2" opacity="0.9" />
-          <path d="M32.6 36.29A15 15 0 0 1 24 39" stroke="#DD0000" strokeWidth="2" />
-          <path d="M24 39A15 15 0 0 1 15.4 36.29" stroke="#FFCE00" strokeWidth="2" />
-          <path d="M20 17.5 30.5 24 20 30.5V17.5Z" fill="#4BEB1E" />
-        </svg>
+        <LogoMark size={320} />
       </div>
     ),
     { ...size }
