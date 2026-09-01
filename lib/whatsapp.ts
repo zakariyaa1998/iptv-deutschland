@@ -9,7 +9,7 @@ export const WHATSAPP_DEFAULT_MESSAGE =
 
 export const WHATSAPP_DEFAULT_LINK = buildWhatsAppLink(WHATSAPP_DEFAULT_MESSAGE);
 
-export const WHATSAPP_FREE_TRIAL_MESSAGE =
-  "Hallo Deutschland IPTV,\n\nich möchte gerne einen kostenlosen IPTV Test anfragen.\n\nVielen Dank!";
+export const WHATSAPP_ORDER_MESSAGE =
+  "Hallo IPTV Deutschland, ich möchte gerne jetzt ein IPTV-Abo bestellen. Vielen Dank!";
 
-export const WHATSAPP_FREE_TRIAL_LINK = buildWhatsAppLink(WHATSAPP_FREE_TRIAL_MESSAGE);
+export const WHATSAPP_ORDER_LINK = buildWhatsAppLink(WHATSAPP_ORDER_MESSAGE);

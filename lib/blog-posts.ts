@@ -55,6 +55,47 @@ export const BLOG_CATEGORIES = [
 
 export type BlogCategory = (typeof BLOG_CATEGORIES)[number];
 
+/**
+ * Editorial news sections — a separate, optional taxonomy from `BlogCategory`
+ * (which drives the tag filter on /blog) and from `BLOG_CLUSTERS` (which drives
+ * IPTV pillar/spoke internal linking). These back the two dedicated, indexable
+ * category landing pages at /blog/film-serien-news and /blog/sport-news
+ * (infrastructure for future editorial content — see docs/seo/keyword-architecture.md
+ * for how they're kept from competing with the commercial IPTV landing pages).
+ * Deliberately a compatibility layer, not a change to `BlogPost.category`: no
+ * existing post needs to set `newsCategory`, so no existing post object changes.
+ */
+export const BLOG_NEWS_CATEGORIES = {
+  "film-serien-news": {
+    label: "Film & Serien News",
+    navLabel: "🎬 Film & Serien News",
+    // Base <title>; the root layout's "%s | Deutschland IPTV" template appends
+    // the brand suffix automatically, matching how every other page here sets
+    // `metadata.title` as a plain, un-suffixed string.
+    title: "Film News Deutschland & Serien News",
+    metaDescription:
+      "Film News Deutschland und Serien News von IPTV Deutschland: neue Filme, neue Staffeln, Streaming-Neuheiten und Trailer im Überblick.",
+    h1: "Film & Serien News",
+    intro:
+      "In dieser Rubrik sammeln wir künftig aktuelle Film News und Serien News aus der Streaming-Welt: neue Filme, neue Staffeln, Filmstarts, Trailer, Besetzungen und Veröffentlichungsdaten auf den wichtigsten Streaming-Plattformen. Sobald neue Artikel erscheinen, finden Sie sie hier.",
+    emptyState: "Hier finden Sie künftig aktuelle News rund um Filme, Serien und Streaming.",
+  },
+  "sport-news": {
+    label: "Sport News",
+    navLabel: "⚽ Sport News",
+    title: "Sport News Deutschland & Fußball News",
+    metaDescription:
+      "Sport News Deutschland und Fußball News von IPTV Deutschland: Bundesliga, Champions League, Transfers und Sport-Streaming im Überblick.",
+    h1: "Sport News",
+    intro:
+      "In dieser Rubrik sammeln wir künftig aktuelle Sport News und Fußball News: Bundesliga, Champions League, Transfers, wichtige Spiele und Spielpläne sowie Entwicklungen rund um Sport-Streaming. Sobald neue Artikel erscheinen, finden Sie sie hier.",
+    emptyState:
+      "Hier finden Sie künftig aktuelle Sport- und Fußball-News sowie Entwicklungen rund um Sport-Streaming.",
+  },
+} as const;
+
+export type BlogNewsCategoryId = keyof typeof BLOG_NEWS_CATEGORIES;
+
 export type BlogPost = {
   slug: string;
   title: string;
@@ -77,6 +118,10 @@ export type BlogPost = {
   clusterId?: BlogClusterId;
   /** Marks this post as the hub/pillar page of its cluster (broadest, most comprehensive). */
   isPillar?: boolean;
+  /** Optional: assigns a post to one of the editorial news sections (see
+   * BLOG_NEWS_CATEGORIES above). Unset for every existing post — only future
+   * Film & Serien / Sport articles need to set this. */
+  newsCategory?: BlogNewsCategoryId;
   intro: string[];
   sections: BlogSection[];
   conclusion: string[];
@@ -133,6 +178,14 @@ export function getClusterPosts(clusterId: BlogClusterId, allPosts: BlogPost[]):
   return allPosts
     .filter((candidate) => candidate.clusterId === clusterId)
     .sort((a, b) => (a.isPillar === b.isPillar ? 0 : a.isPillar ? -1 : 1));
+}
+
+/** Posts assigned to a given editorial news section (see BLOG_NEWS_CATEGORIES). */
+export function getNewsCategoryPosts(
+  newsCategory: BlogNewsCategoryId,
+  allPosts: BlogPost[]
+): BlogPost[] {
+  return allPosts.filter((candidate) => candidate.newsCategory === newsCategory);
 }
 
 export const blogPosts: BlogPost[] = [

@@ -1,9 +1,16 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { BlogList } from "@/components/blog/BlogList";
-import { blogPosts } from "@/lib/blog-posts";
+import { blogPosts, BLOG_NEWS_CATEGORIES, type BlogNewsCategoryId } from "@/lib/blog-posts";
+
+// Editorial section nav — separate from BlogList's own "Alle" + BLOG_CATEGORIES
+// tag filter below, which stays untouched. This row links to the two dedicated
+// news category pages (infrastructure for future editorial content; see
+// docs/seo/keyword-architecture.md).
+const NEWS_SECTIONS: BlogNewsCategoryId[] = ["film-serien-news", "sport-news"];
 
 export const metadata: Metadata = {
   title: "Blog – IPTV Wissenshub",
@@ -42,6 +49,24 @@ export default function BlogPage() {
             title="IPTV Wissenshub"
             description="Praktische Anleitungen, Hintergründe und Trends rund um IPTV Streaming — verständlich erklärt."
           />
+
+          <nav aria-label="Rubriken" className="flex w-full flex-wrap justify-center gap-2.5">
+            <span
+              aria-current="page"
+              className="rounded-full border border-aqua bg-aqua px-4 py-2 text-sm font-medium tracking-tight text-black shadow-[0_0_20px_rgba(75,235,30,0.35)]"
+            >
+              Alle
+            </span>
+            {NEWS_SECTIONS.map((id) => (
+              <Link
+                key={id}
+                href={`/blog/${id}`}
+                className="rounded-full border border-border bg-background-elevated px-4 py-2 text-sm font-medium tracking-tight text-muted transition-all duration-300 ease-out hover:border-aqua/50 hover:text-foreground"
+              >
+                {BLOG_NEWS_CATEGORIES[id].navLabel}
+              </Link>
+            ))}
+          </nav>
 
           <BlogList posts={blogPosts} />
         </Container>

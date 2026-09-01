@@ -15,6 +15,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteUrl}/faq`, lastModified: buildDate, changeFrequency: "monthly", priority: 0.7 },
     { url: `${siteUrl}/contact`, lastModified: buildDate, changeFrequency: "yearly", priority: 0.6 },
     { url: `${siteUrl}/blog`, lastModified: buildDate, changeFrequency: "weekly", priority: 0.8 },
+    // Editorial news category infrastructure (no articles yet) — see
+    // docs/seo/keyword-architecture.md. Lower priority than the blog index
+    // itself until they hold content.
+    { url: `${siteUrl}/blog/film-serien-news`, lastModified: buildDate, changeFrequency: "weekly", priority: 0.6 },
+    { url: `${siteUrl}/blog/sport-news`, lastModified: buildDate, changeFrequency: "weekly", priority: 0.6 },
     { url: `${siteUrl}/iptv-service`, lastModified: buildDate, changeFrequency: "monthly", priority: 0.9 },
     { url: `${siteUrl}/best-iptv-service`, lastModified: buildDate, changeFrequency: "monthly", priority: 0.9 },
     { url: `${siteUrl}/iptv-providers`, lastModified: buildDate, changeFrequency: "monthly", priority: 0.8 },
