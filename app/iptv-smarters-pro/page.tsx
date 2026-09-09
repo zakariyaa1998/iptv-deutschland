@@ -47,12 +47,12 @@ const faqItems = [
   {
     question: "Ist IPTV Smarters Pro kostenlos?",
     answer:
-      "Die App selbst ist kostenlos herunterladbar. Um Sender zu empfangen, benötigen Sie zusätzlich ein aktives IPTV Abo wie Deutschland IPTV, dessen Zugangsdaten Sie in der App hinterlegen.",
+      "Die App selbst lässt sich kostenlos herunterladen. Um Sender zu empfangen, brauchen Sie zusätzlich ein aktives IPTV Abo wie Deutschland IPTV, dessen Zugangsdaten Sie in der App hinterlegen.",
   },
   {
     question: "Welche Zugangsdaten benötige ich für IPTV Smarters Pro?",
     answer:
-      "Für die Einrichtung über Xtream Codes API benötigen Sie die Server-URL (Host), Ihren Benutzernamen und Ihr Passwort. Alternativ lässt sich auch eine M3U-Playlist-URL hinterlegen — beide Zugangsdaten erhalten Sie direkt nach Ihrer Bestellung von Deutschland IPTV.",
+      "Für die Einrichtung über Xtream Codes API brauchen Sie die Server-URL (Host), Ihren Benutzernamen und Ihr Passwort. Alternativ lässt sich auch eine M3U-Playlist-URL hinterlegen — beide Zugangsdaten erhalten Sie direkt nach Ihrer Bestellung von Deutschland IPTV.",
   },
   {
     question: "Auf welchen Geräten läuft IPTV Smarters Pro?",
@@ -62,7 +62,7 @@ const faqItems = [
   {
     question: "Wie viele Geräte kann ich gleichzeitig mit IPTV Smarters Pro nutzen?",
     answer:
-      "Das hängt von Ihrem gebuchten Tarif ab, nicht von der App selbst. Deutschland IPTV bietet Pakete mit mehreren gleichzeitigen Verbindungen an, sodass sich zum Beispiel Smartphone und Smart TV parallel nutzen lassen.",
+      "Das hängt vom gebuchten Tarif ab, nicht von der App selbst. Deutschland IPTV bietet Pakete mit mehreren gleichzeitigen Verbindungen an, sodass sich zum Beispiel Smartphone und Smart TV parallel nutzen lassen.",
   },
 ];
 
@@ -96,15 +96,15 @@ export default function IptvSmartersProPage() {
             as="h1"
             eyebrow="App-Anleitung"
             title="IPTV Smarters Pro Deutschland: Einrichtung & Anleitung"
-            description="Eine der beliebtesten IPTV Apps überhaupt — so richten Sie Deutschland IPTV in IPTV Smarters Pro auf Ihrem Gerät ein."
+            description="Eine der beliebtesten IPTV Apps überhaupt — so richten Sie Deutschland IPTV in IPTV Smarters Pro auf Ihrem Gerät ein, egal ob Smartphone, Fernseher oder Streaming-Stick."
           />
 
           <div className="mx-auto flex w-full max-w-3xl flex-col gap-10">
             <p className="text-base leading-relaxed text-muted">
-              IPTV Smarters Pro zählt zu den am weitesten verbreiteten Apps zur Wiedergabe von IPTV
-              Abonnements und wird von zahlreichen Anbietern weltweit empfohlen. Statt sich um
-              technische Details zu kümmern, tragen Sie einfach Ihre Zugangsdaten ein und die
-              komplette Senderliste samt Programmführer lädt automatisch. Eine allgemeine Einführung
+              Kaum eine App zur Wiedergabe von IPTV Abonnements ist so weit verbreitet wie IPTV
+              Smarters Pro — zahlreiche Anbieter weltweit empfehlen sie ihren Kunden. Statt sich mit
+              technischen Details herumzuschlagen, tragen Sie einfach Ihre Zugangsdaten ein, und die
+              komplette Senderliste samt Programmführer lädt von selbst. Eine allgemeine Einführung
               zu IPTV Deutschland kaufen finden Sie auf unserer Seite{" "}
               <Link href="/iptv-service" className="text-aqua underline underline-offset-4">
                 IPTV kaufen
@@ -131,18 +131,18 @@ export default function IptvSmartersProPage() {
               <p className="text-base leading-relaxed text-muted">
                 IPTV Smarters Pro ist eine kostenlose App zur Wiedergabe von IPTV Abonnements über
                 die gängigen Zugangsformate Xtream Codes API und M3U-Playlist. Statt für jeden
-                Anbieter eine eigene App zu benötigen, funktioniert IPTV Smarters Pro geräteübergreifend
+                Anbieter eine eigene App zu brauchen, funktioniert IPTV Smarters Pro geräteübergreifend
                 mit praktisch jedem seriösen IPTV Service — die App selbst liefert keine Inhalte,
                 sondern stellt lediglich die Senderliste, den Programmführer und die
-                Wiedergabefunktionen bereit. Die Inhalte kommen ausschließlich von Ihrem gebuchten
-                Abo, in diesem Fall von Deutschland IPTV.
+                Wiedergabefunktionen bereit. Die eigentlichen Inhalte kommen ausschließlich von Ihrem
+                gebuchten Abo, in diesem Fall von Deutschland IPTV.
               </p>
               <p className="text-base leading-relaxed text-muted">
                 Die übersichtliche Oberfläche und die schnelle Einrichtung machen IPTV Smarters Pro
-                besonders für Einsteiger attraktiv, während erfahrene Nutzer die umfangreichen
-                Anpassungsoptionen für Kategorien, Favoriten und mehrere Profile schätzen. Da die
-                App seit Jahren aktiv weiterentwickelt wird, läuft sie in der Regel auch auf etwas
-                älterer Hardware stabil und wird von einer großen Nutzerbasis getragen.
+                besonders für Einsteiger attraktiv, während erfahrene Nutzer eher die umfangreichen
+                Anpassungsoptionen für Kategorien, Favoriten und mehrere Profile zu schätzen wissen.
+                Weil die App seit Jahren aktiv weiterentwickelt wird, läuft sie meist auch auf etwas
+                älterer Hardware stabil — getragen von einer entsprechend großen Nutzerbasis.
               </p>
             </section>
 
@@ -151,10 +151,10 @@ export default function IptvSmartersProPage() {
                 Warum IPTV Smarters Pro so beliebt ist
               </h2>
               <ul className="flex flex-col gap-3 text-base leading-relaxed text-muted">
-                <li>Kostenloser Download für nahezu jedes gängige Gerät — vom Smartphone bis zur TV-Box.</li>
-                <li>Übersichtliche Einrichtung über Xtream Codes API oder M3U-Playlist in wenigen Minuten.</li>
-                <li>Unterstützt EPG, mehrere Profile und Favoritenlisten für ein aufgeräumtes Seherlebnis.</li>
-                <li>Regelmäßige Updates und breite Kompatibilität mit den meisten seriösen IPTV Anbietern.</li>
+                <li>Kostenloser Download für nahezu jedes gängige Gerät — vom Smartphone bis zur TV-Box</li>
+                <li>Übersichtliche Einrichtung über Xtream Codes API oder M3U-Playlist in wenigen Minuten</li>
+                <li>Unterstützt EPG, mehrere Profile und Favoritenlisten für ein aufgeräumtes Seherlebnis</li>
+                <li>Regelmäßige Updates und breite Kompatibilität mit den meisten seriösen IPTV Anbietern</li>
               </ul>
             </section>
 
@@ -176,8 +176,8 @@ export default function IptvSmartersProPage() {
                 <h3 className="text-lg font-semibold text-foreground">iOS (iPhone & iPad)</h3>
                 <p className="text-sm leading-relaxed text-muted">
                   Auf iOS-Geräten laden Sie die App „IPTV Smarters Player“ aus dem Apple App Store
-                  herunter — die Funktionsweise entspricht weitgehend der Android-Version, lediglich
-                  der Name unterscheidet sich leicht.
+                  herunter — die Funktionsweise entspricht weitgehend der Android-Version, nur der
+                  Name unterscheidet sich leicht.
                 </p>
               </div>
 
@@ -198,9 +198,9 @@ export default function IptvSmartersProPage() {
                 <h3 className="text-lg font-semibold text-foreground">Smart TV & Android TV Boxen</h3>
                 <p className="text-sm leading-relaxed text-muted">
                   Auf Android TV Boxen lässt sich IPTV Smarters Pro über den Play Store oder per APK
-                  installieren. Auf Samsung- und LG-Fernsehern ist die App im herstellereigenen Store
-                  meist nicht verfügbar — hier empfiehlt sich der Umweg über einen angeschlossenen
-                  Fire TV Stick oder eine Android-TV-Box. Details dazu finden Sie unter{" "}
+                  installieren. Auf Samsung- und LG-Fernsehern fehlt die App im herstellereigenen
+                  Store meist — hier empfiehlt sich der Umweg über einen angeschlossenen Fire TV
+                  Stick oder eine Android-TV-Box. Details dazu finden Sie unter{" "}
                   <Link href="/iptv-smart-tv" className="text-aqua underline underline-offset-4">
                     IPTV Smart TV
                   </Link>{" "}
@@ -225,22 +225,22 @@ export default function IptvSmartersProPage() {
               <ul className="flex flex-col gap-3 text-base leading-relaxed text-muted">
                 <li>
                   <span className="font-semibold text-foreground">Server-URL (Host):</span> die
-                  Adresse Ihres IPTV Servers, inklusive Portnummer.
+                  Adresse Ihres IPTV Servers, inklusive Portnummer
                 </li>
                 <li>
                   <span className="font-semibold text-foreground">Benutzername:</span> Ihr
-                  persönlicher Login-Name für das Abo.
+                  persönlicher Login-Name für das Abo
                 </li>
                 <li>
                   <span className="font-semibold text-foreground">Passwort:</span> das dazugehörige
-                  Passwort für den Zugriff.
+                  Passwort für den Zugriff
                 </li>
               </ul>
               <p className="text-base leading-relaxed text-muted">
-                Nach dem Speichern lädt die App automatisch die vollständige Senderliste samt
-                Programmführer. Wer stattdessen eine M3U-Playlist-URL erhalten hat, wählt bei der
-                Anmeldung einfach die Option „Load your playlist or file (M3U URL)“ und fügt die
-                Adresse dort ein.
+                Nach dem Speichern lädt die App die vollständige Senderliste samt Programmführer von
+                selbst. Wer stattdessen eine M3U-Playlist-URL erhalten hat, wählt bei der Anmeldung
+                einfach die Option „Load your playlist or file (M3U URL)“ und fügt die Adresse dort
+                ein.
               </p>
             </section>
 
@@ -249,10 +249,10 @@ export default function IptvSmartersProPage() {
                 Tipps für eine stabile Wiedergabe
               </h2>
               <p className="text-base leading-relaxed text-muted">
-                Damit IPTV Smarters Pro flüssig läuft, empfehlen wir eine stabile Internetverbindung
+                Damit IPTV Smarters Pro flüssig läuft, empfiehlt sich eine stabile Internetverbindung
                 mit mindestens 10 Mbit/s für HD-Inhalte und deutlich mehr für 4K. Nutzen Sie nach
                 Möglichkeit eine LAN-Kabelverbindung statt WLAN, besonders bei Smart-TV-Boxen oder
-                Streaming-Sticks. Sollte ein Sender einmal ruckeln, hilft häufig ein Neustart der
+                Streaming-Sticks. Ruckelt ein Sender doch einmal, hilft meist schon ein Neustart der
                 App oder ein Wechsel des Streams innerhalb der Kanalübersicht. Bei anhaltenden
                 Problemen unterstützt Sie unser Team gerne über die{" "}
                 <Link href="/contact" className="text-aqua underline underline-offset-4">
@@ -270,26 +270,26 @@ export default function IptvSmartersProPage() {
                 <li>
                   <span className="font-semibold text-foreground">Elektronischer Programmführer (EPG):</span>{" "}
                   zeigt laufende und kommende Sendungen direkt in der Senderübersicht an, sofern Ihr
-                  Anbieter EPG-Daten bereitstellt.
+                  Anbieter EPG-Daten bereitstellt
                 </li>
                 <li>
                   <span className="font-semibold text-foreground">Mehrere Profile:</span> jedes
                   Haushaltsmitglied kann ein eigenes Profil mit individuellen Favoriten und
-                  Kategorien anlegen.
+                  Kategorien anlegen
                 </li>
                 <li>
                   <span className="font-semibold text-foreground">Kindersicherung:</span> einzelne
                   Kategorien oder Sender lassen sich per PIN sperren, praktisch für Familien mit
-                  Kindern.
+                  Kindern
                 </li>
                 <li>
                   <span className="font-semibold text-foreground">Favoriten & Kategorien:</span>{" "}
                   Sender lassen sich frei sortieren und als Favoriten markieren, statt jedes Mal
-                  durch die komplette Liste zu scrollen.
+                  durch die komplette Liste zu scrollen
                 </li>
                 <li>
                   <span className="font-semibold text-foreground">Catch-up-Funktion:</span> sofern
-                  vom Anbieter unterstützt, lassen sich verpasste Sendungen im Nachhinein abrufen.
+                  vom Anbieter unterstützt, lassen sich verpasste Sendungen im Nachhinein abrufen
                 </li>
               </ul>
               <p className="text-base leading-relaxed text-muted">
@@ -309,8 +309,8 @@ export default function IptvSmartersProPage() {
               </h2>
               <p className="text-base leading-relaxed text-muted">
                 Ob Smartphone, Fire TV Stick oder Android-Box — IPTV Smarters Pro läuft mit jedem
-                Deutschland IPTV Tarif zuverlässig. Alle Pakete mit den jeweiligen Laufzeiten und
-                gleichzeitigen Verbindungen finden Sie auf unserer Seite{" "}
+                Deutschland IPTV Tarif zuverlässig zusammen. Alle Pakete mit den jeweiligen
+                Laufzeiten und gleichzeitigen Verbindungen finden Sie auf unserer Seite{" "}
                 <Link href="/plans" className="text-aqua underline underline-offset-4">
                   IPTV Preise
                 </Link>

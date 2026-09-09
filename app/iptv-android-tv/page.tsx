@@ -45,22 +45,22 @@ const faqItems = [
   {
     question: "Brauche ich eine Google-zertifizierte Android TV Box oder reicht eine einfache Android-Box?",
     answer:
-      "Beides funktioniert. Google-zertifizierte Android TV Geräte bieten die offizielle TV-Oberfläche und garantierten Play-Store-Zugriff; günstigere Android-Boxen laufen meist mit einer angepassten Android-Version, auf der sich IPTV Apps aber ebenso per APK installieren lassen.",
+      "Beides funktioniert. Google-zertifizierte Android TV Geräte bringen die offizielle TV-Oberfläche und garantierten Play-Store-Zugriff mit; günstigere Android-Boxen laufen meist mit einer angepassten Android-Version, auf der sich IPTV Apps aber ebenso per APK installieren lassen.",
   },
   {
     question: "Wie installiere ich eine IPTV App per APK auf Android TV?",
     answer:
-      "Aktivieren Sie in den Einstellungen die Installation aus unbekannten Quellen, laden Sie die APK-Datei der gewünschten App herunter (etwa über einen Dateimanager oder Downloader) und öffnen Sie sie anschließend zur Installation.",
+      "Aktivieren Sie in den Einstellungen die Installation aus unbekannten Quellen, laden Sie die APK-Datei der gewünschten App herunter — etwa über einen Dateimanager oder Downloader — und öffnen Sie sie anschließend zur Installation.",
   },
   {
     question: "Wie viel RAM benötigt eine Android-Box für flüssiges 4K-Streaming?",
     answer:
-      "Für ein flüssiges Erlebnis empfehlen wir mindestens 2 GB RAM sowie ein aktuelles Android TV OS mit zuverlässigem HEVC-Decoder — beides wirkt sich direkt auf ruckelfreies 4K-Streaming und Sport mit hoher Bildrate aus.",
+      "Für ein flüssiges Erlebnis empfehlen wir mindestens 2 GB RAM sowie ein aktuelles Android TV OS mit zuverlässigem HEVC-Decoder — beides macht sich direkt bei ruckelfreiem 4K-Streaming und Sport mit hoher Bildrate bemerkbar.",
   },
   {
     question: "Funktioniert IPTV auch auf älteren Android-TV-Boxen?",
     answer:
-      "In der Regel ja, sofern das Gerät mindestens 2 GB RAM hat und eine aktuelle IPTV App unterstützt. Bei sehr alter oder schwacher Hardware kann es bei 4K-Inhalten jedoch zu Rucklern kommen — HD oder Full HD laufen meist trotzdem stabil.",
+      "In der Regel ja, sofern das Gerät mindestens 2 GB RAM hat und eine aktuelle IPTV App unterstützt. Bei sehr alter oder schwacher Hardware kann es bei 4K-Inhalten zu Rucklern kommen — HD oder Full HD laufen meist trotzdem stabil.",
   },
 ];
 
@@ -91,16 +91,16 @@ export default function IptvAndroidTvPage() {
           <SectionHeading
             as="h1"
             eyebrow="Android TV"
-            title="IPTV Android TV: Installation auf TV & Android-Box"
-            description="Die flexibelste Plattform für IPTV: voller Zugriff auf den Play Store und direkte APK-Installation."
+            title="IPTV auf Android TV: Installation auf Fernseher & Android-Box"
+            description="Die flexibelste Plattform für IPTV: voller Zugriff auf den Play Store und direkte APK-Installation, ganz ohne Umwege."
           />
 
           <div className="mx-auto flex w-full max-w-3xl flex-col gap-10">
             <p className="text-base leading-relaxed text-muted">
-              Android TV und klassische Android-Boxen bieten den größten Funktionsumfang unter den
-              IPTV Playern: vollen Zugriff auf den Google Play Store, direkte APK-Installation und
-              meist ein besseres Preis-Leistungs-Verhältnis als vergleichbare Markengeräte. Eine
-              Wie Sie IPTV Deutschland zunächst bestellen, zeigt unsere Seite{" "}
+              Unter den IPTV Playern bieten Android TV und klassische Android-Boxen den größten
+              Funktionsumfang: vollen Zugriff auf den Google Play Store, direkte APK-Installation
+              und meist ein besseres Preis-Leistungs-Verhältnis als vergleichbare Markengeräte. Wie
+              Sie IPTV Deutschland zunächst bestellen, zeigt unsere Seite{" "}
               <Link href="/iptv-service" className="text-aqua underline underline-offset-4">
                 IPTV kaufen
               </Link>
@@ -121,14 +121,14 @@ export default function IptvAndroidTvPage() {
 
             <section className="flex flex-col gap-4">
               <h2 className="text-2xl font-semibold tracking-tight text-foreground">
-                Android TV im Vergleich zur generischen Android-Box
+                Android TV vs. generische Android-Box: Wo liegt der Unterschied?
               </h2>
               <p className="text-base leading-relaxed text-muted">
                 „Android TV“ bezeichnet Googles offizielles Betriebssystem für Fernseher und
                 Streaming-Boxen, mit einheitlicher Oberfläche und Play-Store-Zertifizierung.
-                Günstigere „Android-Boxen“ anderer Hersteller laufen oft mit einer angepassten
-                Android-Version ohne die offizielle TV-Oberfläche — IPTV Apps lassen sich darauf aber
-                meist trotzdem problemlos per APK installieren.
+                Günstigere „Android-Boxen“ anderer Hersteller laufen dagegen oft mit einer
+                angepassten Android-Version ohne die offizielle TV-Oberfläche — IPTV Apps lassen
+                sich darauf aber meist trotzdem problemlos per APK installieren.
               </p>
             </section>
 
@@ -137,7 +137,7 @@ export default function IptvAndroidTvPage() {
                 Worauf Sie bei der Hardware achten sollten
               </h2>
               <p className="text-base leading-relaxed text-muted">
-                Die Leistung unterscheidet sich stark zwischen den Modellen. Für ein flüssiges
+                Die Leistung unterscheidet sich spürbar zwischen den Modellen. Für ein flüssiges
                 Erlebnis empfehlen wir mindestens 2 GB RAM und ein aktuelles Android TV OS mit
                 zuverlässigem HEVC-Decoder — besonders wichtig für 4K-Inhalte und Sport mit hoher
                 Bildrate.
@@ -150,8 +150,8 @@ export default function IptvAndroidTvPage() {
               </h2>
               <p className="text-base leading-relaxed text-muted">
                 Laden Sie eine IPTV App wie TiviMate oder IBO Player aus dem Play Store oder per APK
-                herunter, geben Sie Ihre Deutschland IPTV Zugangsdaten ein, und die Senderliste lädt
-                automatisch. Die ausführliche Schritt-für-Schritt-Anleitung finden Sie unter{" "}
+                herunter, tragen Sie Ihre Deutschland IPTV Zugangsdaten ein, und die Senderliste
+                lädt von selbst. Die ausführliche Schritt-für-Schritt-Anleitung finden Sie unter{" "}
                 <Link href="/blog/iptv-device-setup-guide" className="text-aqua underline underline-offset-4">
                   IPTV auf Ihren Geräten einrichten
                 </Link>

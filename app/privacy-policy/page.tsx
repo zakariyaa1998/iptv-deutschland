@@ -47,7 +47,7 @@ export default function PrivacyPolicyPage() {
             as="h1"
             eyebrow="Rechtliches"
             title="Datenschutzerklärung"
-            description="Der Schutz Ihrer persönlichen Daten ist uns wichtig. Diese Erklärung informiert Sie, welche Daten wir erheben, wie wir sie verwenden und welche Rechte Ihnen nach der Datenschutz-Grundverordnung (DSGVO) zustehen."
+            description="Der Schutz Ihrer persönlichen Daten ist uns bei Deutschland IPTV (deutschland-iptv.online) wichtig. Diese Erklärung informiert Sie, welche Daten wir erheben, wie wir sie verwenden und welche Rechte Ihnen nach der Datenschutz-Grundverordnung (DSGVO) zustehen."
           />
 
           <div className="mx-auto flex w-full max-w-3xl flex-col gap-10">
@@ -56,8 +56,8 @@ export default function PrivacyPolicyPage() {
             <section className="flex flex-col gap-4">
               <h2 className="text-2xl font-semibold tracking-tight text-foreground">Verantwortlicher</h2>
               <p className="text-base leading-relaxed text-muted">
-                Verantwortlich für die Datenverarbeitung im Sinne der DSGVO ist Deutschland IPTV. Bei Fragen zum
-                Datenschutz erreichen Sie uns unter{" "}
+                Verantwortlich für die Datenverarbeitung im Sinne der DSGVO ist Deutschland IPTV
+                (deutschland-iptv.online). Bei Fragen zum Datenschutz erreichen Sie uns unter{" "}
                 <a href="mailto:zerotv.support@gmail.com" className="text-aqua underline underline-offset-4">
                   zerotv.support@gmail.com
                 </a>
@@ -70,14 +70,15 @@ export default function PrivacyPolicyPage() {
                 Welche Daten wir erheben
               </h2>
               <p className="text-base leading-relaxed text-muted">
-                Wir erheben nur die Daten, die für die Bearbeitung Ihrer Anfrage oder Ihres Abos notwendig sind:
+                Erhoben werden ausschließlich die Daten, die für die Bearbeitung Ihrer Anfrage oder Ihres Abos bei
+                Deutschland IPTV notwendig sind:
               </p>
               <ul className="flex flex-col gap-2.5 text-base leading-relaxed text-muted">
                 <li className="flex items-start gap-3">
                   <span aria-hidden className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-aqua" />
                   <span>
                     <strong className="text-foreground">Kontaktdaten:</strong> Name und E-Mail-Adresse, die Sie
-                    über unser Kontaktformular oder per WhatsApp angeben
+                    uns über unser Kontaktformular oder per WhatsApp mitteilen
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
@@ -98,7 +99,7 @@ export default function PrivacyPolicyPage() {
                   <span aria-hidden className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-aqua" />
                   <span>
                     <strong className="text-foreground">Technische Daten:</strong> IP-Adresse, Browsertyp und
-                    Zugriffszeiten, die beim Besuch unserer Website automatisch in Server-Logs anfallen
+                    Zugriffszeiten, die beim Besuch von deutschland-iptv.online automatisch in Server-Logs anfallen
                   </span>
                 </li>
               </ul>
@@ -109,9 +110,9 @@ export default function PrivacyPolicyPage() {
                 Wie wir Ihre Daten verwenden
               </h2>
               <p className="text-base leading-relaxed text-muted">
-                Wir verwenden Ihre Daten ausschließlich, um Ihre Anfragen zu beantworten, Ihr Abo einzurichten und
-                zu verwalten, unsere Website technisch sicher und funktionsfähig zu betreiben und gesetzlichen
-                Pflichten nachzukommen. Eine Nutzung zu Werbezwecken Dritter findet nicht statt.
+                Ihre Daten dienen ausschließlich dazu, Ihre Anfragen zu beantworten, Ihr Abo bei Deutschland IPTV
+                einzurichten und zu verwalten, unsere Website technisch sicher und funktionsfähig zu betreiben
+                sowie gesetzlichen Pflichten nachzukommen. Eine Nutzung zu Werbezwecken Dritter findet nicht statt.
               </p>
             </section>
 
@@ -120,8 +121,8 @@ export default function PrivacyPolicyPage() {
                 Mit wem wir Daten teilen
               </h2>
               <p className="text-base leading-relaxed text-muted">
-                Ihre Daten werden nur an Dienstleister weitergegeben, die uns beim Betrieb der Website und der
-                Kommunikation mit Ihnen unterstützen:
+                Weitergegeben werden Ihre Daten ausschließlich an Dienstleister, die uns beim Betrieb von
+                deutschland-iptv.online und bei der Kommunikation mit Ihnen unterstützen:
               </p>
               <ul className="flex flex-col gap-2.5 text-base leading-relaxed text-muted">
                 <li className="flex items-start gap-3">
@@ -148,7 +149,7 @@ export default function PrivacyPolicyPage() {
                 </li>
               </ul>
               <p className="text-base leading-relaxed text-muted">
-                Einen Verkauf Ihrer Daten an Dritte schließen wir aus.
+                Ein Verkauf Ihrer Daten an Dritte findet nicht statt.
               </p>
             </section>
 
@@ -168,7 +169,7 @@ export default function PrivacyPolicyPage() {
               <h2 className="text-2xl font-semibold tracking-tight text-foreground">
                 Ihre Rechte nach der DSGVO
               </h2>
-              <p className="text-base leading-relaxed text-muted">Ihnen stehen folgende Rechte zu:</p>
+              <p className="text-base leading-relaxed text-muted">Nutzern von Deutschland IPTV stehen die folgenden Rechte zu:</p>
               <ul className="flex flex-col gap-2.5 text-base leading-relaxed text-muted">
                 <li className="flex items-start gap-3">
                   <span aria-hidden className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-aqua" />
@@ -218,7 +219,7 @@ export default function PrivacyPolicyPage() {
                 </li>
               </ul>
               <p className="text-base leading-relaxed text-muted">
-                Zur Ausübung dieser Rechte genügt eine formlose Nachricht an{" "}
+                Für die Ausübung dieser Rechte reicht eine formlose Nachricht an{" "}
                 <a href="mailto:zerotv.support@gmail.com" className="text-aqua underline underline-offset-4">
                   zerotv.support@gmail.com
                 </a>
@@ -229,11 +230,11 @@ export default function PrivacyPolicyPage() {
             <section className="flex flex-col gap-4">
               <h2 className="text-2xl font-semibold tracking-tight text-foreground">Speicherdauer</h2>
               <p className="text-base leading-relaxed text-muted">
-                Wir speichern Ihre Daten nur so lange, wie es für den jeweiligen Zweck erforderlich ist — etwa für
-                die Dauer Ihres Abos zuzüglich der anschließenden Bearbeitung von Rückfragen. Abrechnungsrelevante
-                Unterlagen bewahren wir entsprechend den gesetzlichen handels- und steuerrechtlichen
-                Aufbewahrungsfristen von bis zu zehn Jahren auf. Anschließend werden die Daten gelöscht oder
-                anonymisiert.
+                Daten werden bei Deutschland IPTV nur so lange gespeichert, wie es für den jeweiligen Zweck
+                erforderlich ist — etwa für die Dauer Ihres Abos zuzüglich der anschließenden Bearbeitung von
+                Rückfragen. Abrechnungsrelevante Unterlagen bewahren wir entsprechend den gesetzlichen handels- und
+                steuerrechtlichen Aufbewahrungsfristen von bis zu zehn Jahren auf. Anschließend werden die Daten
+                gelöscht oder anonymisiert.
               </p>
             </section>
 
@@ -242,19 +243,19 @@ export default function PrivacyPolicyPage() {
                 Cookies und Tracking
               </h2>
               <p className="text-base leading-relaxed text-muted">
-                Unsere Website verwendet keine Marketing- oder Werbe-Cookies. Für die Website-Analyse setzen wir
-                Vercel Analytics ein, das ohne Cookies arbeitet und lediglich anonymisierte, aggregierte
+                Deutschland-iptv.online verwendet keine Marketing- oder Werbe-Cookies. Für die Website-Analyse
+                setzen wir Vercel Analytics ein, das ohne Cookies arbeitet und lediglich anonymisierte, aggregierte
                 Zugriffszahlen erfasst — eine Identifizierung einzelner Besucher findet dabei nicht statt. Sollten
-                wir künftig zusätzliche Cookies einsetzen, die eine Einwilligung erfordern, informieren wir Sie
-                darüber und holen Ihre Zustimmung ein.
+                künftig zusätzliche Cookies zum Einsatz kommen, die eine Einwilligung erfordern, informieren wir
+                Sie darüber und holen Ihre Zustimmung ein.
               </p>
             </section>
 
             <section className="flex flex-col gap-4">
               <h2 className="text-2xl font-semibold tracking-tight text-foreground">Datensicherheit</h2>
               <p className="text-base leading-relaxed text-muted">
-                Wir übertragen alle Daten verschlüsselt über TLS/SSL und beschränken den Zugriff auf Ihre Daten auf
-                die Personen, die ihn zur Bearbeitung Ihrer Anfrage tatsächlich benötigen.
+                Alle Daten werden verschlüsselt über TLS/SSL übertragen; Zugriff auf Ihre Daten erhalten
+                ausschließlich Personen, die ihn zur Bearbeitung Ihrer Anfrage tatsächlich benötigen.
               </p>
             </section>
 
@@ -263,8 +264,8 @@ export default function PrivacyPolicyPage() {
                 Änderungen dieser Datenschutzerklärung
               </h2>
               <p className="text-base leading-relaxed text-muted">
-                Wir passen diese Datenschutzerklärung an, wenn sich unsere Datenverarbeitung oder die
-                Rechtslage ändert. Die jeweils aktuelle Fassung finden Sie stets auf dieser Seite.
+                Diese Datenschutzerklärung wird angepasst, sobald sich unsere Datenverarbeitung oder die
+                Rechtslage ändert. Die jeweils aktuelle Fassung finden Sie stets unter deutschland-iptv.online/privacy-policy.
               </p>
             </section>
 
@@ -273,7 +274,7 @@ export default function PrivacyPolicyPage() {
                 Kontakt für Datenschutzanfragen
               </h2>
               <p className="text-sm leading-relaxed text-muted">
-                Bei Fragen zu dieser Datenschutzerklärung oder zur Ausübung Ihrer Rechte erreichen Sie uns unter{" "}
+                Für Fragen zu dieser Datenschutzerklärung oder zur Ausübung Ihrer Rechte erreichen Sie uns unter{" "}
                 <a href="mailto:zerotv.support@gmail.com" className="text-aqua underline underline-offset-4">
                   zerotv.support@gmail.com
                 </a>{" "}
