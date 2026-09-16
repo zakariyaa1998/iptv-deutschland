@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
@@ -5,7 +6,7 @@ import { HeroBackground } from "@/components/home/HeroBackground";
 import { WHATSAPP_ORDER_LINK } from "@/lib/whatsapp";
 
 const stats = [
-  { value: "20.000+", label: "Sender & Kanäle" },
+  { value: "30.000+", label: "Sender & Kanäle" },
   { value: "4K", label: "Ultra HD Streaming" },
   { value: "24/7", label: "Persönlicher Support" },
 ];
@@ -47,6 +48,13 @@ export function Hero() {
             </Button>
           </div>
         </div>
+
+        <Link
+          href="/iptv-germany"
+          className="animate-fade-up-delay-3 text-sm font-medium text-muted underline underline-offset-4 transition-colors hover:text-aqua"
+        >
+          📖 Der große IPTV Germany Ratgeber 2026
+        </Link>
 
         <ScrollReveal className="grid w-full max-w-2xl grid-cols-3 gap-4 rounded-3xl border border-border bg-background-elevated/60 p-6 backdrop-blur-sm sm:p-8">
           {stats.map((stat) => (

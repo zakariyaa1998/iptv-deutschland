@@ -41,25 +41,26 @@ const relatedLandingPages: Record<string, { href: string; label: string }> = {
   "streaming-trends-2026": { href: "/iptv-service", label: "IPTV Service" },
   "best-iptv-devices-2026": { href: "/iptv-android-tv", label: "IPTV Android TV" },
   // Labels below realigned to each landing page's current primary keyword
-  // (see docs/seo/keyword-architecture.md) — /iptv-providers' primary is
-  // "IPTV Anbieter Deutschland", not the bare "IPTV Anbieter".
-  "fix-iptv-buffering-vpn-dns": { href: "/iptv-providers", label: "IPTV Anbieter Deutschland" },
+  // (see docs/seo/keyword-architecture.md) — /iptv-anbieter-deutschland's
+  // primary is "IPTV Anbieter Deutschland", not the bare "IPTV Anbieter".
+  // (2026-09: slug renamed from /iptv-providers; see next.config.ts redirect.)
+  "fix-iptv-buffering-vpn-dns": { href: "/iptv-anbieter-deutschland", label: "IPTV Anbieter Deutschland" },
   "tivimate-vs-ibo-player": { href: "/iptv-smart-tv", label: "IPTV Smart TV" },
   "sports-streaming-4k-guide": { href: "/best-iptv-service", label: "Bester IPTV Anbieter" },
-  "iptv-troubleshooting-guide": { href: "/iptv-providers", label: "IPTV Anbieter Deutschland" },
+  "iptv-troubleshooting-guide": { href: "/iptv-anbieter-deutschland", label: "IPTV Anbieter Deutschland" },
   "iptv-vs-cable-tv": { href: "/iptv-service", label: "IPTV Service" },
   "iptv-fire-tv-stick-setup-guide": { href: "/iptv-fire-tv-stick", label: "IPTV Fire TV Stick" },
-  "best-iptv-providers-2026": { href: "/iptv-providers", label: "IPTV Anbieter Deutschland" },
+  "best-iptv-providers-2026": { href: "/iptv-anbieter-deutschland", label: "IPTV Anbieter Deutschland" },
   "how-to-buy-iptv": { href: "/iptv-service", label: "IPTV kaufen" },
   "iptv-channels-guide": { href: "/iptv-service", label: "IPTV Service" },
   "iptv-test-guide": { href: "/best-iptv-service", label: "Bester IPTV Anbieter" },
-  "iptv-legal-guide": { href: "/iptv-providers", label: "IPTV Anbieter Deutschland" },
+  "iptv-legal-guide": { href: "/iptv-anbieter-deutschland", label: "IPTV Anbieter Deutschland" },
   "best-iptv-apps-2026": { href: "/iptv-android-tv", label: "IPTV Android TV" },
   "iptv-android-tv-einrichten": { href: "/iptv-android-tv", label: "IPTV Android TV" },
   "m3u-playlist-xtream-codes": { href: "/iptv-android-tv", label: "IPTV Android TV" },
   "iptv-vs-netflix-disney-plus-kosten": { href: "/iptv-service", label: "IPTV Service" },
   "beste-vpn-fuer-iptv": { href: "/best-iptv-service", label: "Bester IPTV Anbieter" },
-  "gez-rundfunkbeitrag-iptv": { href: "/iptv-providers", label: "IPTV Anbieter Deutschland" },
+  "gez-rundfunkbeitrag-iptv": { href: "/iptv-anbieter-deutschland", label: "IPTV Anbieter Deutschland" },
   "bundesliga-dazn-sky-iptv-alternative": { href: "/iptv-service", label: "IPTV Service" },
   "iptv-apple-tv": { href: "/iptv-smart-tv", label: "IPTV Smart TV" },
 };

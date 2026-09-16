@@ -16,8 +16,8 @@ TIER 0 — Brand root
   /
 
 TIER 1 — Commercial landing pages (money pages; feed /plans)
-  /iptv-service          /iptv-providers        /best-iptv-service
-  /iptv-smart-tv         /iptv-fire-tv-stick    /iptv-android-tv
+  /iptv-service            /iptv-anbieter-deutschland   /best-iptv-service
+  /iptv-smart-tv           /iptv-fire-tv-stick         /iptv-android-tv
   /plans  (conversion page)
 
 TIER 2 — Blog pillars (cluster hubs; feed Tier 1)
@@ -49,7 +49,7 @@ with `/faq` and `/contact` as cross-cutting trust/conversion assists reachable f
 - **Semantic/related terms:** Live-TV, Streaming ohne Kabel, VOD-Bibliothek, EPG, 4K Streaming
 - **Funnel stage:** TOFU→MOFU (brand entry, routes visitors onward)
 - **Should receive internal links from:** every page, via sitewide header/footer (already in place)
-- **Should provide internal links to:** `/plans` (primary CTA), `/iptv-service`, `/best-iptv-service`, `/iptv-providers`, `/blog`
+- **Should provide internal links to:** `/plans` (primary CTA), `/iptv-service`, `/best-iptv-service`, `/iptv-anbieter-deutschland`, `/blog`
 - **Must NOT compete with:** "bester IPTV Anbieter" (→ `/best-iptv-service`), "IPTV kaufen" (→ `/blog/how-to-buy-iptv`), "IPTV Sender" (→ `/blog/iptv-channels-guide`)
 - **⚠ Current code issue:** `app/layout.tsx`'s sitewide `metadata.keywords` array already includes `"bester IPTV Anbieter"`, `"IPTV kaufen"`, and `"IPTV Sender"` — all three belong to other pages per this architecture. Flagged for correction in the next content/metadata pass; not changed now.
 
@@ -65,10 +65,10 @@ with `/faq` and `/contact` as cross-cutting trust/conversion assists reachable f
 - **Semantic/related terms:** Streaming-Technologie, Zugangsdaten, Playlist-URL, EPG, VOD
 - **Funnel stage:** TOFU→MOFU
 - **Should receive internal links from:** `/` , `/blog/iptv-guide-2026`, `/blog/what-is-iptv-guide`, `/blog/iptv-vs-cable-tv`, device landing pages
-- **Should provide internal links to:** `/blog/iptv-vs-cable-tv`, `/iptv-providers`, `/best-iptv-service`, all three device pages, `/plans`
+- **Should provide internal links to:** `/blog/iptv-vs-cable-tv`, `/iptv-anbieter-deutschland`, `/best-iptv-service`, all three device pages, `/plans`
 - **Must NOT compete with:** "was ist IPTV" (→ `/blog/what-is-iptv-guide`), "IPTV 2026 / IPTV Kosten" (→ `/blog/iptv-guide-2026`)
 
-### `/iptv-providers`
+### `/iptv-anbieter-deutschland`
 - **Primary keyword:** IPTV Anbieter Deutschland
 - **Search intent:** Commercial investigation / trust validation — "is this provider legitimate"
 - **Secondary keywords:** IPTV Anbieter, IPTV Bewertungen, seriöser IPTV Anbieter
@@ -87,9 +87,9 @@ with `/faq` and `/contact` as cross-cutting trust/conversion assists reachable f
 - **Long-tail supporting:** "woran erkennt man den besten IPTV Anbieter", "IPTV Qualitätsmerkmale", "bester IPTV Anbieter Deutschland"
 - **Semantic/related terms:** Serverstabilität, 4K-Qualität, Kundenservice, Preis-Leistung
 - **Funnel stage:** MOFU→BOFU
-- **Should receive internal links from:** `/`, `/iptv-service`, `/iptv-providers`, `/blog/best-iptv-providers-2026`
-- **Should provide internal links to:** `/plans`, `/iptv-providers`, `/blog/best-iptv-providers-2026`
-- **Must NOT compete with:** "IPTV Anbieter Deutschland" (→ `/iptv-providers`), "beste IPTV Anbieter 2026" (→ blog pillar, which owns the dated/deepest comparison)
+- **Should receive internal links from:** `/`, `/iptv-service`, `/iptv-anbieter-deutschland`, `/blog/best-iptv-providers-2026`
+- **Should provide internal links to:** `/plans`, `/iptv-anbieter-deutschland`, `/blog/best-iptv-providers-2026`
+- **Must NOT compete with:** "IPTV Anbieter Deutschland" (→ `/iptv-anbieter-deutschland`), "beste IPTV Anbieter 2026" (→ blog pillar, which owns the dated/deepest comparison)
 
 ### `/iptv-smart-tv`
 - **Primary keyword:** IPTV Smart TV
@@ -148,7 +148,7 @@ with `/faq` and `/contact` as cross-cutting trust/conversion assists reachable f
 - **Semantic/related terms:** Xtream Codes, M3U-Playlist, EPG, VOD-Bibliothek
 - **Funnel stage:** TOFU→MOFU
 - **Should receive internal links from:** all `grundlagen` spokes, `/iptv-service`, homepage
-- **Should provide internal links to:** `/iptv-service`, `/iptv-providers`, `/best-iptv-service`, `/iptv-fire-tv-stick`, `/iptv-smart-tv`, `/plans`
+- **Should provide internal links to:** `/iptv-service`, `/iptv-anbieter-deutschland`, `/best-iptv-service`, `/iptv-fire-tv-stick`, `/iptv-smart-tv`, `/plans`
 - **Must NOT compete with:** "was ist IPTV" (→ `what-is-iptv-guide`), "bester/beste IPTV Anbieter" (→ `/best-iptv-service` / `best-iptv-providers-2026`), "IPTV kaufen" (→ `how-to-buy-iptv`)
 - **Note:** carries "IPTV Test" only as a *secondary* keyword — it should not become anyone's primary until a dedicated IPTV-Test page exists (see §4). Until then this pillar is the closest legitimate current match for that query.
 
@@ -170,9 +170,9 @@ with `/faq` and `/contact` as cross-cutting trust/conversion assists reachable f
 - **Long-tail supporting:** "beste IPTV Anbieter 2026 Vergleich", "IPTV Anbieter Checkliste", "unseriöse IPTV Anbieter erkennen"
 - **Semantic/related terms:** Serverstabilität, Reseller, gefälschte Bewertungen, Testphase
 - **Funnel stage:** MOFU→BOFU
-- **Should receive internal links from:** all `anbieter` spokes, `/iptv-providers`, `/best-iptv-service`
-- **Should provide internal links to:** `/iptv-providers`, `/best-iptv-service`, `/plans`
-- **Must NOT compete with:** "IPTV Anbieter Deutschland" (→ `/iptv-providers`), "bester IPTV Anbieter" evergreen criteria (→ `/best-iptv-service`)
+- **Should receive internal links from:** all `anbieter` spokes, `/iptv-anbieter-deutschland`, `/best-iptv-service`
+- **Should provide internal links to:** `/iptv-anbieter-deutschland`, `/best-iptv-service`, `/plans`
+- **Must NOT compete with:** "IPTV Anbieter Deutschland" (→ `/iptv-anbieter-deutschland`), "bester IPTV Anbieter" evergreen criteria (→ `/best-iptv-service`)
 
 ---
 
@@ -222,7 +222,7 @@ with `/faq` and `/contact` as cross-cutting trust/conversion assists reachable f
 - Primary: **IPTV Fehler beheben** · Intent: Informational/troubleshooting (app-layer) · Secondary: IPTV Playlist Fehler, IPTV EPG Fehler · Long-tail: "IPTV Playlist lädt nicht", "EPG funktioniert nicht IPTV", "HW vs SW Decoder IPTV" · Semantic: M3U-Fehler, Hardware-Decoder, Bildsynchronisation · Funnel: MOFU · Receives from: `/blog/best-iptv-providers-2026` · Provides to: `fix-iptv-buffering-vpn-dns` (currently missing reciprocal link), `/contact` · Must not compete with: `fix-iptv-buffering-vpn-dns` (network-layer vs. app-layer split, kept intentionally distinct)
 
 **`how-to-buy-iptv`**
-- Primary: **IPTV kaufen** · Intent: Transactional (purchase process/safety) · Secondary: IPTV sicher kaufen, IPTV Abo kaufen · Long-tail: "IPTV kaufen Anleitung", "wie kaufe ich IPTV sicher", "IPTV Zahlungsmethoden" · Semantic: Xtream Codes, Testphase, Kündigung · Funnel: BOFU · Receives from: `/blog/best-iptv-providers-2026`, `/iptv-providers` · Provides to: `/plans` (primary conversion target), `/iptv-providers` · Must not compete with: `/plans` (pricing/product page — this post is the pre-purchase education layer that funnels into it, not a competing target for "IPTV Preise")
+- Primary: **IPTV kaufen** · Intent: Transactional (purchase process/safety) · Secondary: IPTV sicher kaufen, IPTV Abo kaufen · Long-tail: "IPTV kaufen Anleitung", "wie kaufe ich IPTV sicher", "IPTV Zahlungsmethoden" · Semantic: Xtream Codes, Testphase, Kündigung · Funnel: BOFU · Receives from: `/blog/best-iptv-providers-2026`, `/iptv-anbieter-deutschland` · Provides to: `/plans` (primary conversion target), `/iptv-anbieter-deutschland` · Must not compete with: `/plans` (pricing/product page — this post is the pre-purchase education layer that funnels into it, not a competing target for "IPTV Preise")
 
 ---
 
@@ -231,7 +231,7 @@ with `/faq` and `/contact` as cross-cutting trust/conversion assists reachable f
 | Contested term | Pages that touch it | Resolution |
 |---|---|---|
 | **IPTV Deutschland** | `/`, (loosely) `iptv-guide-2026` | `/` is sole primary owner; `iptv-guide-2026` uses "IPTV 2026" instead |
-| **IPTV Anbieter** | `/iptv-providers`, `/best-iptv-service`, `best-iptv-providers-2026`, `iptv-guide-2026` | `/iptv-providers` = sole primary owner of the bare term (trust angle). Others use modified variants: `/best-iptv-service` → "bester IPTV Anbieter"; `best-iptv-providers-2026` → "beste IPTV Anbieter 2026"; `iptv-guide-2026` → keeps it as secondary only |
+| **IPTV Anbieter** | `/iptv-anbieter-deutschland`, `/best-iptv-service`, `best-iptv-providers-2026`, `iptv-guide-2026` | `/iptv-anbieter-deutschland` = sole primary owner of the bare term (trust angle). Others use modified variants: `/best-iptv-service` → "bester IPTV Anbieter"; `best-iptv-providers-2026` → "beste IPTV Anbieter 2026"; `iptv-guide-2026` → keeps it as secondary only |
 | **beste IPTV Anbieter** | `/best-iptv-service`, `best-iptv-providers-2026` | `/best-iptv-service` = evergreen quality-criteria (not year-dated); `best-iptv-providers-2026` = dated, deepest comparison pillar. Distinct enough by modifier + depth, but the highest-risk pair on the site — monitor SERP overlap after any content update |
 | **IPTV kaufen** | `how-to-buy-iptv`, `/plans` | `how-to-buy-iptv` = sole owner of "IPTV kaufen" (informational-transactional). `/plans` retargeted to "IPTV Preise" (pure pricing/product intent) instead of a near-duplicate "IPTV Abo kaufen" |
 | **IPTV Test** | `iptv-guide-2026` (secondary only), `best-iptv-providers-2026` (implicit, FAQ mention) | **No primary owner exists.** Highest-priority gap — see §6 |

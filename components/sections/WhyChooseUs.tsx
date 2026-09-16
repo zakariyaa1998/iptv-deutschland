@@ -52,7 +52,12 @@ export function WhyChooseUs() {
             <Link href="/iptv-service" className="text-aqua underline underline-offset-4 hover:text-aqua-dim">
               IPTV kaufen
             </Link>{" "}
-            können, erfahren Sie auf der verlinkten Seite.
+            können, erfahren Sie auf der verlinkten Seite. Sie suchen IPTV für ein anderes europäisches
+            Land? Entdecken Sie unser{" "}
+            <Link href="/europe-iptv" className="text-aqua underline underline-offset-4 hover:text-aqua-dim">
+              Europe IPTV
+            </Link>{" "}
+            Angebot.
           </p>
         </div>
 

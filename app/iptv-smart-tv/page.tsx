@@ -160,7 +160,7 @@ export default function IptvSmartTvPage() {
               <p className="text-base leading-relaxed text-muted">
                 Nicht jeder IPTV Service läuft auf jedem Fernsehermodell gleich gut. Worauf Sie bei
                 einem Anbieter generell achten sollten, erfahren Sie unter{" "}
-                <Link href="/iptv-providers" className="text-aqua underline underline-offset-4">
+                <Link href="/iptv-anbieter-deutschland" className="text-aqua underline underline-offset-4">
                   IPTV Anbieter Deutschland
                 </Link>{" "}
                 und in unserem Vergleich{" "}

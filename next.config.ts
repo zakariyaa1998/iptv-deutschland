@@ -12,7 +12,11 @@ const nextConfig: NextConfig = {
     return [
       { source: "/iptv-deutschland", destination: "/iptv-service", permanent: true },
       { source: "/beste-iptv-deutschland", destination: "/best-iptv-service", permanent: true },
-      { source: "/iptv-anbieter", destination: "/iptv-providers", permanent: true },
+      { source: "/iptv-anbieter", destination: "/iptv-anbieter-deutschland", permanent: true },
+      // 2026-09 slug migration: /iptv-providers renamed to /iptv-anbieter-deutschland
+      // (exact-match slug for its primary keyword). Preserves indexing signals /
+      // inbound links on the old URL instead of 404ing.
+      { source: "/iptv-providers", destination: "/iptv-anbieter-deutschland", permanent: true },
       {
         source: "/blog/iptv-in-deutschland-guide",
         destination: "/blog/what-is-iptv-guide",

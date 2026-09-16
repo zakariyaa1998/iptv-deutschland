@@ -10,10 +10,12 @@ const footerLinks = {
     { href: "/blog", label: "Blog" },
     { href: "/iptv-service", label: "IPTV kaufen" },
     { href: "/best-iptv-service", label: "Bester IPTV Anbieter" },
-    { href: "/iptv-providers", label: "IPTV Anbieter" },
+    { href: "/iptv-anbieter-deutschland", label: "IPTV Anbieter" },
+    { href: "/iptv-germany", label: "IPTV Germany 2026" },
     { href: "/iptv-smart-tv", label: "IPTV Smart TV" },
     { href: "/iptv-fire-tv-stick", label: "IPTV Fire TV Stick" },
     { href: "/iptv-android-tv", label: "IPTV Android TV" },
+    { href: "/europe-iptv", label: "Europe IPTV" },
   ],
   Support: [
     { href: "/faq", label: "FAQ" },

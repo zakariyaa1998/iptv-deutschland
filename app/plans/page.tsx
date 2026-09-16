@@ -139,7 +139,7 @@ export default function PlansPage() {
               </h2>
               <p className="text-base leading-relaxed text-muted">
                 Bevor Sie sich festlegen, lohnt sich ein Blick auf unsere Seite{" "}
-                <Link href="/iptv-providers" className="text-aqua underline underline-offset-4">
+                <Link href="/iptv-anbieter-deutschland" className="text-aqua underline underline-offset-4">
                   IPTV Anbieter Deutschland
                 </Link>{" "}
                 mit Warnzeichen unseriöser Anbieter, oder auf{" "}

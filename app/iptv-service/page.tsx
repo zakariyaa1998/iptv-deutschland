@@ -198,7 +198,7 @@ export default function IptvServicePage() {
               <p className="text-base leading-relaxed text-muted">
                 Nicht jeder Anbieter liefert dieselbe Qualität. Serverstabilität, transparente Preise
                 und echter Kundenservice machen den Unterschied. Unser Ratgeber{" "}
-                <Link href="/iptv-providers" className="text-aqua underline underline-offset-4">
+                <Link href="/iptv-anbieter-deutschland" className="text-aqua underline underline-offset-4">
                   IPTV Anbieter Deutschland
                 </Link>{" "}
                 zeigt, wie Sie seriöse von unseriösen Anbietern unterscheiden, und{" "}

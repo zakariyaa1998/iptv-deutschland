@@ -19,6 +19,10 @@ import { WHATSAPP_DEFAULT_LINK } from "@/lib/whatsapp";
 // schema). The on-page H1/title use "Bester Anbieter im Vergleich" rather
 // than the exact phrase "bester IPTV Anbieter" to stay clear of that page's
 // owned term — see the cannibalization note above.
+// 2026-09 slug migration: moved here from /iptv-providers (exact-match slug
+// for the primary keyword). A permanent redirect from the old slug lives in
+// next.config.ts — every internal link site-wide now points here directly
+// instead of relying on that redirect.
 export const metadata: Metadata = {
   title: "IPTV Anbieter Deutschland 2026 – Bester Anbieter im Vergleich",
   description:
@@ -33,13 +37,13 @@ export const metadata: Metadata = {
     "ist IPTV legal",
   ],
   alternates: {
-    canonical: "/iptv-providers",
+    canonical: "/iptv-anbieter-deutschland",
   },
   openGraph: {
     type: "website",
     locale: "de_DE",
     siteName: "Deutschland IPTV",
-    url: "/iptv-providers",
+    url: "/iptv-anbieter-deutschland",
     title: "IPTV Anbieter Deutschland 2026 – Bester Anbieter im Vergleich | Deutschland IPTV",
     description:
       "IPTV Anbieter Deutschland im Vergleich: Tarife ab 30€, 7-Tage-Zufriedenheitsgarantie und 24/7 WhatsApp-Support.",
@@ -156,7 +160,7 @@ const faqJsonLd = {
   })),
 };
 
-export default function IptvProvidersPage() {
+export default function IptvAnbieterDeutschlandPage() {
   return (
     <>
       <script
@@ -164,7 +168,10 @@ export default function IptvProvidersPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <Breadcrumbs
-        items={[{ label: "Startseite", href: "/" }, { label: "IPTV Anbieter Deutschland", href: "/iptv-providers" }]}
+        items={[
+          { label: "Startseite", href: "/" },
+          { label: "IPTV Anbieter Deutschland", href: "/iptv-anbieter-deutschland" },
+        ]}
       />
 
       <section className="py-16 sm:py-24">
@@ -381,6 +388,16 @@ export default function IptvProvidersPage() {
                 , und die wichtigsten Qualitätsmerkmale im Überblick finden Sie unter{" "}
                 <Link href="/best-iptv-service" className="text-aqua underline underline-offset-4">
                   Bester IPTV Anbieter
+                </Link>
+                . Sie ziehen um oder suchen IPTV für ein anderes Land in Europa? Unser{" "}
+                <Link href="/europe-iptv" className="text-aqua underline underline-offset-4">
+                  Europe IPTV
+                </Link>{" "}
+                Angebot deckt auch Frankreich, Spanien, Italien und Großbritannien ab. Und wer sich
+                erst noch einen kompletten Überblick über IPTV in Deutschland verschaffen möchte,
+                findet ihn auf unserer Seite{" "}
+                <Link href="/iptv-germany" className="text-aqua underline underline-offset-4">
+                  IPTV Germany 2026
                 </Link>
                 .
               </p>

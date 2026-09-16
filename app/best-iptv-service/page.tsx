@@ -7,7 +7,7 @@ import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { ContactCTA } from "@/components/sections/ContactCTA";
 
 // Primary keyword: "bester IPTV Anbieter" (evergreen quality-criteria comparison).
-// Must NOT compete with "IPTV Anbieter Deutschland" (owned by /iptv-providers,
+// Must NOT compete with "IPTV Anbieter Deutschland" (owned by /iptv-anbieter-deutschland,
 // trust/scam-avoidance angle) or "beste IPTV Anbieter 2026" (owned by the blog
 // pillar /blog/best-iptv-providers-2026, the dated, deepest comparison asset) —
 // see docs/seo/keyword-architecture.md. This page stays evergreen and criteria-
@@ -185,7 +185,7 @@ export default function BestIptvServicePage() {
                 Reaktionszeit des Supports gemeinsam — nur so erhalten Sie ein realistisches Bild vom
                 Gesamtpaket. Für Warnzeichen unseriöser Anbieter und eine Vertrauens-Checkliste lohnt
                 sich zusätzlich ein Blick auf unsere Seite{" "}
-                <Link href="/iptv-providers" className="text-aqua underline underline-offset-4">
+                <Link href="/iptv-anbieter-deutschland" className="text-aqua underline underline-offset-4">
                   IPTV Anbieter Deutschland
                 </Link>
                 . Wie ein aussagekräftiger Test in der Praxis abläuft und worauf Sie dabei achten
@@ -206,7 +206,12 @@ export default function BestIptvServicePage() {
                 <Link href="/plans" className="text-aqua underline underline-offset-4">
                   IPTV Preise
                 </Link>{" "}
-                und wählen Sie die Laufzeit, die zu Ihnen passt.
+                und wählen Sie die Laufzeit, die zu Ihnen passt. Suchen Sie einen Anbieter für ein
+                anderes europäisches Land, werfen Sie einen Blick auf unser{" "}
+                <Link href="/europe-iptv" className="text-aqua underline underline-offset-4">
+                  Europe IPTV
+                </Link>{" "}
+                Angebot.
               </p>
             </section>
 

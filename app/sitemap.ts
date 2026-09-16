@@ -22,11 +22,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteUrl}/blog/sport-news`, lastModified: buildDate, changeFrequency: "weekly", priority: 0.6 },
     { url: `${siteUrl}/iptv-service`, lastModified: buildDate, changeFrequency: "monthly", priority: 0.9 },
     { url: `${siteUrl}/best-iptv-service`, lastModified: buildDate, changeFrequency: "monthly", priority: 0.9 },
-    { url: `${siteUrl}/iptv-providers`, lastModified: buildDate, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${siteUrl}/iptv-anbieter-deutschland`, lastModified: buildDate, changeFrequency: "monthly", priority: 0.8 },
+    // Comprehensive guide + conversion page — priority above regular blog
+    // content since it's a Tier-1 commercial landing page, per the request
+    // that created it.
+    { url: `${siteUrl}/iptv-germany`, lastModified: buildDate, changeFrequency: "monthly", priority: 0.85 },
     { url: `${siteUrl}/iptv-smart-tv`, lastModified: buildDate, changeFrequency: "monthly", priority: 0.7 },
     { url: `${siteUrl}/iptv-fire-tv-stick`, lastModified: buildDate, changeFrequency: "monthly", priority: 0.7 },
     { url: `${siteUrl}/iptv-android-tv`, lastModified: buildDate, changeFrequency: "monthly", priority: 0.7 },
     { url: `${siteUrl}/iptv-smarters-pro`, lastModified: buildDate, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${siteUrl}/europe-iptv`, lastModified: buildDate, changeFrequency: "monthly", priority: 0.7 },
     { url: `${siteUrl}/about`, lastModified: "2026-08-16", changeFrequency: "yearly", priority: 0.6 },
     { url: `${siteUrl}/privacy-policy`, lastModified: "2026-08-16", changeFrequency: "yearly", priority: 0.5 },
     { url: `${siteUrl}/terms`, lastModified: "2026-08-16", changeFrequency: "yearly", priority: 0.5 },

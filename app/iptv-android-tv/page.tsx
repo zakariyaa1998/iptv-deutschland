@@ -208,7 +208,7 @@ export default function IptvAndroidTvPage() {
                 Auch auf Android TV entscheidet der Anbieter über die Streaming-Qualität, nicht nur
                 die Hardware. Worauf Sie bei der Anbieterwahl generell achten sollten, erfahren Sie
                 unter{" "}
-                <Link href="/iptv-providers" className="text-aqua underline underline-offset-4">
+                <Link href="/iptv-anbieter-deutschland" className="text-aqua underline underline-offset-4">
                   IPTV Anbieter Deutschland
                 </Link>{" "}
                 und in unserem Vergleich{" "}
