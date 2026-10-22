@@ -15,6 +15,7 @@ const nextConfig: NextConfig = {
       ["/plans", "/tarife"],
       ["/faq", "/fragen-antworten"],
       ["/contact", "/kontakt"],
+      ["/logo", "/images/logo.png"],
     ];
 
     const removed: [string, string][] = [

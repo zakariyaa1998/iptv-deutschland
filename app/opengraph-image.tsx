@@ -1,5 +1,6 @@
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
 import { ImageResponse } from "next/og";
-import { LogoMark } from "@/components/logo/LogoMark";
 
 export const size = {
   width: 1200,
@@ -8,7 +9,10 @@ export const size = {
 
 export const contentType = "image/png";
 
-export default function Image() {
+export default async function Image() {
+  const logo = await readFile(join(process.cwd(), "public/images/main-logo.png"));
+  const logoSrc = `data:image/png;base64,${logo.toString("base64")}`;
+
   return new ImageResponse(
     (
       <div
@@ -19,37 +23,15 @@ export default function Image() {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          background: "#000000",
+          background: "#141414",
           backgroundImage:
-            "radial-gradient(circle at 25% 25%, rgba(75, 235, 30,0.3), transparent 45%), radial-gradient(circle at 80% 80%, rgba(75, 235, 30,0.18), transparent 50%)",
+            "radial-gradient(circle at 25% 25%, rgba(75, 235, 30,0.25), transparent 45%), radial-gradient(circle at 80% 80%, rgba(75, 235, 30,0.15), transparent 50%)",
         }}
       >
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: 24,
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              width: 96,
-              height: 96,
-              borderRadius: 24,
-              border: "2px solid #4BEB1E",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <LogoMark size={64} />
-          </div>
-          <div style={{ display: "flex", fontSize: 84, fontWeight: 700, color: "#FFFFFF" }}>
-            Deutschland&nbsp;<span style={{ color: "#4BEB1E" }}>IPTV</span>
-          </div>
-        </div>
-        <div style={{ display: "flex", marginTop: 28, fontSize: 32, color: "#B3B3B3" }}>
-          Premium IPTV aus Deutschland
+        {/* eslint-disable-next-line @next/next/no-img-element -- ImageResponse needs a plain img */}
+        <img src={logoSrc} width={842} height={156} alt="" />
+        <div style={{ display: "flex", marginTop: 40, fontSize: 36, color: "#B3B3B3" }}>
+          Fernsehen über das Internet
         </div>
       </div>
     ),

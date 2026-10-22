@@ -54,9 +54,9 @@ const organizationJsonLd = {
   url: siteUrl,
   logo: {
     "@type": "ImageObject",
-    url: `${siteUrl}/logo`,
-    width: 512,
-    height: 512,
+    url: `${siteUrl}/images/logo.png`,
+    width: 500,
+    height: 500,
   },
   description:
     "IPTV Deutschland: Fernsehen, Filme und Serien über die Internetleitung.",

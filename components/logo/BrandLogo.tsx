@@ -1,24 +1,20 @@
-import { LogoMark } from "./LogoMark";
+import Image from "next/image";
 
 type BrandLogoProps = {
   className?: string;
-  textClassName?: string;
-  markSize?: number;
 };
 
-// Icon + wordmark brand lockup, used consistently in the header, footer, and
-// anywhere else the brand needs to appear. The mark (see LogoMark) is a
-// geometric "D" monogram, not a play/pause control. "Deutschland" sits in
-// the neutral foreground color and "IPTV" in the brand green, per the
-// Black + #4BEB1E identity — the mark's bowl reuses the same green so it
-// reads as one system rather than a decorative add-on.
-export function BrandLogo({ className, textClassName = "text-lg", markSize = 24 }: BrandLogoProps) {
+// Main brand lockup (TV icon + "Deutschland IPTV" wordmark), used in the header
+// and footer. Source file is 1684×312, rendered at a fixed 32px height.
+export function BrandLogo({ className }: BrandLogoProps) {
   return (
-    <span className={`inline-flex items-center gap-2 ${className ?? ""}`}>
-      <LogoMark size={markSize} />
-      <span className={`font-display font-bold tracking-tight ${textClassName}`}>
-        <span className="text-foreground">Deutschland</span> <span className="text-aqua">IPTV</span>
-      </span>
-    </span>
+    <Image
+      src="/images/main-logo.png"
+      alt="Deutschland IPTV"
+      width={173}
+      height={32}
+      priority
+      className={`h-8 w-auto ${className ?? ""}`}
+    />
   );
 }
