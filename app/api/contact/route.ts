@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const CONTACT_DESTINATION_EMAIL = "zerotv.support@gmail.com";
+const CONTACT_DESTINATION_EMAIL = "deutschland.iptv.support@gmail.com";
 const CONTACT_SENDER_EMAIL = "onboarding@resend.dev";
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

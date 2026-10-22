@@ -7,10 +7,11 @@ import { Button } from "@/components/ui/Button";
 
 const navLinks = [
   { href: "/", label: "Startseite" },
-  { href: "/plans", label: "Preise" },
-  { href: "/blog", label: "Blog" },
-  { href: "/faq", label: "FAQ" },
-  { href: "/contact", label: "Kontakt" },
+  { href: "/tarife", label: "Tarife" },
+  { href: "/iptv-einrichten", label: "Einrichten" },
+  { href: "/deutsches-fernsehen-iptv", label: "Fernsehen" },
+  { href: "/fragen-antworten", label: "Fragen" },
+  { href: "/kontakt", label: "Kontakt" },
 ];
 
 export function Header() {
@@ -36,8 +37,8 @@ export function Header() {
         </nav>
 
         <div className="hidden lg:block">
-          <Button href="/plans" variant="primary" className="text-sm">
-            Jetzt starten
+          <Button href="/tarife" variant="primary" className="text-sm">
+            Tarife ansehen
           </Button>
         </div>
 
@@ -73,8 +74,8 @@ export function Header() {
               {link.label}
             </Link>
           ))}
-          <Button href="/plans" variant="primary" className="mt-2 w-full">
-            Jetzt starten
+          <Button href="/tarife" variant="primary" className="mt-2 w-full">
+            Tarife ansehen
           </Button>
         </nav>
       ) : null}

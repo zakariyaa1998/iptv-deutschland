@@ -10,22 +10,47 @@ export type FaqCategory = {
 
 export const faqCategories: FaqCategory[] = [
   {
-    category: "Abo & Bestellung",
+    category: "Grundlagen",
     items: [
       {
-        question: "Wie funktioniert ein IPTV Abo bei Deutschland IPTV?",
+        question: "Was bedeutet IPTV Deutschland genau?",
         answer:
-          "Sie wählen eine Laufzeit (6 Monate, 1 Jahr oder 2 Jahre), kontaktieren uns über WhatsApp, und nach der Bestätigung erhalten Sie Ihre persönlichen Zugangsdaten samt Einrichtungsanleitung für Ihr Gerät.",
+          "IPTV steht für Internet Protocol Television. Das Fernsehsignal kommt nicht über Satellit, Antenne oder Kabelanschluss, sondern als Datenstrom über Ihre Internetleitung. Mit IPTV Deutschland empfangen Sie Live-Programme, Filme und Serien in einer App auf dem Gerät, das Sie ohnehin schon nutzen.",
       },
       {
-        question: "Wie lange dauert die Aktivierung?",
+        question: "Brauche ich eine Satellitenschüssel oder einen Kabelanschluss?",
         answer:
-          "Ihr Zugang wird in der Regel innerhalb weniger Minuten nach Zahlungsbestätigung aktiviert. In seltenen Fällen kann es bis zu einigen Stunden dauern.",
+          "Nein. Sie benötigen nur einen Internetanschluss und ein kompatibles Gerät, zum Beispiel einen Smart TV, einen Streaming-Stick oder ein Smartphone. Schüssel, Receiver oder TV-Dose sind nicht nötig.",
       },
       {
-        question: "Kann ich meinen Tarif später verlängern oder wechseln?",
+        question: "Kann ich IPTV Deutschland auch außerhalb Deutschlands nutzen?",
         answer:
-          "Ja. Sie können Ihr Abo jederzeit über WhatsApp verlängern oder auf einen längeren Tarif upgraden, um von besseren Preisen zu profitieren.",
+          "Der Zugang ist an die Internetverbindung gebunden, nicht an einen bestimmten Wohnort. Viele Kundinnen und Kunden nutzen ihn deshalb auch im Urlaub oder an einem Zweitwohnsitz. Wie gut das Bild läuft, hängt von der Leitung vor Ort ab.",
+      },
+    ],
+  },
+  {
+    category: "Bestellung & Tarife",
+    items: [
+      {
+        question: "Wie bestelle ich ein IPTV Abo?",
+        answer:
+          "Sie wählen auf der Tarifseite Laufzeit und Geräteanzahl und tippen auf den Bestell-Button. Dadurch öffnet sich WhatsApp mit einer vorbereiteten Nachricht. Wir antworten mit den Zahlungsinformationen und senden nach Zahlungseingang Ihre Zugangsdaten samt Anleitung.",
+      },
+      {
+        question: "Verlängert sich mein Tarif automatisch?",
+        answer:
+          "Nein. Jeder Tarif endet mit Ablauf der gewählten Laufzeit. Wenn Sie weiterschauen möchten, schreiben Sie uns und wir verlängern den Zugang.",
+      },
+      {
+        question: "Was ist der Unterschied zwischen den Tarifen?",
+        answer:
+          "Inhalt und Funktionen sind in jedem Tarif gleich. Die Tarife unterscheiden sich nur in der Laufzeit und darin, auf wie vielen Geräten Sie gleichzeitig schauen können.",
+      },
+      {
+        question: "Wie bezahle ich?",
+        answer:
+          "Die verfügbaren Zahlungswege teilen wir Ihnen bei der Bestellung per WhatsApp mit.",
       },
     ],
   },
@@ -33,54 +58,42 @@ export const faqCategories: FaqCategory[] = [
     category: "Geräte & Einrichtung",
     items: [
       {
-        question: "Welche Geräte werden unterstützt?",
+        question: "Auf welchen Geräten funktioniert IPTV Deutschland?",
         answer:
-          "Deutschland IPTV funktioniert auf Smart TVs (Samsung, LG), Android TV, Fire TV Stick, Apple TV, iPhone, Android-Smartphones sowie PC und Laptop.",
+          "Auf Smart TVs von Samsung und LG, auf Geräten mit Android TV oder Google TV, auf dem Amazon Fire TV Stick, auf Apple TV, auf MAG-Boxen sowie auf Smartphones, Tablets und Computern.",
       },
       {
-        question: "Benötige ich zusätzliche Hardware?",
+        question: "Welche App brauche ich?",
         answer:
-          "Nein. Eine stabile Internetverbindung und ein kompatibles Gerät reichen aus. Für ältere Fernseher empfehlen wir einen Fire TV Stick oder eine Android-Box.",
+          "Das hängt vom Gerät ab. Mit den Zugangsdaten bekommen Sie eine passende App-Empfehlung und eine Anleitung für genau Ihr Gerät. Einen Überblick finden Sie auf unserer Seite zum Einrichten.",
       },
       {
-        question: "Wie installiere ich die App auf meinem Gerät?",
+        question: "Mein Fernseher ist älter. Geht das trotzdem?",
         answer:
-          "Nach Ihrer Bestellung erhalten Sie eine Schritt-für-Schritt-Anleitung passend zu Ihrem Gerät, inklusive App-Empfehlung und Hilfe bei der Eingabe Ihrer Zugangsdaten.",
-      },
-    ],
-  },
-  {
-    category: "Zahlung & Support",
-    items: [
-      {
-        question: "Welche Zahlungsmethoden werden akzeptiert?",
-        answer:
-          "Die Zahlungsdetails teilen wir Ihnen individuell über WhatsApp mit. Wir bieten flexible und sichere Zahlungsoptionen.",
-      },
-      {
-        question: "Welche Laufzeiten stehen zur Verfügung?",
-        answer: "Wir bieten Tarife mit 6 Monaten, 1 Jahr und 2 Jahren Laufzeit — je länger die Laufzeit, desto besser der Preis.",
-      },
-      {
-        question: "Wie erreiche ich den Kundenservice?",
-        answer:
-          "Unser Support-Team ist über WhatsApp und E-Mail erreichbar und hilft schnell bei Fragen zu Einrichtung, Zahlung oder technischen Problemen.",
+          "Ja, in den meisten Fällen. Wenn auf dem Fernseher keine passende App läuft, schließen Sie einfach einen Streaming-Stick oder eine Android-Box an den HDMI-Eingang an.",
       },
     ],
   },
   {
-    category: "Problembehebung",
+    category: "Wiedergabe & Hilfe",
     items: [
       {
-        question: "Was tue ich bei Bild- oder Verbindungsproblemen?",
+        question: "Das Bild stockt. Was kann ich tun?",
         answer:
-          "Prüfen Sie zunächst Ihre Internetgeschwindigkeit (mindestens 10 Mbit/s empfohlen), starten Sie die App neu und stellen Sie sicher, dass kein VPN aktiv ist. Bestehen die Probleme weiterhin, hilft Ihnen unser Support-Team direkt weiter.",
+          "Verbinden Sie das Gerät nach Möglichkeit per LAN-Kabel statt WLAN, schließen Sie andere Downloads im Heimnetz und starten Sie Router und App neu. Hilft das nicht, schreiben Sie uns kurz, auf welchem Gerät und bei welchem Programm das Problem auftritt.",
       },
       {
-        question: "Was mache ich, wenn Sender nicht laden?",
+        question: "Ein Sender lädt nicht. Woran liegt das?",
         answer:
-          "Das liegt meist an einer instabilen Verbindung oder einer veralteten App-Version. Ein Neustart der App und ein Aktualisieren der Senderliste löst das Problem in den meisten Fällen.",
+          "Oft hilft es, die Senderliste in der App neu zu laden oder die App einmal komplett zu schließen. Bleibt der Sender schwarz, melden Sie sich bei uns, damit wir den Eintrag prüfen können.",
+      },
+      {
+        question: "Wie erreiche ich den Support?",
+        answer:
+          "Per WhatsApp oder E-Mail. Am schnellsten geht es über WhatsApp, weil Sie dort direkt einen Screenshot mitschicken können.",
       },
     ],
   },
 ];
+
+export const allFaqItems = faqCategories.flatMap((category) => category.items);

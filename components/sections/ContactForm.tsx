@@ -23,13 +23,13 @@ export function ContactForm() {
 
     if (!name || !email || !subject || !message) {
       setStatus("error");
-      setErrorMessage("Bitte füllen Sie alle Felder aus.");
+      setErrorMessage("Es fehlt noch eine Angabe. Bitte alle Felder ausfüllen.");
       return;
     }
 
     if (!EMAIL_REGEX.test(email)) {
       setStatus("error");
-      setErrorMessage("Bitte geben Sie eine gültige E-Mail-Adresse ein.");
+      setErrorMessage("Diese E-Mail-Adresse sieht unvollständig aus.");
       return;
     }
 
@@ -46,7 +46,7 @@ export function ContactForm() {
       const data: { error?: string } | null = await response.json().catch(() => null);
 
       if (!response.ok) {
-        throw new Error(data?.error || "Die Nachricht konnte nicht gesendet werden.");
+        throw new Error(data?.error || "Senden fehlgeschlagen. Versuchen Sie es erneut oder schreiben Sie uns per WhatsApp.");
       }
 
       setStatus("success");
@@ -54,7 +54,7 @@ export function ContactForm() {
     } catch (error) {
       setStatus("error");
       setErrorMessage(
-        error instanceof Error ? error.message : "Die Nachricht konnte nicht gesendet werden."
+        error instanceof Error ? error.message : "Senden fehlgeschlagen. Versuchen Sie es erneut oder schreiben Sie uns per WhatsApp."
       );
     }
   }
@@ -76,7 +76,7 @@ export function ContactForm() {
           value={values.name}
           onChange={(event) => setValues((prev) => ({ ...prev, name: event.target.value }))}
           className="rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground outline-none transition-colors focus:border-aqua"
-          placeholder="Ihr vollständiger Name"
+          placeholder="Vor- und Nachname"
         />
       </div>
 
@@ -124,7 +124,7 @@ export function ContactForm() {
           value={values.message}
           onChange={(event) => setValues((prev) => ({ ...prev, message: event.target.value }))}
           className="resize-none rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground outline-none transition-colors focus:border-aqua"
-          placeholder="Wie können wir helfen?"
+          placeholder="Ihre Frage, gern mit Angabe des Geräts"
         />
       </div>
 
@@ -134,7 +134,7 @@ export function ContactForm() {
             role="status"
             className="rounded-xl border border-emerald-500/30 bg-emerald-500/10 px-4 py-3 text-sm text-emerald-400"
           >
-            Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet. Wir melden uns in Kürze bei Ihnen.
+            Danke, Ihre Nachricht ist angekommen. Die Antwort kommt an die angegebene E-Mail-Adresse.
           </p>
         ) : null}
 
@@ -153,7 +153,7 @@ export function ContactForm() {
         disabled={status === "loading"}
         className="mt-2 inline-flex items-center justify-center rounded-full bg-aqua px-6 py-3.5 text-sm font-semibold text-black transition-all duration-300 hover:bg-aqua-soft hover:shadow-[0_0_30px_rgba(75,235,30,0.35)] disabled:cursor-not-allowed disabled:opacity-60"
       >
-        {status === "loading" ? "Wird gesendet..." : "Nachricht senden"}
+        {status === "loading" ? "Senden läuft …" : "Nachricht senden"}
       </button>
     </form>
   );

@@ -55,16 +55,16 @@ export function PricingCard({ tier, duration, recommended }: PricingCardProps) {
 
       <div className="mt-auto flex flex-col items-center gap-4 pt-2">
         <ul className="flex flex-col items-center gap-1 text-xs text-[#4b5563]">
-          <li>✔ Sofortige Aktivierung</li>
-          <li>✔ Keine versteckten Kosten</li>
-          <li>✔ Sichere Zahlung</li>
+          <li>✔ Keine automatische Verlängerung</li>
+          <li>✔ Gleicher Funktionsumfang in jedem Tarif</li>
+          <li>✔ Bestellung per WhatsApp</li>
         </ul>
 
         <div className="flex w-full flex-col items-center gap-2">
           <Button href={tier.whatsappLink} external variant="primary" className="w-full">
-            {recommended ? "Jetzt starten" : "Angebot sichern"}
+            Per WhatsApp bestellen
           </Button>
-          <p className="text-xs text-[#6b7280]">Zufriedenheitsgarantie</p>
+          <p className="text-xs text-[#6b7280]">Preis für die gesamte Laufzeit</p>
         </div>
       </div>
     </div>

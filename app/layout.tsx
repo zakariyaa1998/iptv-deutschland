@@ -6,58 +6,36 @@ import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 
+import { SITE_URL as siteUrl } from "@/lib/site";
+
 const manrope = Manrope({
   variable: "--font-manrope",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
 });
 
-const siteUrl = "https://deutschland-iptv.online";
-
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Deutschland IPTV – IPTV Anbieter für Deutschland",
+    default: "IPTV Deutschland – Fernsehen über das Internet",
     template: "%s | Deutschland IPTV",
   },
   description:
-    "Deutschland IPTV ist Ihr IPTV Anbieter für Deutschland: Tausende Sender, Filme und Serien in HD, Full HD und 4K – auf jedem Gerät, mit stabilen Servern und persönlichem Support.",
-  // Kept deliberately narrow to the homepage's own primary/secondary keywords
-  // (see docs/seo/keyword-architecture.md, updated 2026-08). "bester IPTV
-  // Anbieter" and "IPTV Sender" stay excluded — those remain another page's
-  // assigned primary keyword (/best-iptv-service and /blog/iptv-channels-guide).
-  // "IPTV kaufen" and "IPTV Deutschland kaufen" were reintroduced as homepage
-  // secondary keywords: the page that now owns "IPTV kaufen" as PRIMARY is the
-  // landing page /iptv-service, not a blog post, so listing it here as a
-  // secondary term is no longer self-inflicted cannibalization.
-  keywords: [
-    "IPTV Deutschland",
-    "IPTV kaufen",
-    "IPTV Anbieter",
-    "IPTV Deutschland kaufen",
-    "IPTV Anbieter Deutschland",
-    "IPTV Abo",
-    "IPTV Streaming",
-    "IPTV Live TV",
-    "IPTV Service",
-  ],
-  alternates: {
-    canonical: "/",
-  },
+    "IPTV Deutschland: Live-TV, Filme und Serien über Ihre Internetleitung auf Smart TV, Stick oder Smartphone. Bestellung und Hilfe per WhatsApp.",
+  // No `alternates` here: a root-level canonical would be inherited by every page
+  // that forgets its own. Each page sets its canonical explicitly.
   openGraph: {
     type: "website",
     locale: "de_DE",
     url: siteUrl,
     siteName: "Deutschland IPTV",
-    title: "Deutschland IPTV – IPTV Anbieter für Deutschland",
-    description:
-      "Tausende Sender, Filme und Serien in HD, Full HD und 4K. Stabile Server, faire Preise, persönlicher Support.",
+    title: "IPTV Deutschland – Fernsehen über das Internet",
+    description: "Live-TV, Filme und Serien über die Internetleitung, auf den Geräten, die Sie schon haben.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Deutschland IPTV – IPTV Anbieter für Deutschland",
-    description:
-      "Tausende Sender, Filme und Serien in HD, Full HD und 4K. Stabile Server, faire Preise, persönlicher Support.",
+    title: "IPTV Deutschland – Fernsehen über das Internet",
+    description: "Live-TV, Filme und Serien über die Internetleitung, auf den Geräten, die Sie schon haben.",
   },
   robots: {
     index: true,
@@ -81,10 +59,10 @@ const organizationJsonLd = {
     height: 512,
   },
   description:
-    "IPTV Anbieter aus Deutschland mit Tausenden Sendern, Filmen und Serien in HD, Full HD und 4K.",
+    "IPTV Deutschland: Fernsehen, Filme und Serien über die Internetleitung.",
   contactPoint: {
     "@type": "ContactPoint",
-    email: "zerotv.support@gmail.com",
+    email: "deutschland.iptv.support@gmail.com",
     contactType: "customer support",
     areaServed: "DE",
     availableLanguage: ["German"],

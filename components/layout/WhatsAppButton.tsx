@@ -6,7 +6,7 @@ export function WhatsAppButton() {
       href={WHATSAPP_DEFAULT_LINK}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Kontaktieren Sie uns über WhatsApp"
+      aria-label="WhatsApp-Chat mit Deutschland IPTV öffnen"
       className="animate-pulse-glow fixed bottom-6 right-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-black shadow-lg transition-transform hover:scale-105 sm:bottom-8 sm:right-8"
     >
       <svg viewBox="0 0 24 24" fill="currentColor" className="h-7 w-7" aria-hidden="true">

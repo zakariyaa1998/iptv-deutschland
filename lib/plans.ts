@@ -5,61 +5,6 @@ export function discountPercent(originalPrice: number, price: number): number {
   return Math.round(100 - (price / originalPrice) * 100);
 }
 
-// ---------------------------------------------------------------------------
-// Home page — featured plans preview (3 cards, no device selection)
-// ---------------------------------------------------------------------------
-
-export type FeaturedPlan = {
-  id: string;
-  duration: string;
-  price: string;
-  badge?: string;
-  featured?: boolean;
-  whatsappLink: string;
-};
-
-export const homeFeatures: string[] = [
-  "30.000+ Live-TV-Sender und Sportevents weltweit",
-  "Herausragende Qualität in Full HD, 4K und Ultra HD für das beste Streaming-Erlebnis",
-  "70.000+ Filme und Serien auf Abruf (VOD)",
-  "Elektronischer Programmführer (EPG) inklusive",
-  "24/7 Kundenservice — schnell, professionell und zuverlässig",
-];
-
-export const featuredPlans: FeaturedPlan[] = [
-  {
-    id: "6-months",
-    duration: "6 Monate",
-    price: "30€",
-    whatsappLink: buildWhatsAppLink(
-      "Hallo Deutschland IPTV Support,\nich interessiere mich für den 6-Monats-Tarif (ab 30€)."
-    ),
-  },
-  {
-    id: "1-year",
-    duration: "1 Jahr",
-    price: "40€",
-    badge: "🔥 Am beliebtesten",
-    featured: true,
-    whatsappLink: buildWhatsAppLink(
-      "Hallo Deutschland IPTV Support,\nich interessiere mich für den 1-Jahres-Tarif (ab 40€)."
-    ),
-  },
-  {
-    id: "2-years",
-    duration: "2 Jahre",
-    price: "70€",
-    badge: "💎 Bester Wert",
-    whatsappLink: buildWhatsAppLink(
-      "Hallo Deutschland IPTV Support,\nich interessiere mich für den 2-Jahres-Tarif (ab 70€)."
-    ),
-  },
-];
-
-// ---------------------------------------------------------------------------
-// Pricing page — duration tabs, each with 1/2/3-device tiers
-// ---------------------------------------------------------------------------
-
 export type DeviceTier = {
   id: string;
   devices: 1 | 2 | 3;
@@ -77,13 +22,15 @@ export type PricingDuration = {
   tiers: DeviceTier[];
 };
 
+// Kept deliberately free of channel/film counts and uptime promises — only what
+// every plan verifiably includes.
 export const pricingFeatures: string[] = [
-  "30.000+ TV-Sender",
-  "Full HD • 4K • Ultra HD Qualität",
-  "70.000+ Filme und Serien (VOD)",
-  "Kompatibel mit: Smart TV, Android TV, Fire TV Stick, Apple TV, MAG, PC und Smartphone",
-  "Schnelle Aktivierung",
-  "24/7 Support",
+  "Live-TV, Filme und Serien in einem gemeinsamen Zugang",
+  "Wiedergabe in HD und Full HD, bei passenden Inhalten auch in 4K",
+  "Elektronischer Programmführer (EPG) für die Live-Sender",
+  "Nutzbar auf Smart TV, Fire TV, Android TV, Apple TV, MAG-Box, PC und Smartphone",
+  "Zugangsdaten und Anleitung kommen per WhatsApp",
+  "Hilfe bei Einrichtung und Fragen per WhatsApp und E-Mail",
 ];
 
 function buildTiers(
@@ -97,9 +44,9 @@ function buildTiers(
     originalPrice,
     price,
     whatsappLink: buildWhatsAppLink(
-      `Hallo Deutschland IPTV Support,\nich interessiere mich für den Tarif "${durationLabel}" mit ${devices} Gerät${
-        devices > 1 ? "en" : ""
-      } (${price}€).`
+      `Hallo, ich möchte das IPTV Deutschland Abo "${durationLabel}" für ${devices} Gerät${
+        devices > 1 ? "e" : ""
+      } (${price}€) bestellen.`
     ),
   }));
 }
@@ -135,7 +82,7 @@ export const pricingDurations: PricingDuration[] = [
   {
     id: "1-year",
     label: "1 Jahr",
-    badge: "🔥 Am beliebtesten",
+    badge: "Unsere Empfehlung",
     featured: true,
     tiers: buildTiers("1 Jahr", [
       { devices: 1, originalPrice: 79, price: 40 },
@@ -146,7 +93,7 @@ export const pricingDurations: PricingDuration[] = [
   {
     id: "2-years",
     label: "2 Jahre",
-    badge: "💎 Bestes Angebot",
+    badge: "Längste Laufzeit",
     tiers: buildTiers("2 Jahre", [
       { devices: 1, originalPrice: 119, price: 70 },
       { devices: 2, originalPrice: 149, price: 120 },
@@ -154,3 +101,12 @@ export const pricingDurations: PricingDuration[] = [
     ]),
   },
 ];
+
+/** Single-device entry price per duration — used for the compact homepage overview. */
+export const startingPrices = pricingDurations.map((duration) => ({
+  id: duration.id,
+  label: duration.label,
+  badge: duration.badge,
+  featured: duration.featured,
+  price: duration.tiers[0].price,
+}));

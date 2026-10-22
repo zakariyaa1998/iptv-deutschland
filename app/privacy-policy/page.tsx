@@ -17,6 +17,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/privacy-policy",
   },
+  // Legal pages stay reachable for users but are kept out of the index.
+  robots: { index: false, follow: true },
   openGraph: {
     type: "website",
     locale: "de_DE",
@@ -58,8 +60,8 @@ export default function PrivacyPolicyPage() {
               <p className="text-base leading-relaxed text-muted">
                 Verantwortlich für die Datenverarbeitung im Sinne der DSGVO ist Deutschland IPTV
                 (deutschland-iptv.online). Bei Fragen zum Datenschutz erreichen Sie uns unter{" "}
-                <a href="mailto:zerotv.support@gmail.com" className="text-aqua underline underline-offset-4">
-                  zerotv.support@gmail.com
+                <a href="mailto:deutschland.iptv.support@gmail.com" className="text-aqua underline underline-offset-4">
+                  deutschland.iptv.support@gmail.com
                 </a>
                 .
               </p>
@@ -220,8 +222,8 @@ export default function PrivacyPolicyPage() {
               </ul>
               <p className="text-base leading-relaxed text-muted">
                 Für die Ausübung dieser Rechte reicht eine formlose Nachricht an{" "}
-                <a href="mailto:zerotv.support@gmail.com" className="text-aqua underline underline-offset-4">
-                  zerotv.support@gmail.com
+                <a href="mailto:deutschland.iptv.support@gmail.com" className="text-aqua underline underline-offset-4">
+                  deutschland.iptv.support@gmail.com
                 </a>
                 .
               </p>
@@ -275,11 +277,11 @@ export default function PrivacyPolicyPage() {
               </h2>
               <p className="text-sm leading-relaxed text-muted">
                 Für Fragen zu dieser Datenschutzerklärung oder zur Ausübung Ihrer Rechte erreichen Sie uns unter{" "}
-                <a href="mailto:zerotv.support@gmail.com" className="text-aqua underline underline-offset-4">
-                  zerotv.support@gmail.com
+                <a href="mailto:deutschland.iptv.support@gmail.com" className="text-aqua underline underline-offset-4">
+                  deutschland.iptv.support@gmail.com
                 </a>{" "}
                 oder über unsere{" "}
-                <Link href="/contact" className="text-aqua underline underline-offset-4">
+                <Link href="/kontakt" className="text-aqua underline underline-offset-4">
                   Kontaktseite
                 </Link>
                 .

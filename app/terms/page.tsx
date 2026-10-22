@@ -13,6 +13,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/terms",
   },
+  // Legal pages stay reachable for users but are kept out of the index.
+  robots: { index: false, follow: true },
   openGraph: {
     type: "website",
     locale: "de_DE",
@@ -74,7 +76,7 @@ export default function TermsPage() {
               </h2>
               <p className="text-base leading-relaxed text-muted">
                 Wir bieten Tarife mit unterschiedlichen Laufzeiten an, deren aktuelle Preise auf unserer{" "}
-                <Link href="/plans" className="text-aqua underline underline-offset-4">
+                <Link href="/tarife" className="text-aqua underline underline-offset-4">
                   Tarifseite
                 </Link>{" "}
                 einsehbar sind. Die Zahlungsabwicklung wird individuell mit Ihnen über WhatsApp oder E-Mail
@@ -160,11 +162,11 @@ export default function TermsPage() {
               <h2 className="text-xl font-semibold text-foreground">10. Kontakt</h2>
               <p className="text-sm leading-relaxed text-muted">
                 Fragen zu diesen AGB richten Sie bitte an{" "}
-                <a href="mailto:zerotv.support@gmail.com" className="text-aqua underline underline-offset-4">
-                  zerotv.support@gmail.com
+                <a href="mailto:deutschland.iptv.support@gmail.com" className="text-aqua underline underline-offset-4">
+                  deutschland.iptv.support@gmail.com
                 </a>{" "}
                 oder über unsere{" "}
-                <Link href="/contact" className="text-aqua underline underline-offset-4">
+                <Link href="/kontakt" className="text-aqua underline underline-offset-4">
                   Kontaktseite
                 </Link>
                 .

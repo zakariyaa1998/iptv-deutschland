@@ -3,24 +3,17 @@ import { BrandLogo } from "@/components/logo/BrandLogo";
 import { WHATSAPP_DEFAULT_LINK } from "@/lib/whatsapp";
 
 const footerLinks = {
-  Unternehmen: [
+  "IPTV Deutschland": [
     { href: "/", label: "Startseite" },
-    { href: "/about", label: "Über uns" },
-    { href: "/plans", label: "Preise" },
-    { href: "/blog", label: "Blog" },
-    { href: "/iptv-service", label: "IPTV kaufen" },
-    { href: "/best-iptv-service", label: "Bester IPTV Anbieter" },
-    { href: "/iptv-anbieter-deutschland", label: "IPTV Anbieter" },
-    { href: "/iptv-germany", label: "IPTV Germany 2026" },
-    { href: "/iptv-smart-tv", label: "IPTV Smart TV" },
-    { href: "/iptv-fire-tv-stick", label: "IPTV Fire TV Stick" },
-    { href: "/iptv-android-tv", label: "IPTV Android TV" },
-    { href: "/europe-iptv", label: "Europe IPTV" },
+    { href: "/tarife", label: "IPTV Abo & Tarife" },
+    { href: "/iptv-bestellen", label: "IPTV bestellen" },
+    { href: "/iptv-einrichten", label: "IPTV einrichten" },
+    { href: "/deutsches-fernsehen-iptv", label: "Deutsches Fernsehen per IPTV" },
   ],
-  Support: [
-    { href: "/faq", label: "FAQ" },
-    { href: "/contact", label: "Kontakt" },
-    { href: WHATSAPP_DEFAULT_LINK, label: "WhatsApp Support", external: true },
+  Hilfe: [
+    { href: "/fragen-antworten", label: "Fragen & Antworten" },
+    { href: "/kontakt", label: "Kontakt" },
+    { href: WHATSAPP_DEFAULT_LINK, label: "WhatsApp", external: true },
   ],
   Rechtliches: [
     { href: "/privacy-policy", label: "Datenschutzerklärung" },
@@ -36,8 +29,8 @@ export function Footer() {
         <div className="flex flex-col gap-4">
           <BrandLogo />
           <p className="max-w-sm text-sm leading-relaxed text-muted">
-            Deutschland IPTV ist Ihr IPTV Anbieter für Deutschland — stabile Server, Tausende
-            Sender und persönlicher Support, sieben Tage die Woche.
+            Fernsehen über die Internetleitung: Live-Programm, Filme und Serien auf Ihren
+            vorhandenen Geräten. Bestellung und Hilfe per WhatsApp.
           </p>
         </div>
 
@@ -73,7 +66,7 @@ export function Footer() {
       <div className="border-t border-border">
         <div className="mx-auto flex w-full max-w-7xl flex-col gap-2 px-5 py-6 text-xs text-muted sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:px-10">
           <p>© {new Date().getFullYear()} Deutschland IPTV. Alle Rechte vorbehalten.</p>
-          <p>zerotv.support@gmail.com</p>
+          <p>deutschland.iptv.support@gmail.com</p>
         </div>
       </div>
     </footer>

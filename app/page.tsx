@@ -1,44 +1,60 @@
 import type { Metadata } from "next";
-import { Hero } from "@/components/sections/Hero";
-import { StreamingCategories } from "@/components/sections/StreamingCategories";
-import { Features } from "@/components/sections/Features";
-import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
-import { LatestMovies } from "@/components/sections/LatestMovies";
-import { Devices } from "@/components/sections/Devices";
-import { PricingPreview } from "@/components/sections/PricingPreview";
-import { LiveSports } from "@/components/sections/LiveSports";
-import { FAQPreview } from "@/components/sections/FAQPreview";
+import Link from "next/link";
+import { HomeHero } from "@/components/home/HomeHero";
+import {
+  DevicesOverview,
+  HowItWorks,
+  PriceOverview,
+  Programmes,
+  Requirements,
+  WhatIsIptv,
+} from "@/components/home/HomeSections";
+import { Container } from "@/components/ui/Container";
+import { FaqList } from "@/components/content/FaqList";
 import { ContactCTA } from "@/components/sections/ContactCTA";
+import { faqCategories } from "@/lib/faq-data";
+import { socialMetadata } from "@/lib/site";
+
+// Primary keyword: "IPTV Deutschland". Every other page owns its own term
+// (see docs/seo/keyword-map.md), so the homepage does not target them.
+const title = "IPTV Deutschland – Fernsehen über das Internet";
+const description =
+  "IPTV Deutschland: Live-TV, Filme und Serien über Ihre Internetleitung auf Smart TV, Fire TV Stick oder Smartphone. Laufzeiten ab 1 Monat, Bestellung per WhatsApp.";
 
 export const metadata: Metadata = {
-  title: "IPTV Deutschland – Anbieter für Live-TV & Streaming",
-  // Tightened to ~150 characters and folds in the "IPTV Abo" secondary keyword
-  // per docs/seo/keyword-architecture.md, without repeating "IPTV Anbieter" —
-  // that exact-match term is /iptv-anbieter-deutschland's assigned primary keyword.
-  description:
-    "IPTV Deutschland: Tausende Sender, Filme und Serien in HD, Full HD und 4K in einem IPTV Abo. Stabile Server, faire Preise und persönlicher Support.",
-  alternates: {
-    canonical: "/",
-  },
+  title: { absolute: `${title} | Deutschland IPTV` },
+  description,
+  alternates: { canonical: "/" },
+  ...socialMetadata("/", title, description),
 };
 
-// Organization/WebSite structured data now lives once, sitewide, in app/layout.tsx —
-// see the comment there. Keeping a second copy here would be duplicate JSON-LD on
-// the homepage specifically, which is exactly the kind of duplicate structured data
-// Google's Rich Results guidelines warn against.
+const homeFaq = faqCategories[0].items.concat(faqCategories[1].items.slice(0, 2));
 
 export default function Home() {
   return (
     <>
-      <Hero />
-      <StreamingCategories />
-      <PricingPreview />
-      <Features />
-      <WhyChooseUs />
-      <LatestMovies />
-      <Devices />
-      <LiveSports />
-      <FAQPreview />
+      <HomeHero />
+      <WhatIsIptv />
+      <HowItWorks />
+      <Programmes />
+      <DevicesOverview />
+      <PriceOverview />
+      <Requirements />
+
+      <section className="border-b border-border bg-background-elevated/40 py-20 sm:py-24">
+        <Container>
+          <div className="mx-auto flex max-w-3xl flex-col gap-8">
+          <h2 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+            Fragen zu IPTV Deutschland
+          </h2>
+          <FaqList items={homeFaq} />
+          <Link href="/fragen-antworten" className="w-fit text-sm font-semibold text-aqua underline underline-offset-4">
+            Alle Fragen und Antworten →
+          </Link>
+          </div>
+        </Container>
+      </section>
+
       <ContactCTA />
     </>
   );

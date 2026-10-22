@@ -17,10 +17,10 @@ export const metadata: Metadata = {
 };
 
 const helpfulLinks = [
-  { href: "/plans", label: "IPTV Tarife ansehen" },
-  { href: "/blog", label: "Zum Blog" },
-  { href: "/faq", label: "Häufige Fragen" },
-  { href: "/contact", label: "Kontakt aufnehmen" },
+  { href: "/tarife", label: "Tarife ansehen" },
+  { href: "/iptv-einrichten", label: "IPTV einrichten" },
+  { href: "/fragen-antworten", label: "Fragen & Antworten" },
+  { href: "/kontakt", label: "Kontakt aufnehmen" },
 ];
 
 export default function NotFound() {
@@ -30,15 +30,15 @@ export default function NotFound() {
         <SectionHeading
           as="h1"
           eyebrow="404"
-          title="Diese Seite konnte nicht gefunden werden"
-          description="Der Link ist möglicherweise veraltet oder die Seite wurde verschoben. Nutzen Sie einen der folgenden Einstiegspunkte, um weiterzukommen."
+          title="Unter dieser Adresse gibt es keine Seite"
+          description="Vielleicht war der Link fehlerhaft oder stammt von einer älteren Version dieser Website. Hier geht es weiter:"
         />
 
         <div className="flex flex-wrap items-center justify-center gap-4">
           <Button href="/" variant="primary" className="px-8 py-4 text-base">
             Zur Startseite
           </Button>
-          <Button href="/contact" variant="outline" className="px-8 py-4 text-base">
+          <Button href="/kontakt" variant="outline" className="px-8 py-4 text-base">
             Support kontaktieren
           </Button>
         </div>

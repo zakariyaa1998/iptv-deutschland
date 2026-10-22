@@ -5,11 +5,11 @@ export function buildWhatsAppLink(message: string): string {
 }
 
 export const WHATSAPP_DEFAULT_MESSAGE =
-  "Hallo Deutschland IPTV Support, ich interessiere mich für ein IPTV Abo. Können Sie mir bitte weitere Informationen schicken?";
+  "Hallo, ich habe eine Frage zu IPTV Deutschland. Können Sie mir weiterhelfen?";
 
 export const WHATSAPP_DEFAULT_LINK = buildWhatsAppLink(WHATSAPP_DEFAULT_MESSAGE);
 
 export const WHATSAPP_ORDER_MESSAGE =
-  "Hallo IPTV Deutschland, ich möchte gerne jetzt ein IPTV-Abo bestellen. Vielen Dank!";
+  "Hallo, ich möchte ein IPTV Deutschland Abo bestellen. Welche Schritte sind nötig?";
 
 export const WHATSAPP_ORDER_LINK = buildWhatsAppLink(WHATSAPP_ORDER_MESSAGE);
