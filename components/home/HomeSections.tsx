@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
+import { PlanCard } from "@/components/plans/PlanCard";
 import { homePlanFeatures, homePlans } from "@/lib/plans";
 
 function Heading({ kicker, title, text }: { kicker: string; title: string; text?: string }) {
@@ -207,52 +208,16 @@ export function PriceOverview() {
         <div className="grid items-stretch gap-6 lg:grid-cols-3">
           {homePlans.map((plan, index) => (
             <ScrollReveal key={plan.id} delay={((index % 3) + 1) as 1 | 2 | 3} className="grid">
-              <div
-                className={`flex flex-col gap-6 rounded-2xl border border-t-4 bg-background-elevated p-7 ${
-                  plan.featured
-                    ? "border-aqua shadow-[0_0_40px_rgba(75,235,30,0.12)]"
-                    : "border-border border-t-aqua/40"
-                }`}
-              >
-                <div className="flex items-center justify-between gap-3">
-                  <h3 className="text-lg font-semibold text-foreground">{plan.label}</h3>
-                  {plan.badge ? (
-                    <span className="rounded-md bg-aqua/15 px-2.5 py-1 text-xs font-semibold text-aqua">
-                      {plan.badge}
-                    </span>
-                  ) : null}
-                </div>
-
-                <div className="flex flex-col gap-1">
-                  <p className="text-4xl font-bold text-foreground">{plan.price}€</p>
-                  <p className="text-sm text-muted">
-                    für 1 Gerät · rechnerisch {plan.monthly}€ pro Monat
-                  </p>
-                </div>
-
-                <ul className="flex flex-col gap-2.5 border-t border-border pt-5">
-                  {homePlanFeatures.map((feature) => (
-                    <li key={feature} className="flex items-start gap-2.5 text-sm text-muted">
-                      <span aria-hidden className="mt-0.5 text-aqua">✓</span>
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <div className="mt-auto flex flex-col gap-2 pt-2">
-                  <Button
-                    href={plan.whatsappLink}
-                    external
-                    variant={plan.featured ? "primary" : "outline"}
-                    className="w-full"
-                  >
-                    Per WhatsApp bestellen
-                  </Button>
-                  <Link href="/tarife" className="text-center text-xs text-muted underline underline-offset-4 hover:text-aqua">
-                    Für 2 oder 3 Geräte
-                  </Link>
-                </div>
-              </div>
+              <PlanCard
+                title={plan.label}
+                badge={plan.badge}
+                featured={plan.featured}
+                price={plan.price}
+                details={<span>für 1 Gerät · rechnerisch {plan.monthly}€ pro Monat</span>}
+                features={homePlanFeatures}
+                whatsappLink={plan.whatsappLink}
+                footerLink={{ href: "/tarife", label: "Für 2 oder 3 Geräte" }}
+              />
             </ScrollReveal>
           ))}
         </div>

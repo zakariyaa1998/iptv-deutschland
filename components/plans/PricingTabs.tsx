@@ -48,7 +48,7 @@ export function PricingTabs() {
         </span>
       ) : null}
 
-      <div key={activeDuration.id} className="animate-fade-up grid w-full items-start gap-8 pt-4 lg:grid-cols-3">
+      <div key={activeDuration.id} className="animate-fade-up grid w-full items-stretch gap-6 lg:grid-cols-3">
         {activeDuration.tiers.map((tier) => (
           <PricingCard key={tier.id} tier={tier} duration={activeDuration} recommended={tier.devices === 2} />
         ))}

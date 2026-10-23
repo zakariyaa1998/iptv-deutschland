@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
-import { WHATSAPP_ORDER_LINK } from "@/lib/whatsapp";
+import { WHATSAPP_TEST_LINK } from "@/lib/whatsapp";
 
 const facts = [
   "Laufzeit zwischen 1 Monat und 2 Jahren",
@@ -44,8 +44,8 @@ export function HomeHero() {
             <Button href="/tarife" variant="primary" className="px-8 py-4 text-base">
               Tarife vergleichen
             </Button>
-            <Button href={WHATSAPP_ORDER_LINK} external variant="whatsapp-white" className="px-8 py-4 text-base">
-              Per WhatsApp anfragen
+            <Button href={WHATSAPP_TEST_LINK} external variant="whatsapp-white" className="px-8 py-4 text-base">
+              Kostenlosen Test anfragen
             </Button>
           </div>
         </div>

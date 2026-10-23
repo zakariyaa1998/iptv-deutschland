@@ -13,3 +13,8 @@ export const WHATSAPP_ORDER_MESSAGE =
   "Hallo, ich möchte ein IPTV Deutschland Abo bestellen. Welche Schritte sind nötig?";
 
 export const WHATSAPP_ORDER_LINK = buildWhatsAppLink(WHATSAPP_ORDER_MESSAGE);
+
+export const WHATSAPP_TEST_MESSAGE =
+  "Hallo, ich möchte IPTV Deutschland gern kostenlos testen. Wie bekomme ich einen Testzugang?";
+
+export const WHATSAPP_TEST_LINK = buildWhatsAppLink(WHATSAPP_TEST_MESSAGE);
