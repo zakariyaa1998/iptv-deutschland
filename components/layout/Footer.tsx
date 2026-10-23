@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { BrandLogo } from "@/components/logo/BrandLogo";
+import { PaymentIcons } from "@/components/layout/PaymentIcons";
 import { WHATSAPP_DEFAULT_LINK } from "@/lib/whatsapp";
 
 const footerLinks = {
@@ -61,6 +62,12 @@ export function Footer() {
             </ul>
           </div>
         ))}
+      </div>
+
+      <div className="border-t border-border">
+        <div className="mx-auto w-full max-w-7xl px-5 py-6 sm:px-8 lg:px-10">
+          <PaymentIcons />
+        </div>
       </div>
 
       <div className="border-t border-border">

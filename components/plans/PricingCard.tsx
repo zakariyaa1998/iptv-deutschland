@@ -34,13 +34,24 @@ export function PricingCard({ tier, duration, recommended }: PricingCardProps) {
       <div className="flex flex-col items-center gap-2 text-center">
         <h3 className="text-sm font-semibold uppercase tracking-wide text-[#4b5563]">{tier.label}</h3>
         <div className="mt-1 flex flex-col items-center gap-1">
-          <span className="text-base text-[#6b7280] line-through decoration-2">{tier.originalPrice}€</span>
+          {/* The struck-through price is the same period booked as monthly plans,
+              labelled as such — not a fictitious former price. */}
+          {discount > 0 ? (
+            <span className="text-sm text-[#6b7280]">
+              <span className="line-through decoration-2">{tier.originalPrice}€</span> im Monatstarif
+            </span>
+          ) : (
+            <span className="text-sm text-[#6b7280]">Laufzeit 1 Monat</span>
+          )}
           <div className="flex items-baseline gap-2">
             <span className="text-5xl font-bold text-[#111111]">{tier.price}€</span>
-            <span className="rounded-full bg-aqua px-2.5 py-1 text-xs font-bold text-black shadow-[0_2px_10px_rgba(75,235,30,0.35)]">
-              -{discount}%
-            </span>
+            {discount > 0 ? (
+              <span className="rounded-full bg-aqua px-2.5 py-1 text-xs font-bold text-black shadow-[0_2px_10px_rgba(75,235,30,0.35)]">
+                -{discount}%
+              </span>
+            ) : null}
           </div>
+          <span className="text-sm text-[#4b5563]">{tier.monthly}€ pro Monat</span>
         </div>
       </div>
 

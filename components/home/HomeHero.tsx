@@ -24,19 +24,23 @@ export function HomeHero() {
       <div aria-hidden className="absolute inset-0 -z-10 bg-gradient-to-r from-background via-background/85 to-background/30" />
 
       <Container className="flex flex-col gap-12 py-20 sm:py-28 lg:py-36">
-        <div className="flex max-w-2xl flex-col gap-6">
-          <span className="w-fit border-l-2 border-aqua pl-3 text-xs font-semibold uppercase tracking-[0.2em] text-aqua">
-            Fernsehen über das Internet
-          </span>
-          <h1 className="text-4xl font-bold leading-[1.1] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-            IPTV Deutschland: Live-TV, Filme und Serien ohne Schüssel und Kabel
-          </h1>
-          <p className="max-w-xl text-base leading-relaxed text-muted sm:text-lg">
-            Ein Zugang, eine App, Ihre vorhandenen Geräte. Mit IPTV Deutschland kommt das
-            Fernsehprogramm über Ihre Internetleitung auf Smart TV, Stick oder Smartphone — Sie
-            wählen nur Laufzeit und Geräteanzahl.
-          </p>
-          <div className="flex flex-col gap-3 pt-2 sm:flex-row">
+        {/* Text on the left, buttons vertically centred on the right (stacked below on mobile). */}
+        <div className="flex flex-col gap-10 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
+          <div className="flex max-w-2xl flex-col gap-6">
+            <span className="w-fit border-l-2 border-aqua pl-3 text-xs font-semibold uppercase tracking-[0.2em] text-aqua">
+              Fernsehen über das Internet
+            </span>
+            <h1 className="text-4xl font-bold leading-[1.1] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+              IPTV Deutschland: Live-TV, Filme und Serien ohne Schüssel und Kabel
+            </h1>
+            <p className="max-w-xl text-base leading-relaxed text-muted sm:text-lg">
+              Ein Zugang, eine App, Ihre vorhandenen Geräte. Mit IPTV Deutschland kommt das
+              Fernsehprogramm über Ihre Internetleitung auf Smart TV, Stick oder Smartphone — Sie
+              wählen nur Laufzeit und Geräteanzahl.
+            </p>
+          </div>
+
+          <div className="flex shrink-0 flex-col gap-3 sm:flex-row lg:w-72 lg:flex-col">
             <Button href="/tarife" variant="primary" className="px-8 py-4 text-base">
               Tarife vergleichen
             </Button>
