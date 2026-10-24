@@ -3,13 +3,6 @@ import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { WHATSAPP_TEST_LINK } from "@/lib/whatsapp";
 
-const facts = [
-  "Laufzeit zwischen 1 Monat und 2 Jahren",
-  "1, 2 oder 3 Geräte pro Abo",
-  "Keine automatische Verlängerung",
-  "Hilfe per WhatsApp und E-Mail",
-];
-
 export function HomeHero() {
   return (
     <section className="relative isolate overflow-hidden border-b border-border">
@@ -19,48 +12,42 @@ export function HomeHero() {
         fill
         priority
         sizes="100vw"
-        className="-z-20 object-cover object-center opacity-45"
+        className="-z-20 object-cover object-center"
       />
-      <div aria-hidden className="absolute inset-0 -z-10 bg-gradient-to-r from-background via-background/85 to-background/30" />
+      {/* Dark only behind the text column; the poster wall stays bright on the right. */}
+      <div
+        aria-hidden
+        className="absolute inset-0 -z-10 bg-gradient-to-r from-background via-background/80 to-background/10 lg:via-background/60 lg:to-transparent"
+      />
+      <div aria-hidden className="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-background to-transparent" />
 
-      <Container className="flex flex-col gap-12 py-20 sm:py-28 lg:py-36">
-        {/* Text on the left, buttons vertically centred on the right (stacked below on mobile). */}
-        <div className="flex flex-col gap-10 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
-          <div className="flex max-w-2xl flex-col gap-6">
-            <span className="w-fit border-l-2 border-aqua pl-3 text-xs font-semibold uppercase tracking-[0.2em] text-aqua">
-              Fernsehen über das Internet
-            </span>
-            <h1 className="text-4xl font-bold leading-[1.1] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-              IPTV Deutschland: Live-TV, Filme und Serien ohne Schüssel und Kabel
-            </h1>
-            <p className="max-w-xl text-base leading-relaxed text-muted sm:text-lg">
-              Ein Zugang, eine App, Ihre vorhandenen Geräte. Mit IPTV Deutschland kommt das
-              Fernsehprogramm über Ihre Internetleitung auf Smart TV, Stick oder Smartphone — Sie
-              wählen nur Laufzeit und Geräteanzahl.
-            </p>
+      <Container className="flex min-h-[440px] items-center py-16 sm:min-h-[520px] sm:py-20">
+        <div className="flex max-w-xl flex-col gap-6">
+          <h1 className="text-4xl font-bold leading-[1.1] tracking-tight text-white drop-shadow-[0_2px_16px_rgba(0,0,0,0.6)] sm:text-5xl lg:text-6xl">
+            <span className="text-aqua">IPTV Deutschland</span> – Fernsehen ohne Schüssel und Kabel
+          </h1>
+
+          <div aria-hidden className="flex items-center gap-1.5">
+            <span className="h-1.5 w-1.5 rounded-full bg-aqua" />
+            <span className="h-1.5 w-1.5 rounded-full bg-aqua" />
+            <span className="h-1.5 w-1.5 rounded-full bg-aqua" />
+            <span className="ml-1 h-1 w-24 rounded-full bg-aqua" />
           </div>
 
-          <div className="flex shrink-0 flex-col gap-3 sm:flex-row lg:w-72 lg:flex-col">
+          <p className="text-base leading-relaxed text-white/85 drop-shadow-[0_1px_10px_rgba(0,0,0,0.6)] sm:text-lg">
+            Live-TV, Filme und Serien über Ihre Internetleitung — auf Smart TV, Stick oder
+            Smartphone. Laufzeit und Geräteanzahl wählen, fertig.
+          </p>
+
+          <div className="flex flex-col gap-3 pt-1 sm:flex-row">
             <Button href="/tarife" variant="primary" className="px-8 py-4 text-base">
-              Tarife vergleichen
+              Tarife ansehen
             </Button>
             <Button href={WHATSAPP_TEST_LINK} external variant="whatsapp-white" className="px-8 py-4 text-base">
               Kostenlosen Test anfragen
             </Button>
           </div>
         </div>
-
-        <ul className="grid max-w-4xl gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          {facts.map((fact) => (
-            <li
-              key={fact}
-              className="rounded-xl border border-border bg-background/70 px-4 py-3 text-sm font-medium text-foreground backdrop-blur-sm"
-            >
-              <span aria-hidden className="mr-2 text-aqua">●</span>
-              {fact}
-            </li>
-          ))}
-        </ul>
       </Container>
     </section>
   );
