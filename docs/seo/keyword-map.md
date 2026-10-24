@@ -11,6 +11,7 @@ One primary keyword per page. Do not target another page's keyword in a title or
 | `/deutsches-fernsehen-iptv` | deutsches Fernsehen per IPTV |
 | `/fragen-antworten` | IPTV Deutschland Fragen |
 | `/kontakt` | — |
+| `/blog` + articles | long-tail topics (Umzug, Heimnetz, Mediathek) |
 
 Legal pages (`/privacy-policy`, `/terms`, `/refund-policy`) are `noindex, follow` and not in the sitemap.
 

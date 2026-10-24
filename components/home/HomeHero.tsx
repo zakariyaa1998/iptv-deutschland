@@ -14,7 +14,7 @@ export function HomeHero() {
   return (
     <section className="relative isolate overflow-hidden border-b border-border">
       <Image
-        src="/images/premium-home-cinema.webp"
+        src="/images/hero-filme-serien.jpg"
         alt=""
         fill
         priority

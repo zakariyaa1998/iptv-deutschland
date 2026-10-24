@@ -5,11 +5,11 @@ import type { NextConfig } from "next";
 // those and produces a redirect loop (ERR_TOO_MANY_REDIRECTS).
 const nextConfig: NextConfig = {
   // 2026-10 relaunch: live pages are /, /tarife, /iptv-bestellen, /iptv-einrichten,
-  // /deutsches-fernsehen-iptv, /fragen-antworten, /kontakt and the legal pages.
+  // /deutsches-fernsehen-iptv, /fragen-antworten, /kontakt, /blog and the legal pages.
   // Every URL from earlier site versions redirects permanently to the closest live
   // page. Keep this list flat — every destination must be a live page, never
-  // another redirect's source. Specific /blog/<slug> rules must stay above the
-  // /blog/:slug catch-all, because the first matching rule wins.
+  // another redirect's source. Old blog slugs are listed one by one (no catch-all)
+  // so that new /blog/<slug> articles are never redirected away.
   async redirects() {
     const renamed: [string, string][] = [
       ["/plans", "/tarife"],
@@ -56,8 +56,31 @@ const nextConfig: NextConfig = {
       ["/blog/how-to-buy-iptv", "/iptv-bestellen"],
       ["/blog/iptv-kaufen-deutschland", "/iptv-bestellen"],
       ["/blog/iptv-test-guide", "/iptv-bestellen"],
-      ["/blog", "/"],
-      ["/blog/:slug*", "/"],
+      // Remaining posts from earlier site versions → new blog index.
+      ["/blog/benefits-of-iptv", "/blog"],
+      ["/blog/best-iptv-apps-2026", "/blog"],
+      ["/blog/best-iptv-devices-2026", "/blog"],
+      ["/blog/best-iptv-providers-2026", "/blog"],
+      ["/blog/beste-iptv-anbieter-2026-vergleich", "/blog"],
+      ["/blog/beste-vpn-fuer-iptv", "/blog"],
+      ["/blog/bundesliga-dazn-sky-iptv-alternative", "/blog"],
+      ["/blog/film-serien-news", "/blog"],
+      ["/blog/iptv-beste-geraete-deutschland-test", "/blog"],
+      ["/blog/iptv-deutschland-2026", "/blog"],
+      ["/blog/iptv-guide-2026", "/blog"],
+      ["/blog/iptv-in-deutschland-guide", "/blog"],
+      ["/blog/iptv-legal-guide", "/blog"],
+      ["/blog/iptv-vpn-deutschland-ip-sperren-vermeiden", "/blog"],
+      ["/blog/iptv-vs-netflix-disney-plus-kosten", "/blog"],
+      ["/blog/sport-news", "/blog"],
+      ["/blog/sport-streaming-4k-deutschland-guide", "/blog"],
+      ["/blog/sports-streaming-4k-guide", "/blog"],
+      ["/blog/streaming-trends-2026", "/blog"],
+      ["/blog/streaming-trends-deutschland", "/blog"],
+      ["/blog/tivimate-vs-ibo-player", "/blog"],
+      ["/blog/tivimate-vs-ibo-player-beste-app", "/blog"],
+      ["/blog/vorteile-von-iptv", "/blog"],
+      ["/blog/what-is-iptv-guide", "/blog"],
     ];
 
     return [...renamed, ...removed, ...oldBlog].map(([source, destination]) => ({

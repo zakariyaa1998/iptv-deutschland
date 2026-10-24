@@ -10,6 +10,7 @@ const footerLinks = {
     { href: "/iptv-bestellen", label: "IPTV bestellen" },
     { href: "/iptv-einrichten", label: "IPTV einrichten" },
     { href: "/deutsches-fernsehen-iptv", label: "Deutsches Fernsehen per IPTV" },
+    { href: "/blog", label: "Blog" },
   ],
   Hilfe: [
     { href: "/fragen-antworten", label: "Fragen & Antworten" },

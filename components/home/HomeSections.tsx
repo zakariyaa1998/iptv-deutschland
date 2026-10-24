@@ -22,8 +22,8 @@ export function WhatIsIptv() {
       <Container className="grid items-center gap-12 lg:grid-cols-2">
         <ScrollReveal className="overflow-hidden rounded-2xl border border-border">
           <Image
-            src="/images/satellit-vs-iptv.jpg"
-            alt="Satellitenschüssel auf dem Dach im Vergleich zu einem Fernseher mit IPTV Empfang"
+            src="/images/iptv-deutschland-familie.jpg"
+            alt="Familie schaut IPTV Deutschland auf dem Fernseher im Wohnzimmer"
             width={1920}
             height={1280}
             sizes="(max-width: 1024px) 100vw, 600px"
@@ -101,7 +101,7 @@ export function HowItWorks() {
 
 const programmes = [
   {
-    image: "/images/iptv-deutschland-familie.jpg",
+    image: "/images/premium-home-cinema.webp",
     title: "Live-Fernsehen",
     text: "Nachrichten, Unterhaltung und Shows im laufenden Programm, mit Programmführer.",
   },

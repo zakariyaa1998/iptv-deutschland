@@ -8,10 +8,8 @@ import { Button } from "@/components/ui/Button";
 const navLinks = [
   { href: "/", label: "Startseite" },
   { href: "/tarife", label: "Tarife" },
-  { href: "/iptv-einrichten", label: "Einrichten" },
-  { href: "/deutsches-fernsehen-iptv", label: "Fernsehen" },
-  { href: "/fragen-antworten", label: "Fragen" },
-  { href: "/kontakt", label: "Kontakt" },
+  { href: "/blog", label: "Blog" },
+  { href: "/fragen-antworten", label: "FAQ" },
 ];
 
 export function Header() {
