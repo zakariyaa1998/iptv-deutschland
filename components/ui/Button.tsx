@@ -17,10 +17,9 @@ type BaseProps = {
 };
 
 const variantClasses: Record<ButtonVariant, string> = {
-  // Solid brand-green fill: #4BEB1E is a high-luminance color, so it needs dark
-  // (not white) text on top to stay readable — see globals.css contrast note.
+  // Solid brand-violet fill: dark enough to carry white text.
   primary:
-    "bg-aqua text-black hover:bg-aqua-soft shadow-[0_0_0_1px_rgba(75,235,30,0.4)] hover:shadow-[0_0_30px_rgba(75,235,30,0.35)]",
+    "bg-aqua-fill text-white hover:brightness-110 shadow-[0_0_0_1px_rgba(124,58,237,0.4)] hover:shadow-[0_0_30px_rgba(124,58,237,0.35)]",
   secondary:
     "bg-background-elevated text-foreground border border-border hover:border-aqua/60 hover:text-aqua",
   outline:
@@ -31,8 +30,8 @@ const variantClasses: Record<ButtonVariant, string> = {
   telegram: "bg-white text-gray-900 hover:bg-gray-100",
   // Outline treatment for use ON WHITE CARDS: the sitewide "outline" variant defaults to
   // white text (text-foreground), which disappears against a white surface — this variant
-  // uses dark text instead. It also borrows the darker "aqua-dim" brand-green shade rather
-  // than the bright primary green, which is too light-toned to read clearly on white.
+  // uses dark text instead. It also borrows the darker "aqua-dim" brand-violet shade rather
+  // than the light accent violet, which is too light-toned to read clearly on white.
   "outline-dark":
     "bg-transparent text-[#111111] border border-aqua-dim/60 hover:bg-aqua-dim/10 hover:border-aqua-dim hover:text-aqua-dim",
 };

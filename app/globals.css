@@ -1,18 +1,19 @@
 @import "tailwindcss";
 
 :root {
-  --background: #141414;
-  --background-elevated: #1f1f1f;
+  --background: #0b0814;
+  --background-elevated: #161022;
   --foreground: #ffffff;
   --muted: #b3b3b3;
-  --border: #2a2a2a;
+  --border: #2a2238;
 
-  /* Brand accent — Deutschland IPTV green. Variable names kept as "aqua" to avoid
+  /* Brand accent — Deutschland IPTV violet. Variable names kept as "aqua" to avoid
      a sitewide class-name rename (bg-aqua/text-aqua/etc. stay valid Tailwind
      utilities); only the color values changed. */
-  --brand-aqua: #4BEB1E;
-  --brand-aqua-dim: #1F5C0C;
-  --brand-aqua-soft: #8FF56B;
+  --brand-aqua: #A78BFA;
+  --brand-aqua-fill: #7C3AED;
+  --brand-aqua-dim: #5B21B6;
+  --brand-aqua-soft: #C4B5FD;
   --brand-black: #000000;
 }
 
@@ -24,6 +25,7 @@
   --color-border: var(--border);
 
   --color-aqua: var(--brand-aqua);
+  --color-aqua-fill: var(--brand-aqua-fill);
   --color-aqua-dim: var(--brand-aqua-dim);
   --color-aqua-soft: var(--brand-aqua-soft);
   --color-black: var(--brand-black);
@@ -48,7 +50,7 @@ body {
 }
 
 .text-gradient-aqua {
-  background: linear-gradient(90deg, #8FF56B 0%, #4BEB1E 55%, #1F5C0C 100%);
+  background: linear-gradient(90deg, #ffffff 0%, #ede9fe 35%, #a78bfa 75%, #8b5cf6 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -57,10 +59,10 @@ body {
 .bg-noise {
   background-image: radial-gradient(
       circle at 20% 20%,
-      rgba(75, 235, 30, 0.1),
+      rgba(124, 58, 237, 0.1),
       transparent 40%
     ),
-    radial-gradient(circle at 80% 0%, rgba(75, 235, 30, 0.07), transparent 45%);
+    radial-gradient(circle at 80% 0%, rgba(124, 58, 237, 0.07), transparent 45%);
 }
 
 .glass-panel {
@@ -102,10 +104,10 @@ body {
 @keyframes pulse-glow {
   0%,
   100% {
-    box-shadow: 0 0 0 0 rgba(75, 235, 30, 0.35);
+    box-shadow: 0 0 0 0 rgba(124, 58, 237, 0.35);
   }
   50% {
-    box-shadow: 0 0 0 12px rgba(75, 235, 30, 0);
+    box-shadow: 0 0 0 12px rgba(124, 58, 237, 0);
   }
 }
 
@@ -171,9 +173,9 @@ body {
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(150, 255, 140, 0.1),
-    rgba(150, 255, 140, 0.22),
-    rgba(150, 255, 140, 0.1),
+    rgba(196, 181, 253, 0.1),
+    rgba(196, 181, 253, 0.22),
+    rgba(196, 181, 253, 0.1),
     transparent
   );
   transform: rotate(18deg);

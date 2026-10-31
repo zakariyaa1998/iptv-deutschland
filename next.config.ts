@@ -5,7 +5,7 @@ import type { NextConfig } from "next";
 // those and produces a redirect loop (ERR_TOO_MANY_REDIRECTS).
 const nextConfig: NextConfig = {
   // 2026-10 relaunch: live pages are /, /tarife, /iptv-bestellen, /iptv-einrichten,
-  // /deutsches-fernsehen-iptv, /fragen-antworten, /blog and the legal pages.
+  // /deutsches-fernsehen-iptv, /fragen-antworten, /kontakt, /blog and the legal pages.
   // Every URL from earlier site versions redirects permanently to the closest live
   // page. Keep this list flat — every destination must be a live page, never
   // another redirect's source. Old blog slugs are listed one by one (no catch-all)
@@ -14,8 +14,7 @@ const nextConfig: NextConfig = {
     const renamed: [string, string][] = [
       ["/plans", "/tarife"],
       ["/faq", "/fragen-antworten"],
-      ["/contact", "/fragen-antworten"],
-      ["/kontakt", "/fragen-antworten"],
+      ["/contact", "/kontakt"],
       ["/logo", "/images/logo.png"],
     ];
 

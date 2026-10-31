@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { ContactCTA } from "@/components/sections/ContactCTA";
-import { WHATSAPP_DEFAULT_LINK } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
   // Plain title (no manual brand suffix): the root layout's title.template
@@ -80,14 +80,14 @@ export default function PrivacyPolicyPage() {
                   <span aria-hidden className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-aqua" />
                   <span>
                     <strong className="text-foreground">Kontaktdaten:</strong> Name und E-Mail-Adresse, die Sie
-                    uns per E-Mail oder WhatsApp mitteilen
+                    uns über unser Kontaktformular oder per WhatsApp mitteilen
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span aria-hidden className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-aqua" />
                   <span>
-                    <strong className="text-foreground">Nachrichteninhalt:</strong> der Text Ihrer Anfrage per
-                    E-Mail oder WhatsApp
+                    <strong className="text-foreground">Nachrichteninhalt:</strong> der Text Ihrer Anfrage über das
+                    Kontaktformular oder WhatsApp
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
@@ -127,6 +127,10 @@ export default function PrivacyPolicyPage() {
                 deutschland-iptv.online und bei der Kommunikation mit Ihnen unterstützen:
               </p>
               <ul className="flex flex-col gap-2.5 text-base leading-relaxed text-muted">
+                <li className="flex items-start gap-3">
+                  <span aria-hidden className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-aqua" />
+                  <span>Resend, zum Versand von Nachrichten aus unserem Kontaktformular</span>
+                </li>
                 <li className="flex items-start gap-3">
                   <span aria-hidden className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-aqua" />
                   <span>Vercel, für Hosting und datensparsame, anonymisierte Website-Analyse</span>
@@ -276,15 +280,10 @@ export default function PrivacyPolicyPage() {
                 <a href="mailto:deutschland.iptv.support@gmail.com" className="text-aqua underline underline-offset-4">
                   deutschland.iptv.support@gmail.com
                 </a>{" "}
-                oder per{" "}
-                <a
-                  href={WHATSAPP_DEFAULT_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-aqua underline underline-offset-4"
-                >
-                  WhatsApp
-                </a>
+                oder über unsere{" "}
+                <Link href="/kontakt" className="text-aqua underline underline-offset-4">
+                  Kontaktseite
+                </Link>
                 .
               </p>
             </section>

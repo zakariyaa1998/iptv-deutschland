@@ -29,7 +29,7 @@ export function PricingTabs() {
               onClick={() => setActiveId(duration.id)}
               className={`rounded-full px-4 py-2.5 text-sm font-semibold transition-all duration-300 sm:px-5 ${
                 isActive
-                  ? "bg-aqua text-black shadow-[0_0_20px_rgba(75,235,30,0.35)]"
+                  ? "bg-aqua-fill text-white shadow-[0_0_20px_rgba(124,58,237,0.35)]"
                   : "text-muted hover:text-foreground"
               }`}
             >
@@ -42,7 +42,7 @@ export function PricingTabs() {
       {activeDuration.badge ? (
         <span
           key={`badge-${activeDuration.id}`}
-          className="animate-fade-up inline-flex items-center gap-2 rounded-full bg-aqua px-4 py-1.5 text-sm font-bold uppercase tracking-wide text-black shadow-[0_4px_16px_rgba(75,235,30,0.4)]"
+          className="animate-fade-up inline-flex items-center gap-2 rounded-full bg-aqua-fill px-4 py-1.5 text-sm font-bold uppercase tracking-wide text-white shadow-[0_4px_16px_rgba(124,58,237,0.4)]"
         >
           {activeDuration.badge}
         </span>

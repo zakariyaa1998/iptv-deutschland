@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
+import { CountUp } from "@/components/ui/CountUp";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { PlanCard } from "@/components/plans/PlanCard";
 import { homePlanFeatures, homePlans } from "@/lib/plans";
@@ -26,7 +27,7 @@ function Heading({
         {kicker}
       </span>
       <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
-        {title} {accent ? <span className="text-aqua">{accent}</span> : null}
+        <span className="text-gradient-aqua box-decoration-clone">{title}{accent ? ` ${accent}` : ""}</span>
       </h2>
       {text ? <p className="text-base leading-relaxed text-muted sm:text-lg">{text}</p> : null}
     </div>
@@ -46,9 +47,9 @@ function Icon({ path }: { path: string }) {
 const CARD = "rounded-2xl border border-border bg-gradient-to-br from-background-elevated to-background";
 
 const stats = [
-  { value: "1–3", label: "Geräte pro IPTV Abo", note: "je nach Tarif" },
-  { value: "5", label: "Laufzeiten zur Auswahl", note: "von 1 Monat bis 2 Jahre" },
-  { value: "4K", label: "Bildqualität", note: "HD und Full HD, 4K bei passenden Inhalten" },
+  { value: 3, label: "Geräte pro IPTV Abo", note: "1, 2 oder 3 je nach Tarif" },
+  { value: 5, label: "Laufzeiten zur Auswahl", note: "von 1 Monat bis 2 Jahre" },
+  { value: 4, suffix: "K", label: "Bildqualität", note: "HD und Full HD, 4K bei passenden Inhalten" },
 ];
 
 export function StatsBand() {
@@ -57,7 +58,7 @@ export function StatsBand() {
       <Container className="grid gap-10 text-center sm:grid-cols-3">
         {stats.map((stat) => (
           <div key={stat.label} className="flex flex-col gap-1">
-            <span className="text-5xl font-bold tracking-tight text-aqua sm:text-6xl">{stat.value}</span>
+            <CountUp value={stat.value} suffix={stat.suffix} className="text-gradient-aqua mx-auto w-fit text-5xl font-bold tracking-tight sm:text-6xl" />
             <span className="mt-2 text-base font-semibold text-foreground">{stat.label}</span>
             <span className="text-sm text-muted">{stat.note}</span>
           </div>
@@ -203,7 +204,7 @@ export function WhatIsIptv() {
             ))}
           </ul>
         </ScrollReveal>
-        <ScrollReveal delay={2} className="overflow-hidden rounded-2xl border border-aqua/20 shadow-[0_0_50px_rgba(75,235,30,0.1)]">
+        <ScrollReveal delay={2} className="overflow-hidden rounded-2xl border border-aqua/20 shadow-[0_0_50px_rgba(124,58,237,0.1)]">
           <Image
             src="/images/iptv-deutschland-familie.jpg"
             alt="Familie schaut IPTV Deutschland auf dem Fernseher im Wohnzimmer"
@@ -291,7 +292,7 @@ export function TestBanner() {
   return (
     <section className="border-b border-border py-20 sm:py-24">
       <Container>
-        <div className="flex flex-col items-center gap-5 rounded-3xl border border-aqua/30 bg-gradient-to-br from-aqua/15 via-background-elevated to-background p-10 text-center shadow-[0_0_60px_rgba(75,235,30,0.1)] sm:p-14">
+        <div className="flex flex-col items-center gap-5 rounded-3xl border border-aqua/30 bg-gradient-to-br from-aqua/15 via-background-elevated to-background p-10 text-center shadow-[0_0_60px_rgba(124,58,237,0.1)] sm:p-14">
           <h2 className="max-w-2xl text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             IPTV Deutschland <span className="text-aqua">kostenlos testen</span>
           </h2>

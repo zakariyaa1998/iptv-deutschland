@@ -26,7 +26,7 @@ export function HomeHero() {
       <Container className="flex min-h-[440px] items-center py-16 sm:min-h-[520px] sm:py-20">
         <div className="flex max-w-xl flex-col gap-6">
           <h1 className="text-4xl font-bold leading-[1.1] tracking-tight text-white drop-shadow-[0_2px_16px_rgba(0,0,0,0.6)] sm:text-5xl lg:text-6xl">
-            <span className="text-aqua">IPTV Deutschland</span> – Fernsehen ohne Schüssel und Kabel
+            <span className="text-gradient-aqua box-decoration-clone">IPTV Deutschland – Fernsehen ohne Schüssel und Kabel</span>
           </h1>
 
           <div aria-hidden className="flex items-center gap-1.5">

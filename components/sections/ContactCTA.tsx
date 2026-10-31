@@ -25,6 +25,9 @@ export function ContactCTA() {
             <Button href={TELEGRAM_LINK} external variant="telegram">
               Telegram
             </Button>
+            <Button href="/kontakt" variant="outline">
+              Kontaktformular
+            </Button>
           </div>
         </div>
       </Container>

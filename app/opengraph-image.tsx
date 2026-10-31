@@ -23,9 +23,9 @@ export default async function Image() {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          background: "#141414",
+          background: "#0b0814",
           backgroundImage:
-            "radial-gradient(circle at 25% 25%, rgba(75, 235, 30,0.25), transparent 45%), radial-gradient(circle at 80% 80%, rgba(75, 235, 30,0.15), transparent 50%)",
+            "radial-gradient(circle at 25% 25%, rgba(124,58,237,0.25), transparent 45%), radial-gradient(circle at 80% 80%, rgba(124,58,237,0.15), transparent 50%)",
         }}
       >
         {/* eslint-disable-next-line @next/next/no-img-element -- ImageResponse needs a plain img */}

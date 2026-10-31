@@ -116,14 +116,9 @@ export default function RefundPolicyPage() {
               <p className="text-base leading-relaxed text-muted">
                 Wir empfehlen daher, vor einer längeren Laufzeit unsere kurze Testphase zu nutzen — mehr dazu
                 erfahren Sie über unser{" "}
-                <a
-                  href={WHATSAPP_DEFAULT_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-aqua underline underline-offset-4"
-                >
+                <Link href="/kontakt" className="text-aqua underline underline-offset-4">
                   Support-Team
-                </a>
+                </Link>
                 .
               </p>
             </section>
@@ -147,7 +142,10 @@ export default function RefundPolicyPage() {
                     >
                       WhatsApp
                     </a>{" "}
-                    oder per E-Mail
+                    oder unsere{" "}
+                    <Link href="/kontakt" className="text-aqua underline underline-offset-4">
+                      Kontaktseite
+                    </Link>
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
@@ -190,15 +188,10 @@ export default function RefundPolicyPage() {
                 <a href="mailto:deutschland.iptv.support@gmail.com" className="text-aqua underline underline-offset-4">
                   deutschland.iptv.support@gmail.com
                 </a>{" "}
-                oder per{" "}
-                <a
-                  href={WHATSAPP_DEFAULT_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-aqua underline underline-offset-4"
-                >
-                  WhatsApp
-                </a>
+                oder über unsere{" "}
+                <Link href="/kontakt" className="text-aqua underline underline-offset-4">
+                  Kontaktseite
+                </Link>
                 .
               </p>
             </section>

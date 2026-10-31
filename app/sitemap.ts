@@ -14,6 +14,7 @@ const routes: { path: string; priority: number }[] = [
   { path: "/deutsches-fernsehen-iptv", priority: 0.8 },
   { path: "/blog", priority: 0.7 },
   { path: "/fragen-antworten", priority: 0.6 },
+  { path: "/kontakt", priority: 0.5 },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

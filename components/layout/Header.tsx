@@ -10,6 +10,7 @@ const navLinks = [
   { href: "/tarife", label: "Tarife" },
   { href: "/blog", label: "Blog" },
   { href: "/fragen-antworten", label: "FAQ" },
+  { href: "/kontakt", label: "Kontakt" },
 ];
 
 export function Header() {

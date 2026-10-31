@@ -19,7 +19,7 @@ export function PlanCard({ title, badge, featured, price, details, features, wha
   return (
     <div
       className={`flex h-full flex-col gap-6 rounded-2xl border border-t-4 bg-background-elevated p-7 ${
-        featured ? "border-aqua shadow-[0_0_40px_rgba(75,235,30,0.12)]" : "border-border border-t-aqua/40"
+        featured ? "border-aqua shadow-[0_0_40px_rgba(124,58,237,0.12)]" : "border-border border-t-aqua/40"
       }`}
     >
       <div className="flex items-center justify-between gap-3">

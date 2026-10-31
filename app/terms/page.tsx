@@ -4,7 +4,6 @@ import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { ContactCTA } from "@/components/sections/ContactCTA";
-import { WHATSAPP_DEFAULT_LINK } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
   // Plain title (no manual brand suffix) — see app/privacy-policy/page.tsx for why.
@@ -65,7 +64,7 @@ export default function TermsPage() {
             <section className="flex flex-col gap-4">
               <h2 className="text-2xl font-semibold tracking-tight text-foreground">2. Vertragsschluss</h2>
               <p className="text-base leading-relaxed text-muted">
-                Ein Vertrag kommt zustande, sobald Sie über WhatsApp oder E-Mail eine
+                Ein Vertrag kommt zustande, sobald Sie über WhatsApp, unser Kontaktformular oder E-Mail eine
                 Bestellung aufgeben und wir diese bestätigen. Nach Zahlungseingang erhalten Sie Ihre persönlichen
                 Zugangsdaten oder eine Playlist-URL, mit denen Sie den Dienst auf Ihrem Gerät einrichten können.
               </p>
@@ -166,15 +165,10 @@ export default function TermsPage() {
                 <a href="mailto:deutschland.iptv.support@gmail.com" className="text-aqua underline underline-offset-4">
                   deutschland.iptv.support@gmail.com
                 </a>{" "}
-                oder per{" "}
-                <a
-                  href={WHATSAPP_DEFAULT_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-aqua underline underline-offset-4"
-                >
-                  WhatsApp
-                </a>
+                oder über unsere{" "}
+                <Link href="/kontakt" className="text-aqua underline underline-offset-4">
+                  Kontaktseite
+                </Link>
                 .
               </p>
             </section>

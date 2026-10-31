@@ -3,7 +3,6 @@ import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
-import { WHATSAPP_DEFAULT_LINK } from "@/lib/whatsapp";
 
 // Next.js renders this for any unmatched route and any notFound() call, and
 // automatically serves it with a real HTTP 404 status — no robots meta needed.
@@ -21,7 +20,7 @@ const helpfulLinks = [
   { href: "/tarife", label: "Tarife ansehen" },
   { href: "/iptv-einrichten", label: "IPTV einrichten" },
   { href: "/fragen-antworten", label: "Fragen & Antworten" },
-  { href: "/blog", label: "Blog" },
+  { href: "/kontakt", label: "Kontakt aufnehmen" },
 ];
 
 export default function NotFound() {
@@ -39,7 +38,7 @@ export default function NotFound() {
           <Button href="/" variant="primary" className="px-8 py-4 text-base">
             Zur Startseite
           </Button>
-          <Button href={WHATSAPP_DEFAULT_LINK} external variant="outline" className="px-8 py-4 text-base">
+          <Button href="/kontakt" variant="outline" className="px-8 py-4 text-base">
             Support kontaktieren
           </Button>
         </div>
