@@ -14,7 +14,6 @@ const footerLinks = {
   ],
   Hilfe: [
     { href: "/fragen-antworten", label: "Fragen & Antworten" },
-    { href: "/kontakt", label: "Kontakt" },
     { href: WHATSAPP_DEFAULT_LINK, label: "WhatsApp", external: true },
   ],
   Rechtliches: [

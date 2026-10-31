@@ -3,6 +3,8 @@ import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { WHATSAPP_TEST_LINK } from "@/lib/whatsapp";
 
+const heroPoints = ["Keine automatische Verlängerung", "1, 2 oder 3 Geräte", "HD, Full HD und 4K", "Kostenloser Test auf Anfrage"];
+
 export function HomeHero() {
   return (
     <section className="relative isolate overflow-hidden border-b border-border">
@@ -38,6 +40,15 @@ export function HomeHero() {
             Live-TV, Filme und Serien über Ihre Internetleitung — auf Smart TV, Stick oder
             Smartphone. Laufzeit und Geräteanzahl wählen, fertig.
           </p>
+
+          <ul className="grid gap-2 text-sm font-medium text-white sm:grid-cols-2">
+            {heroPoints.map((point) => (
+              <li key={point} className="flex items-center gap-2 drop-shadow-[0_1px_8px_rgba(0,0,0,0.7)]">
+                <span aria-hidden className="text-aqua">✓</span>
+                {point}
+              </li>
+            ))}
+          </ul>
 
           <div className="flex flex-col gap-3 pt-1 sm:flex-row">
             <Button href="/tarife" variant="primary" className="px-8 py-4 text-base">

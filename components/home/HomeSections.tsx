@@ -5,192 +5,63 @@ import { Button } from "@/components/ui/Button";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { PlanCard } from "@/components/plans/PlanCard";
 import { homePlanFeatures, homePlans } from "@/lib/plans";
+import { blogPosts } from "@/lib/blog";
+import { WHATSAPP_TEST_LINK } from "@/lib/whatsapp";
 
-function Heading({ kicker, title, text }: { kicker: string; title: string; text?: string }) {
+function Heading({
+  kicker,
+  title,
+  accent,
+  text,
+}: {
+  kicker: string;
+  title: string;
+  /** Trailing part of the title, shown in the brand colour. */
+  accent?: string;
+  text?: string;
+}) {
   return (
-    <div className="flex max-w-2xl flex-col gap-3">
-      <span className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua">{kicker}</span>
-      <h2 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">{title}</h2>
+    <div className="mx-auto flex max-w-3xl flex-col items-center gap-4 text-center">
+      <span className="rounded-full border border-aqua/30 bg-aqua/10 px-3.5 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-aqua">
+        {kicker}
+      </span>
+      <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
+        {title} {accent ? <span className="text-aqua">{accent}</span> : null}
+      </h2>
       {text ? <p className="text-base leading-relaxed text-muted sm:text-lg">{text}</p> : null}
     </div>
   );
 }
 
-export function WhatIsIptv() {
+function Icon({ path }: { path: string }) {
   return (
-    <section className="border-b border-border py-20 sm:py-24">
-      <Container className="grid items-center gap-12 lg:grid-cols-2">
-        <ScrollReveal className="overflow-hidden rounded-2xl border border-border">
-          <Image
-            src="/images/iptv-deutschland-familie.jpg"
-            alt="Familie schaut IPTV Deutschland auf dem Fernseher im Wohnzimmer"
-            width={1920}
-            height={1280}
-            sizes="(max-width: 1024px) 100vw, 600px"
-            className="h-auto w-full object-cover"
-          />
-        </ScrollReveal>
-        <ScrollReveal delay={2} className="flex flex-col gap-5">
-          <Heading kicker="Kurz erklärt" title="Was ist IPTV Deutschland?" />
-          <p className="text-base leading-relaxed text-muted">
-            Beim klassischen Fernsehen hängt der Empfang an der Schüssel auf dem Dach oder an der
-            Kabeldose in der Wand. IPTV Deutschland nutzt stattdessen die Internetleitung, die in
-            fast jedem Haushalt ohnehin vorhanden ist. Das Programm wird als Datenstrom übertragen
-            und in einer App wiedergegeben.
-          </p>
-          <p className="text-base leading-relaxed text-muted">
-            Für Sie heißt das: kein Techniker, keine Verkabelung, kein Receiver. Sie tragen Ihre
-            Zugangsdaten einmal in der App ein und können danach Live-Programme, Filme und Serien
-            abrufen — im Wohnzimmer, im Schlafzimmer oder unterwegs auf dem Handy.
-          </p>
-          <p className="text-base leading-relaxed text-muted">
-            Welche Programmarten Sie erwarten, beschreiben wir auf der Seite{" "}
-            <Link href="/deutsches-fernsehen-iptv" className="text-aqua underline underline-offset-4">
-              deutsches Fernsehen per IPTV
-            </Link>
-            .
-          </p>
-        </ScrollReveal>
-      </Container>
-    </section>
+    <span className="flex h-11 w-11 items-center justify-center rounded-xl border border-aqua/30 bg-aqua/10 text-aqua">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5" aria-hidden="true">
+        <path d={path} />
+      </svg>
+    </span>
   );
 }
 
-const steps = [
-  {
-    title: "Tarif auswählen",
-    text: "Laufzeit und Anzahl der Geräte festlegen. Der Inhalt ist in jedem Tarif derselbe.",
-  },
-  {
-    title: "Per WhatsApp bestellen",
-    text: "Der Button öffnet eine fertige Nachricht. Wir antworten mit den Zahlungsinformationen.",
-  },
-  {
-    title: "Zugangsdaten eintragen",
-    text: "Nach Zahlungseingang kommen Zugangsdaten und Anleitung. Einmal in die App eingeben, fertig.",
-  },
+const CARD = "rounded-2xl border border-border bg-gradient-to-br from-background-elevated to-background";
+
+const stats = [
+  { value: "1–3", label: "Geräte pro IPTV Abo", note: "je nach Tarif" },
+  { value: "5", label: "Laufzeiten zur Auswahl", note: "von 1 Monat bis 2 Jahre" },
+  { value: "4K", label: "Bildqualität", note: "HD und Full HD, 4K bei passenden Inhalten" },
 ];
 
-export function HowItWorks() {
+export function StatsBand() {
   return (
-    <section className="border-b border-border bg-background-elevated/40 py-20 sm:py-24">
-      <Container className="flex flex-col gap-12">
-        <Heading
-          kicker="Ablauf"
-          title="In drei Schritten zu IPTV Deutschland"
-          text="Kein Formular, kein Kundenkonto. Die Bestellung läuft komplett über einen WhatsApp-Chat."
-        />
-        <ScrollReveal>
-          <ol className="grid gap-6 md:grid-cols-3">
-            {steps.map((step, index) => (
-              <li key={step.title} className="flex h-full flex-col gap-3 border-t-2 border-aqua pt-5">
-                <span className="text-sm font-bold tabular-nums text-aqua">Schritt {index + 1}</span>
-                <h3 className="text-lg font-semibold text-foreground">{step.title}</h3>
-                <p className="text-sm leading-relaxed text-muted">{step.text}</p>
-              </li>
-            ))}
-          </ol>
-        </ScrollReveal>
-        <Link href="/iptv-bestellen" className="w-fit text-sm font-semibold text-aqua underline underline-offset-4">
-          Bestellung im Detail ansehen →
-        </Link>
-      </Container>
-    </section>
-  );
-}
-
-const programmes = [
-  {
-    image: "/images/premium-home-cinema.webp",
-    title: "Live-Fernsehen",
-    text: "Nachrichten, Unterhaltung und Shows im laufenden Programm, mit Programmführer.",
-  },
-  {
-    image: "/images/iptv-fussball-wohnzimmer.jpg",
-    title: "Sport",
-    text: "Spiele und Rennen live verfolgen, ohne Zusatzgerät am Fernseher.",
-  },
-  {
-    image: "/images/iptv-sport-mehrere-spiele.jpg",
-    title: "Filme & Serien",
-    text: "Eine Mediathek zum Abrufen, wann immer Sie Zeit haben.",
-  },
-];
-
-export function Programmes() {
-  return (
-    <section className="border-b border-border py-20 sm:py-24">
-      <Container className="flex flex-col gap-12">
-        <Heading
-          kicker="Inhalte"
-          title="Was Sie mit IPTV Deutschland schauen"
-          text="Live-Programm und Abruf-Inhalte liegen in derselben App. Sie wechseln mit der Fernbedienung zwischen beiden."
-        />
-        <div className="grid gap-6 md:grid-cols-3">
-          {programmes.map((item, index) => (
-            <ScrollReveal
-              key={item.title}
-              delay={((index % 3) + 1) as 1 | 2 | 3}
-              className="flex flex-col overflow-hidden rounded-2xl border border-border bg-background-elevated"
-            >
-              <Image
-                src={item.image}
-                alt={`${item.title} mit IPTV Deutschland auf dem Fernseher`}
-                width={1920}
-                height={1280}
-                sizes="(max-width: 768px) 100vw, 400px"
-                className="aspect-[3/2] h-auto w-full object-cover"
-              />
-              <div className="flex flex-col gap-2 p-6">
-                <h3 className="text-lg font-semibold text-foreground">{item.title}</h3>
-                <p className="text-sm leading-relaxed text-muted">{item.text}</p>
-              </div>
-            </ScrollReveal>
-          ))}
-        </div>
-      </Container>
-    </section>
-  );
-}
-
-const deviceGroups = [
-  { name: "Fernseher", list: "Samsung, LG, Android TV, Google TV" },
-  { name: "Sticks & Boxen", list: "Fire TV Stick, Apple TV, MAG-Box, Android-Box" },
-  { name: "Mobil & PC", list: "iPhone, Android-Smartphone, Tablet, Windows, macOS" },
-];
-
-export function DevicesOverview() {
-  return (
-    <section className="border-b border-border bg-background-elevated/40 py-20 sm:py-24">
-      <Container className="grid items-center gap-12 lg:grid-cols-[1fr_1fr]">
-        <ScrollReveal className="flex flex-col gap-6">
-          <Heading
-            kicker="Geräte"
-            title="Läuft auf dem, was Sie schon haben"
-            text="Für IPTV Deutschland müssen Sie in der Regel nichts Neues kaufen. Ein Gerät mit Internetzugang und einer passenden App genügt."
-          />
-          <dl className="flex flex-col divide-y divide-border rounded-2xl border border-border bg-background">
-            {deviceGroups.map((group) => (
-              <div key={group.name} className="flex flex-col gap-1 px-5 py-4 sm:flex-row sm:gap-6">
-                <dt className="w-36 shrink-0 text-sm font-semibold text-foreground">{group.name}</dt>
-                <dd className="text-sm text-muted">{group.list}</dd>
-              </div>
-            ))}
-          </dl>
-          <Link href="/iptv-einrichten" className="w-fit text-sm font-semibold text-aqua underline underline-offset-4">
-            Anleitung zum Einrichten →
-          </Link>
-        </ScrollReveal>
-        <ScrollReveal delay={2} className="overflow-hidden rounded-2xl border border-border">
-          <Image
-            src="/images/iptv-geraete-stick-box.jpg"
-            alt="Streaming-Stick und zwei TV-Boxen für IPTV Deutschland"
-            width={1920}
-            height={1280}
-            sizes="(max-width: 1024px) 100vw, 600px"
-            className="h-auto w-full object-cover"
-          />
-        </ScrollReveal>
+    <section className="border-b border-border py-14 sm:py-16">
+      <Container className="grid gap-10 text-center sm:grid-cols-3">
+        {stats.map((stat) => (
+          <div key={stat.label} className="flex flex-col gap-1">
+            <span className="text-5xl font-bold tracking-tight text-aqua sm:text-6xl">{stat.value}</span>
+            <span className="mt-2 text-base font-semibold text-foreground">{stat.label}</span>
+            <span className="text-sm text-muted">{stat.note}</span>
+          </div>
+        ))}
       </Container>
     </section>
   );
@@ -221,7 +92,7 @@ export function PriceOverview() {
             </ScrollReveal>
           ))}
         </div>
-        <Button href="/tarife" variant="secondary" className="w-fit">
+        <Button href="/tarife" variant="secondary" className="mx-auto w-fit">
           Alle Tarife und Laufzeiten
         </Button>
       </Container>
@@ -229,32 +100,209 @@ export function PriceOverview() {
   );
 }
 
-export function Requirements() {
+const benefits = [
+  {
+    title: "IPTV Abo ohne automatische Verlängerung",
+    text: "Sie zahlen einmal für die gewählte Laufzeit. Danach endet der Zugang von selbst, und Sie entscheiden, ob Sie weiterschauen möchten.",
+    icon: "M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3zM9 12l2 2 4-4",
+    wide: true,
+  },
+  {
+    title: "Kein Receiver, keine Schüssel",
+    text: "Das Programm kommt über Ihre Internetleitung. Eine App genügt.",
+    icon: "M3 6h18v11H3zM8 21h8M12 17v4",
+  },
+  {
+    title: "IPTV kostenlos testen",
+    text: "Fragen Sie per WhatsApp einen Testzugang an, bevor Sie sich für einen Tarif entscheiden.",
+    icon: "M5 3l14 9-14 9V3z",
+  },
+  {
+    title: "Auf Ihren vorhandenen Geräten",
+    text: "Smart TV, Fire TV Stick, Android TV, Apple TV, Smartphone oder PC.",
+    icon: "M7 2h10v20H7zM11 18h2",
+  },
+  {
+    title: "Hilfe auf Deutsch",
+    text: "Fragen zur Einrichtung beantworten wir per WhatsApp und E-Mail.",
+    icon: "M21 12a8 8 0 01-11.6 7.1L4 20l1-4.6A8 8 0 1121 12z",
+  },
+  {
+    title: "Live-TV, Filme und Serien in einer App",
+    text: "Deutsches Fernsehen im laufenden Programm mit Programmführer, dazu Filme und Serien zum Abrufen. Alles mit denselben Zugangsdaten.",
+    icon: "M4 5h16v12H4zM9 9l5 3-5 3V9zM8 21h8",
+    full: true,
+  },
+];
+
+export function Benefits() {
+  return (
+    <section className="border-b border-border py-20 sm:py-24">
+      <Container className="flex flex-col gap-12">
+        <Heading
+          kicker="Ihre Vorteile"
+          title="Warum IPTV Deutschland"
+          accent="so unkompliziert ist"
+          text="Fernsehen über das Internet braucht keine neue Technik im Haus. Das sind die Punkte, die im Alltag den Unterschied machen."
+        />
+        <div className="grid gap-5 md:grid-cols-3">
+          {benefits.map((item, index) => (
+            <ScrollReveal
+              key={item.title}
+              delay={((index % 3) + 1) as 1 | 2 | 3}
+              className={`${CARD} flex flex-col gap-4 p-7 transition-colors hover:border-aqua/50 ${item.full ? "md:col-span-3" : item.wide ? "md:col-span-2" : ""}`}
+            >
+              <Icon path={item.icon} />
+              <h3 className="text-lg font-semibold text-foreground">{item.title}</h3>
+              <p className="text-sm leading-relaxed text-muted">{item.text}</p>
+            </ScrollReveal>
+          ))}
+        </div>
+      </Container>
+    </section>
+  );
+}
+
+const aboutPoints = [
+  "Empfang über die vorhandene Internetleitung",
+  "Keine Verkabelung und kein Techniktermin",
+  "Dieselbe App im Wohnzimmer und unterwegs",
+  "Tarife ohne automatische Verlängerung",
+];
+
+export function WhatIsIptv() {
   return (
     <section className="border-b border-border py-20 sm:py-24">
       <Container className="grid items-center gap-12 lg:grid-cols-2">
-        <ScrollReveal className="overflow-hidden rounded-2xl border border-border">
+        <ScrollReveal className="flex flex-col gap-5">
+          <span className="w-fit rounded-full border border-aqua/30 bg-aqua/10 px-3.5 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-aqua">
+            Kurz erklärt
+          </span>
+          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+            Was ist <span className="text-aqua">IPTV Deutschland?</span>
+          </h2>
+          <p className="text-base leading-relaxed text-muted">
+            IPTV bedeutet Fernsehen über das Internetprotokoll. Das Signal kommt nicht von der
+            Schüssel auf dem Dach oder aus der Kabeldose, sondern als Datenstrom über Ihren
+            Internetanschluss. Die Wiedergabe läuft in einer App auf dem Gerät Ihrer Wahl.
+          </p>
+          <p className="text-base leading-relaxed text-muted">
+            Sie tragen Ihre Zugangsdaten einmal ein und rufen danach Live-Programme, Filme und Serien
+            ab. Welche Programmarten Sie erwarten, zeigt die Seite{" "}
+            <Link href="/deutsches-fernsehen-iptv" className="text-aqua underline underline-offset-4">
+              deutsches Fernsehen per IPTV
+            </Link>
+            .
+          </p>
+          <ul className="flex flex-col gap-2.5 pt-1">
+            {aboutPoints.map((point) => (
+              <li key={point} className="flex items-start gap-3 text-sm text-foreground">
+                <span aria-hidden className="text-aqua">✓</span>
+                {point}
+              </li>
+            ))}
+          </ul>
+        </ScrollReveal>
+        <ScrollReveal delay={2} className="overflow-hidden rounded-2xl border border-aqua/20 shadow-[0_0_50px_rgba(75,235,30,0.1)]">
           <Image
-            src="/images/iptv-stabile-verbindung.jpg"
-            alt="Laptop und Smartphone mit stabiler Internetverbindung für IPTV"
+            src="/images/iptv-deutschland-familie.jpg"
+            alt="Familie schaut IPTV Deutschland auf dem Fernseher im Wohnzimmer"
             width={1920}
             height={1280}
             sizes="(max-width: 1024px) 100vw, 600px"
             className="h-auto w-full object-cover"
           />
         </ScrollReveal>
-        <ScrollReveal delay={2} className="flex flex-col gap-5">
-          <Heading kicker="Voraussetzungen" title="Was Ihr Anschluss leisten sollte" />
-          <p className="text-base leading-relaxed text-muted">
-            Entscheidend ist weniger die Spitzengeschwindigkeit als eine gleichmäßige Verbindung.
-            Ein gewöhnlicher Breitbandanschluss reicht für HD meist aus. Für 4K und für mehrere
-            Geräte gleichzeitig brauchen Sie entsprechend mehr Bandbreite.
+      </Container>
+    </section>
+  );
+}
+
+const devices = ["Samsung Smart TV", "LG Smart TV", "Android TV", "Fire TV Stick", "Apple TV", "iPhone & iPad", "Android-Handy", "PC & Mac"];
+
+export function DevicesOverview() {
+  return (
+    <section className="border-b border-border bg-background-elevated/30 py-20 sm:py-24">
+      <Container className="flex flex-col gap-12">
+        <Heading
+          kicker="Einrichtung"
+          title="IPTV einrichten"
+          accent="auf Ihrem Gerät"
+          text="App installieren, Zugangsdaten eintragen, Senderliste laden. Wählen Sie Ihr Gerät, die Anleitung bekommen Sie mit den Zugangsdaten."
+        />
+        <ul className="grid grid-cols-2 gap-4 md:grid-cols-4">
+          {devices.map((device) => (
+            <li key={device}>
+              <Link
+                href="/iptv-einrichten"
+                className={`${CARD} flex h-full items-center justify-center p-5 text-center text-sm font-semibold text-foreground transition-colors hover:border-aqua/60 hover:text-aqua`}
+              >
+                {device}
+              </Link>
+            </li>
+          ))}
+        </ul>
+        <Button href="/iptv-einrichten" variant="outline" className="mx-auto w-fit">
+          Zur Einrichtungsanleitung
+        </Button>
+      </Container>
+    </section>
+  );
+}
+
+export function BlogTeaser() {
+  return (
+    <section className="border-b border-border py-20 sm:py-24">
+      <Container className="flex flex-col gap-12">
+        <Heading
+          kicker="Ratgeber"
+          title="Wissen rund um"
+          accent="Fernsehen per Internet"
+          text="Alternativen zum Kabelanschluss, deutsches Fernsehen im Ausland und stabiles WLAN."
+        />
+        <div className="grid gap-6 md:grid-cols-3">
+          {blogPosts.map((post) => (
+            <Link
+              key={post.slug}
+              href={`/blog/${post.slug}`}
+              className={`${CARD} group flex flex-col overflow-hidden transition-colors hover:border-aqua/60`}
+            >
+              <Image
+                src={post.image.src}
+                alt={post.image.alt}
+                width={1920}
+                height={1280}
+                sizes="(max-width: 768px) 100vw, 400px"
+                className="aspect-[3/2] h-auto w-full object-cover"
+              />
+              <div className="flex flex-1 flex-col gap-3 p-6">
+                <h3 className="text-base font-semibold leading-snug text-foreground group-hover:text-aqua">{post.title}</h3>
+                <span className="mt-auto text-sm font-semibold text-aqua">Weiterlesen →</span>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </Container>
+    </section>
+  );
+}
+
+export function TestBanner() {
+  return (
+    <section className="border-b border-border py-20 sm:py-24">
+      <Container>
+        <div className="flex flex-col items-center gap-5 rounded-3xl border border-aqua/30 bg-gradient-to-br from-aqua/15 via-background-elevated to-background p-10 text-center shadow-[0_0_60px_rgba(75,235,30,0.1)] sm:p-14">
+          <h2 className="max-w-2xl text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+            IPTV Deutschland <span className="text-aqua">kostenlos testen</span>
+          </h2>
+          <p className="max-w-xl text-base leading-relaxed text-muted">
+            Schreiben Sie uns per WhatsApp, welches Gerät Sie nutzen. Wir melden uns mit den nächsten
+            Schritten für Ihren Testzugang.
           </p>
-          <p className="text-base leading-relaxed text-muted">
-            Am Fernseher lohnt sich ein LAN-Kabel zum Router. Über WLAN kann das Bild schwanken,
-            wenn das Signal durch mehrere Wände muss oder viele Geräte gleichzeitig online sind.
-          </p>
-        </ScrollReveal>
+          <Button href={WHATSAPP_TEST_LINK} external variant="primary" className="px-8 py-4 text-base">
+            Test per WhatsApp anfragen
+          </Button>
+        </div>
       </Container>
     </section>
   );

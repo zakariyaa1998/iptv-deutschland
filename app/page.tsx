@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { HomeHero } from "@/components/home/HomeHero";
 import {
+  Benefits,
+  BlogTeaser,
   DevicesOverview,
-  HowItWorks,
   PriceOverview,
-  Programmes,
-  Requirements,
+  StatsBand,
+  TestBanner,
   WhatIsIptv,
 } from "@/components/home/HomeSections";
 import { Container } from "@/components/ui/Container";
@@ -34,12 +35,13 @@ export default function Home() {
   return (
     <>
       <HomeHero />
-      <WhatIsIptv />
-      <HowItWorks />
-      <Programmes />
-      <DevicesOverview />
+      <StatsBand />
       <PriceOverview />
-      <Requirements />
+      <Benefits />
+      <WhatIsIptv />
+      <TestBanner />
+      <DevicesOverview />
+      <BlogTeaser />
 
       <section className="border-b border-border bg-background-elevated/40 py-20 sm:py-24">
         <Container>
