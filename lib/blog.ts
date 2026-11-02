@@ -156,7 +156,7 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "2026-10-23",
     image: {
       src: "/images/mediathek-fernseher.jpg",
-      alt: "Fernseher in einer Ferienwohnung, auf dem deutsches Fernsehen im Ausland läuft",
+      alt: "Fernseher mit Filmübersicht: deutsches Fernsehen im Ausland per IPTV",
     },
     intro:
       "Ob Wintermonate in Spanien, Ferienhaus in Dänemark oder ein neuer Job im Ausland: Viele möchten ihre gewohnten Sendungen nicht missen. Deutsches Fernsehen im Ausland zu schauen ist heute einfacher als früher. Es gibt aber Unterschiede, die Sie kennen sollten, bevor die Koffer gepackt sind.",

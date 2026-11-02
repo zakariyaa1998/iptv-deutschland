@@ -124,10 +124,10 @@ export default function DeutschesFernsehenPage() {
           <ProseSection title="Sport im Wohnzimmer">
             <div className="overflow-hidden rounded-2xl border border-border">
               <Image
-                src="/images/iptv-fussball-wohnzimmer.jpg"
-                alt="Freunde schauen ein Fußballspiel per IPTV auf dem Fernseher"
-                width={1920}
-                height={1280}
+                src="/images/premium-home-cinema.jpg"
+                alt="Heimkino mit großem Fernseher für deutsches Fernsehen per IPTV"
+                width={2096}
+                height={1184}
                 sizes="(max-width: 768px) 100vw, 768px"
                 className="h-auto w-full object-cover"
               />

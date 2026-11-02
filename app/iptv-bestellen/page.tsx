@@ -48,7 +48,7 @@ export default function IptvBestellenPage() {
         eyebrow="Bestellung"
         title="IPTV bestellen: vom Tarif bis zu den Zugangsdaten"
         image={{
-          src: "/images/iptv-bestellen-fernbedienung.jpg",
+          src: "/images/iptv-bestellung-smartphone.jpg",
           alt: "Smartphone mit Bestellübersicht neben einer TV-Fernbedienung",
           width: 1920,
           height: 1280,
