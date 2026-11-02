@@ -47,9 +47,9 @@ function Icon({ path }: { path: string }) {
 const CARD = "rounded-2xl border border-border bg-gradient-to-br from-background-elevated to-background";
 
 const stats = [
-  { value: 3, label: "Geräte pro IPTV Abo", note: "1, 2 oder 3 je nach Tarif" },
-  { value: 5, label: "Laufzeiten zur Auswahl", note: "von 1 Monat bis 2 Jahre" },
-  { value: 4, suffix: "K", label: "Bildqualität", note: "HD und Full HD, 4K bei passenden Inhalten" },
+  { value: 36000, label: "Live-TV Sender", note: "aus über 60 Ländern" },
+  { value: 150000, label: "Filme & Serien", note: "auf Abruf, jederzeit" },
+  { value: 1000, suffix: "+", label: "zufriedene Kunden", note: "in DE, AT & CH" },
 ];
 
 export function StatsBand() {
@@ -58,7 +58,7 @@ export function StatsBand() {
       <Container className="grid gap-10 text-center sm:grid-cols-3">
         {stats.map((stat) => (
           <div key={stat.label} className="flex flex-col gap-1">
-            <CountUp value={stat.value} suffix={stat.suffix} className="text-gradient-aqua mx-auto w-fit text-5xl font-bold tracking-tight sm:text-6xl" />
+            <CountUp value={stat.value} suffix={stat.suffix} className="text-gradient-aqua mx-auto w-fit text-5xl font-bold tracking-tight sm:text-4xl lg:text-6xl" />
             <span className="mt-2 text-base font-semibold text-foreground">{stat.label}</span>
             <span className="text-sm text-muted">{stat.note}</span>
           </div>

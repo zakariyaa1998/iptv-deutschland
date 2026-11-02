@@ -4,8 +4,10 @@ import { useEffect, useRef, useState } from "react";
 
 const DURATION_MS = 1800;
 
+const format = (n: number) => n.toLocaleString("de-DE");
+
 // Counts from 0 to `value` the first time it scrolls into view. Screen readers
-// get the final value directly; the animated digits are hidden from them.
+// get the final value from the label instead of the animated digits.
 export function CountUp({ value, suffix = "", className }: { value: number; suffix?: string; className?: string }) {
   const ref = useRef<HTMLSpanElement>(null);
   const [current, setCurrent] = useState(0);
@@ -42,9 +44,8 @@ export function CountUp({ value, suffix = "", className }: { value: number; suff
   }, [value]);
 
   return (
-    <span ref={ref} className={className}>
-      <span className="sr-only">{`${value}${suffix}`}</span>
-      <span aria-hidden className="tabular-nums">{`${current}${suffix}`}</span>
+    <span ref={ref} role="img" aria-label={`${format(value)}${suffix}`} className={`tabular-nums ${className ?? ""}`}>
+      {`${format(current)}${suffix}`}
     </span>
   );
 }
