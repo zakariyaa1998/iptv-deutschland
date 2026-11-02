@@ -9,7 +9,7 @@ export function HomeHero() {
   return (
     <section className="relative isolate overflow-hidden border-b border-border">
       <Image
-        src="/images/hero-filme-serien.jpg"
+        src="/images/purple_exact_v2.png"
         alt=""
         fill
         priority

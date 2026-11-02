@@ -5,16 +5,16 @@ type BrandLogoProps = {
 };
 
 // Main brand lockup (TV icon + "Deutschland IPTV" wordmark), used in the header
-// and footer. Source file is 1684×312, rendered at a fixed 32px height.
+// and footer. Source file is 1162×312, rendered at a fixed 40px height.
 export function BrandLogo({ className }: BrandLogoProps) {
   return (
     <Image
       src="/images/main-logo.png"
       alt="Deutschland IPTV"
-      width={173}
-      height={32}
+      width={149}
+      height={40}
       priority
-      className={`h-8 w-auto ${className ?? ""}`}
+      className={`h-10 w-auto ${className ?? ""}`}
     />
   );
 }

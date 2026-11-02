@@ -29,7 +29,7 @@ export default async function Image() {
         }}
       >
         {/* eslint-disable-next-line @next/next/no-img-element -- ImageResponse needs a plain img */}
-        <img src={logoSrc} width={842} height={156} alt="" />
+        <img src={logoSrc} width={581} height={156} alt="" />
         <div style={{ display: "flex", marginTop: 40, fontSize: 36, color: "#B3B3B3" }}>
           Fernsehen über das Internet
         </div>
