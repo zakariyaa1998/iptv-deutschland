@@ -16,14 +16,14 @@ export function HomeHero() {
         sizes="100vw"
         className="-z-20 object-cover object-center"
       />
-      {/* Dark only behind the text column; the poster wall stays bright on the right. */}
+      {/* Light shade behind the text only, so the whole poster wall stays visible. */}
       <div
         aria-hidden
-        className="absolute inset-0 -z-10 bg-gradient-to-r from-background via-background/80 to-background/10 lg:via-background/60 lg:to-transparent"
+        className="absolute inset-0 -z-10 bg-gradient-to-r from-background/80 via-background/40 to-transparent lg:from-background/55 lg:via-background/15"
       />
-      <div aria-hidden className="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-background to-transparent" />
+      <div aria-hidden className="absolute inset-x-0 bottom-0 -z-10 h-10 bg-gradient-to-t from-background to-transparent" />
 
-      <Container className="flex min-h-[440px] items-center py-16 sm:min-h-[520px] sm:py-20">
+      <Container className="flex min-h-[440px] items-center py-16 sm:min-h-[520px] sm:py-20 lg:min-h-[min(44.2vw,680px)]">
         <div className="flex max-w-xl flex-col gap-6">
           <h1 className="text-4xl font-bold leading-[1.1] tracking-tight text-white drop-shadow-[0_2px_16px_rgba(0,0,0,0.6)] sm:text-5xl lg:text-6xl">
             <span className="text-gradient-aqua box-decoration-clone">IPTV Deutschland – Fernsehen ohne Schüssel und Kabel</span>

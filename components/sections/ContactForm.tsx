@@ -151,7 +151,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="mt-2 inline-flex items-center justify-center rounded-full bg-aqua-fill px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-aqua-soft hover:shadow-[0_0_30px_rgba(75,235,30,0.35)] disabled:cursor-not-allowed disabled:opacity-60"
+        className="mt-2 inline-flex items-center justify-center rounded-full bg-aqua-fill px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:brightness-110 hover:shadow-[0_0_30px_rgba(124,58,237,0.35)] disabled:cursor-not-allowed disabled:opacity-60"
       >
         {status === "loading" ? "Senden läuft …" : "Nachricht senden"}
       </button>

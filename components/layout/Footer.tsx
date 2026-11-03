@@ -29,7 +29,7 @@ export function Footer() {
     <footer className="border-t border-border bg-background-elevated">
       <div className="mx-auto grid w-full max-w-7xl gap-10 px-5 py-14 sm:grid-cols-2 sm:px-8 lg:grid-cols-[1.2fr_1fr_1fr_1fr] lg:px-10">
         <div className="flex flex-col gap-4">
-          <BrandLogo />
+          <BrandLogo className="self-start" />
           <p className="max-w-sm text-sm leading-relaxed text-muted">
             Fernsehen über die Internetleitung: Live-Programm, Filme und Serien auf Ihren
             vorhandenen Geräten. Bestellung und Hilfe per WhatsApp.
