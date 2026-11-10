@@ -1,11 +1,13 @@
 # Keyword map — deutschland-iptv.online (relaunch 2026-10)
 
-One primary keyword per page. Do not target another page's keyword in a title or H1.
+Site-wide main keywords: **IPTV Deutschland** and **IPTV Anbieter Deutschland** (since 2026-11-10). Each appears once near the start and once in the middle of the main text on every content page — not in every paragraph (keyword stuffing). Only the owning page uses a keyword in its title and H1.
 
 | Page | Primary keyword |
 |---|---|
 | `/` | IPTV Deutschland |
 | `/tarife` | IPTV Abo Deutschland |
+| `/iptv-anbieter-deutschland` | IPTV Anbieter Deutschland |
+| `/ueber-uns` | — (trust page) |
 | `/iptv-bestellen` | IPTV bestellen |
 | `/iptv-einrichten` | IPTV einrichten |
 | `/deutsches-fernsehen-iptv` | deutsches Fernsehen per IPTV |
@@ -13,7 +15,7 @@ One primary keyword per page. Do not target another page's keyword in a title or
 | `/kontakt` | — |
 | `/blog` + articles | long-tail topics (Umzug, Heimnetz, Mediathek) |
 
-Legal pages (`/privacy-policy`, `/terms`, `/refund-policy`) are `noindex, follow` and not in the sitemap.
+Legal pages (`/impressum`, `/privacy-policy`, `/terms`, `/refund-policy`) are `noindex, follow` and not in the sitemap.
 
 ## Rules
 

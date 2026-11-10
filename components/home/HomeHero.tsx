@@ -38,8 +38,8 @@ export function HomeHero() {
           </div>
 
           <p className="text-base leading-relaxed text-white/85 drop-shadow-[0_1px_10px_rgba(0,0,0,0.6)] sm:text-lg md:text-sm lg:text-base xl:text-lg">
-            Live-TV, Filme und Serien über Ihre Internetleitung — auf Smart TV, Stick oder
-            Smartphone. Laufzeit und Geräteanzahl wählen, fertig.
+            Mit IPTV Deutschland kommen Live-TV, Filme und Serien über Ihre Internetleitung — auf
+            Smart TV, Stick oder Smartphone. Laufzeit und Geräteanzahl wählen, fertig.
           </p>
 
           <ul className="grid gap-2 text-sm font-medium text-white sm:grid-cols-2 md:hidden lg:grid">

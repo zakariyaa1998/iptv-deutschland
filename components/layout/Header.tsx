@@ -8,6 +8,8 @@ import { Button } from "@/components/ui/Button";
 const navLinks = [
   { href: "/", label: "Startseite" },
   { href: "/tarife", label: "Tarife" },
+  { href: "/iptv-anbieter-deutschland", label: "Anbieter" },
+  { href: "/iptv-einrichten", label: "Einrichtung" },
   { href: "/blog", label: "Blog" },
   { href: "/fragen-antworten", label: "FAQ" },
   { href: "/kontakt", label: "Kontakt" },

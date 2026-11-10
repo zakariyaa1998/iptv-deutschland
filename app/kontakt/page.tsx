@@ -3,12 +3,13 @@ import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { ContactForm } from "@/components/sections/ContactForm";
+import { TextLink } from "@/components/content/Prose";
 import { WHATSAPP_DEFAULT_LINK } from "@/lib/whatsapp";
 import { SUPPORT_EMAIL, socialMetadata } from "@/lib/site";
 
-const title = "Kontakt";
+const title = "Kontakt zu IPTV Deutschland";
 const description =
-  "Kontakt zu Deutschland IPTV per WhatsApp, E-Mail oder Formular. Fragen zu Tarifen, Bestellung oder Einrichtung beantworten wir persönlich.";
+  "Kontakt zu IPTV Deutschland per WhatsApp, E-Mail oder Formular. Fragen zu Tarifen, Bestellung oder Einrichtung beantworten wir persönlich.";
 
 export const metadata: Metadata = {
   title,
@@ -44,11 +45,19 @@ export default function KontaktPage() {
           <div className="flex max-w-2xl flex-col gap-4">
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua">Kontakt</span>
             <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
-              So erreichen Sie uns
+              Kontakt zu IPTV Deutschland
             </h1>
             <p className="text-base leading-relaxed text-muted sm:text-lg">
-              Nennen Sie uns am besten gleich Ihr Gerät und Ihre Frage. Dann können wir ohne
-              Rückfragen weiterhelfen.
+              Sie haben eine Frage zu IPTV Deutschland, zu einem Tarif oder zur Einrichtung? Nennen Sie
+              uns am besten gleich Ihr Gerät und Ihre Frage. Dann können wir ohne Rückfragen
+              weiterhelfen.
+            </p>
+            <p className="text-base leading-relaxed text-muted">
+              Viele Antworten finden Sie auch ohne Nachricht: unter{" "}
+              <TextLink href="/fragen-antworten">Fragen & Antworten</TextLink>, in der Anleitung{" "}
+              <TextLink href="/iptv-einrichten">IPTV einrichten</TextLink> und auf der Seite{" "}
+              <TextLink href="/iptv-anbieter-deutschland">IPTV Anbieter Deutschland</TextLink>, wenn
+              Sie gerade Angebote vergleichen.
             </p>
           </div>
 

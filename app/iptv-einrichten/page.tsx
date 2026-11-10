@@ -10,7 +10,7 @@ import { socialMetadata } from "@/lib/site";
 // (/iptv-smart-tv, /iptv-fire-tv-stick, /iptv-android-tv, /iptv-smarters-pro).
 const title = "IPTV einrichten – Anleitung für TV, Stick und Handy";
 const description =
-  "IPTV einrichten auf Smart TV, Fire TV Stick, Android TV, Apple TV, Smartphone und PC: was Sie brauchen, wie die Zugangsdaten eingetragen werden und was bei Problemen hilft.";
+  "IPTV einrichten auf Smart TV, Fire TV Stick, Android TV, Apple TV, Handy und PC: was Sie brauchen, wie Sie die Zugangsdaten eintragen und was hilft.";
 
 export const metadata: Metadata = {
   title,
@@ -62,7 +62,7 @@ export default function IptvEinrichtenPage() {
         }}
       >
         <p>
-          Die Einrichtung läuft auf fast jedem Gerät gleich ab: App installieren, Zugangsdaten
+          Die Einrichtung von IPTV Deutschland läuft auf fast jedem Gerät gleich ab: App installieren, Zugangsdaten
           eintragen, Senderliste laden. Unterschiede gibt es vor allem dabei, woher die App kommt.
           Hier finden Sie den Ablauf und Hinweise zu den gängigen Geräten.
         </p>
@@ -118,7 +118,8 @@ export default function IptvEinrichtenPage() {
               ]}
             />
             <p>
-              Hilft nichts davon, schicken Sie uns einen Screenshot per WhatsApp. Weitere Antworten
+              Hilft nichts davon, schicken Sie uns einen Screenshot per WhatsApp. Als IPTV Anbieter
+              helfen wir Ihnen bei der Einrichtung, bis das Bild läuft. Weitere Antworten
               finden Sie unter <TextLink href="/fragen-antworten">Fragen & Antworten</TextLink>.
               Noch ohne Zugang? Hier geht es zu den <TextLink href="/tarife">Tarifen</TextLink>.
             </p>

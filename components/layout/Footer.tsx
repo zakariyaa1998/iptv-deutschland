@@ -7,6 +7,7 @@ const footerLinks = {
   "IPTV Deutschland": [
     { href: "/", label: "Startseite" },
     { href: "/tarife", label: "IPTV Abo & Tarife" },
+    { href: "/iptv-anbieter-deutschland", label: "IPTV Anbieter Deutschland" },
     { href: "/iptv-bestellen", label: "IPTV bestellen" },
     { href: "/iptv-einrichten", label: "IPTV einrichten" },
     { href: "/deutsches-fernsehen-iptv", label: "Deutsches Fernsehen per IPTV" },
@@ -15,9 +16,11 @@ const footerLinks = {
   Hilfe: [
     { href: "/fragen-antworten", label: "Fragen & Antworten" },
     { href: "/kontakt", label: "Kontakt" },
+    { href: "/ueber-uns", label: "Über uns" },
     { href: WHATSAPP_DEFAULT_LINK, label: "WhatsApp", external: true },
   ],
   Rechtliches: [
+    { href: "/impressum", label: "Impressum" },
     { href: "/privacy-policy", label: "Datenschutzerklärung" },
     { href: "/terms", label: "AGB" },
     { href: "/refund-policy", label: "Rückerstattung" },
@@ -31,8 +34,8 @@ export function Footer() {
         <div className="flex flex-col gap-4">
           <BrandLogo className="self-start" />
           <p className="max-w-sm text-sm leading-relaxed text-muted">
-            Fernsehen über die Internetleitung: Live-Programm, Filme und Serien auf Ihren
-            vorhandenen Geräten. Bestellung und Hilfe per WhatsApp.
+            IPTV Deutschland: Fernsehen über die Internetleitung, mit Live-Programm, Filmen und
+            Serien auf Ihren vorhandenen Geräten. Bestellung und Hilfe per WhatsApp.
           </p>
         </div>
 

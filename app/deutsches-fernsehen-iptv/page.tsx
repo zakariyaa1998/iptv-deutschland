@@ -12,7 +12,7 @@ import { socialMetadata } from "@/lib/site";
 // Primary keyword: "deutsches Fernsehen per IPTV".
 const title = "Deutsches Fernsehen per IPTV – Empfang ohne Schüssel";
 const description =
-  "Deutsches Fernsehen per IPTV: Live-Programm, Sport, Filme und Serien über die Internetleitung statt über Satellit oder Kabel. Was sich ändert und was Sie wissen sollten.";
+  "Deutsches Fernsehen per IPTV: Live-Programm, Sport, Filme und Serien über die Internetleitung statt über Satellit oder Kabel. Was sich ändert.";
 
 export const metadata: Metadata = {
   title,
@@ -74,8 +74,8 @@ export default function DeutschesFernsehenPage() {
       >
         <p>
           Nachrichten am Abend, die Samstagsshow, das Spiel am Wochenende: Am Programm ändert sich
-          mit IPTV wenig, wohl aber am Empfang. Statt über Satellit oder Kabel kommt das Signal über
-          das Internet. Diese Seite erklärt, was das im Alltag bedeutet.
+          mit IPTV Deutschland wenig, wohl aber am Empfang. Statt über Satellit oder Kabel kommt das
+          Signal über das Internet. Diese Seite erklärt, was das im Alltag bedeutet.
         </p>
       </PageIntro>
 
@@ -118,6 +118,7 @@ export default function DeutschesFernsehenPage() {
             <p>
               Welche Programme genau in der Senderliste stehen, sehen Sie nach dem Einloggen in der
               App. Sie suchen ein bestimmtes Programm? Fragen Sie uns vor der Bestellung im WhatsApp-Chat.
+              Das gilt bei jedem IPTV Anbieter: Lassen Sie sich wichtige Programme vorher bestätigen.
             </p>
           </ProseSection>
 

@@ -12,7 +12,7 @@ import { socialMetadata } from "@/lib/site";
 // Primary keyword: "IPTV bestellen".
 const title = "IPTV bestellen – so läuft die Bestellung ab";
 const description =
-  "IPTV bestellen bei Deutschland IPTV: Tarif wählen, per WhatsApp anfragen, Zugangsdaten erhalten. Der Ablauf Schritt für Schritt, mit Hinweisen zu Zahlung und Freischaltung.";
+  "IPTV bestellen bei IPTV Deutschland: Tarif wählen, per WhatsApp anfragen, Zugangsdaten erhalten. Der Ablauf Schritt für Schritt erklärt.";
 
 export const metadata: Metadata = {
   title,
@@ -65,7 +65,7 @@ export default function IptvBestellenPage() {
         }
       >
         <p>
-          Bei uns gibt es keinen Warenkorb und kein Bestellformular. Sie schreiben uns, wir
+          Bei IPTV Deutschland gibt es keinen Warenkorb und kein Bestellformular. Sie schreiben uns, wir
           antworten — und am Ende haben Sie Ihre Zugangsdaten im Chat. Auf dieser Seite sehen Sie,
           was dabei genau passiert.
         </p>
@@ -106,7 +106,8 @@ export default function IptvBestellenPage() {
             />
             <p>
               Unsicher bei einem Punkt? Schreiben Sie uns vor der Bestellung — wir sagen Ihnen
-              ehrlich, ob Ihr Gerät geeignet ist.
+              ehrlich, ob Ihr Gerät geeignet ist. Ein seriöser IPTV Anbieter beantwortet solche
+              Fragen, bevor Sie bezahlen.
             </p>
           </ProseSection>
 

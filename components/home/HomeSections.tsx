@@ -144,7 +144,7 @@ export function Benefits() {
           kicker="Ihre Vorteile"
           title="Warum IPTV Deutschland"
           accent="so unkompliziert ist"
-          text="Fernsehen über das Internet braucht keine neue Technik im Haus. Das sind die Punkte, die im Alltag den Unterschied machen."
+          text="IPTV Deutschland braucht keine neue Technik im Haus. Das sind die Punkte, die im Alltag den Unterschied machen."
         />
         <div className="grid gap-5 md:grid-cols-3">
           {benefits.map((item, index) => (
@@ -194,6 +194,14 @@ export function WhatIsIptv() {
               deutsches Fernsehen per IPTV
             </Link>
             .
+          </p>
+          <p className="text-base leading-relaxed text-muted">
+            Sie vergleichen gerade mehrere Angebote? Worauf es bei einem IPTV Anbieter in Deutschland
+            ankommt, haben wir auf der Seite{" "}
+            <Link href="/iptv-anbieter-deutschland" className="text-aqua underline underline-offset-4">
+              IPTV Anbieter Deutschland
+            </Link>{" "}
+            zusammengefasst.
           </p>
           <ul className="flex flex-col gap-2.5 pt-1">
             {aboutPoints.map((point) => (

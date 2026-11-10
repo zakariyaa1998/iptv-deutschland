@@ -6,21 +6,23 @@ import { SITE_URL } from "@/lib/site";
 // therefore deliberately left out; every older URL 301-redirects (next.config.ts).
 const RELAUNCH_DATE = "2026-10-22";
 
-const routes: { path: string; priority: number }[] = [
+const routes: { path: string; priority: number; lastModified?: string }[] = [
   { path: "", priority: 1 },
   { path: "/tarife", priority: 0.9 },
+  { path: "/iptv-anbieter-deutschland", priority: 0.9, lastModified: "2026-11-10" },
   { path: "/iptv-bestellen", priority: 0.8 },
   { path: "/iptv-einrichten", priority: 0.8 },
   { path: "/deutsches-fernsehen-iptv", priority: 0.8 },
   { path: "/blog", priority: 0.7 },
   { path: "/fragen-antworten", priority: 0.6 },
   { path: "/kontakt", priority: 0.5 },
+  { path: "/ueber-uns", priority: 0.5, lastModified: "2026-11-10" },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const pages: MetadataRoute.Sitemap = routes.map(({ path, priority }) => ({
+  const pages: MetadataRoute.Sitemap = routes.map(({ path, priority, lastModified }) => ({
     url: `${SITE_URL}${path}`,
-    lastModified: RELAUNCH_DATE,
+    lastModified: lastModified ?? RELAUNCH_DATE,
     changeFrequency: "monthly",
     priority,
   }));

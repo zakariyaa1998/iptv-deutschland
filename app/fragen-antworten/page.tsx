@@ -51,8 +51,9 @@ export default function FragenAntwortenPage() {
               <p className="text-base leading-relaxed text-muted sm:text-lg">
                 Hier finden Sie kurze Antworten zu den Themen, nach denen wir am häufigsten gefragt
                 werden. Ausführlicher wird es auf den Seiten{" "}
-                <TextLink href="/iptv-bestellen">IPTV bestellen</TextLink> und{" "}
-                <TextLink href="/iptv-einrichten">IPTV einrichten</TextLink>.
+                <TextLink href="/iptv-bestellen">IPTV bestellen</TextLink>,{" "}
+                <TextLink href="/iptv-einrichten">IPTV einrichten</TextLink> und{" "}
+                <TextLink href="/iptv-anbieter-deutschland">IPTV Anbieter Deutschland</TextLink>.
               </p>
             </div>
 

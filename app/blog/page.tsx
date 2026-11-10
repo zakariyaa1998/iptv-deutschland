@@ -33,7 +33,7 @@ export default function BlogPage() {
               Tipps rund um Fernsehen per Internet
             </h1>
             <p className="text-base leading-relaxed text-muted sm:text-lg">
-              Ausführliche Ratgeber zu den Fragen, die uns am häufigsten erreichen: vom Ende des Kabelanschlusses bis zum Fernsehen im Urlaub.
+              Ratgeber von IPTV Deutschland zu den Fragen, die uns am häufigsten erreichen: vom Ende des Kabelanschlusses bis zum Fernsehen im Urlaub.
             </p>
           </div>
 

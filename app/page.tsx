@@ -20,7 +20,7 @@ import { socialMetadata } from "@/lib/site";
 // (see docs/seo/keyword-map.md), so the homepage does not target them.
 const title = "IPTV Deutschland – Fernsehen über das Internet";
 const description =
-  "IPTV Deutschland: Live-TV, Filme und Serien über Ihre Internetleitung auf Smart TV, Fire TV Stick oder Smartphone. Laufzeiten ab 1 Monat, Bestellung per WhatsApp.";
+  "IPTV Deutschland: Live-TV, Filme und Serien über Ihre Internetleitung auf Smart TV, Fire TV Stick oder Smartphone. Test und Bestellung per WhatsApp.";
 
 export const metadata: Metadata = {
   title: { absolute: `${title} | Deutschland IPTV` },

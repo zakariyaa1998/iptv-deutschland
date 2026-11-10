@@ -11,7 +11,7 @@ import { socialMetadata } from "@/lib/site";
 // Primary keyword: "IPTV Abo Deutschland".
 const title = "IPTV Abo Deutschland – Tarife und Laufzeiten";
 const description =
-  "IPTV Abo Deutschland: Laufzeit von 1 Monat bis 2 Jahre wählen, 1 bis 3 Geräte, gleicher Inhalt in jedem Tarif. Ohne automatische Verlängerung, Bestellung per WhatsApp.";
+  "IPTV Abo Deutschland: Laufzeit von 1 Monat bis 2 Jahre, 1 bis 3 Geräte, gleicher Inhalt in jedem Tarif. Ohne automatische Verlängerung.";
 
 export const metadata: Metadata = {
   title,
@@ -51,8 +51,8 @@ export default function TarifePage() {
               IPTV Abo Deutschland: Laufzeit und Geräte frei wählen
             </h1>
             <p className="text-base leading-relaxed text-muted sm:text-lg">
-              Zuerst die Laufzeit, dann die Anzahl der Geräte — mehr müssen Sie nicht entscheiden.
-              Der Preis gilt für die gesamte Laufzeit.
+              Bei IPTV Deutschland wählen Sie zuerst die Laufzeit, dann die Anzahl der Geräte — mehr
+              müssen Sie nicht entscheiden. Der Preis gilt für die gesamte Laufzeit.
             </p>
           </div>
           <PricingTabs />
@@ -75,6 +75,11 @@ export default function TarifePage() {
               Bei der Geräteanzahl zählt, wie viele Bildschirme zur selben Zeit laufen sollen.
               Schauen zum Beispiel zwei Personen in verschiedenen Räumen gleichzeitig, wählen Sie
               zwei Geräte.
+            </p>
+            <p>
+              Achten Sie beim Vergleich mit einem anderen IPTV Anbieter darauf, ob der Preis für die
+              ganze Laufzeit gilt und ob sich das Abo von selbst verlängert. Mehr dazu auf{" "}
+              <TextLink href="/iptv-anbieter-deutschland">IPTV Anbieter Deutschland</TextLink>.
             </p>
           </ProseSection>
 

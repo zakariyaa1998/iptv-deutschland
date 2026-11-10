@@ -58,8 +58,13 @@ export default function PrivacyPolicyPage() {
             <section className="flex flex-col gap-4">
               <h2 className="text-2xl font-semibold tracking-tight text-foreground">Verantwortlicher</h2>
               <p className="text-base leading-relaxed text-muted">
-                Verantwortlich für die Datenverarbeitung im Sinne der DSGVO ist Deutschland IPTV
-                (deutschland-iptv.online). Bei Fragen zum Datenschutz erreichen Sie uns unter{" "}
+                Verantwortlich für die Datenverarbeitung im Sinne der DSGVO ist Europe Digital,
+                München, Deutschland, Betreiber von Deutschland IPTV (deutschland-iptv.online). Die
+                vollständigen Anbieterangaben finden Sie im{" "}
+                <a href="/impressum" className="text-aqua underline underline-offset-4">
+                  Impressum
+                </a>
+                . Bei Fragen zum Datenschutz erreichen Sie uns unter{" "}
                 <a href="mailto:deutschland.iptv.support@gmail.com" className="text-aqua underline underline-offset-4">
                   deutschland.iptv.support@gmail.com
                 </a>

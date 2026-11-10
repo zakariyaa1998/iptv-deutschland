@@ -19,14 +19,14 @@ const nextConfig: NextConfig = {
     ];
 
     const removed: [string, string][] = [
-      ["/about", "/"],
+      ["/about", "/ueber-uns"],
       ["/iptv-deutschland", "/"],
       ["/iptv-germany", "/"],
       ["/europe-iptv", "/"],
       ["/best-iptv-service", "/"],
       ["/beste-iptv-deutschland", "/"],
-      ["/iptv-anbieter", "/"],
-      ["/iptv-anbieter-deutschland", "/"],
+      ["/iptv-anbieter", "/iptv-anbieter-deutschland"],
+      // /iptv-anbieter-deutschland is a live page again since 2026-11 — no redirect.
       ["/iptv-providers", "/"],
       ["/iptv-service", "/iptv-bestellen"],
       ["/iptv-smart-tv", "/iptv-einrichten"],
