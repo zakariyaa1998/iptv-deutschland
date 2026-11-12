@@ -82,10 +82,11 @@ export function PriceOverview() {
             <ScrollReveal key={plan.id} delay={((index % 3) + 1) as 1 | 2 | 3} className="grid">
               <PlanCard
                 title={plan.label}
+                subtitle="1 Gerät"
                 badge={plan.badge}
                 featured={plan.featured}
                 price={plan.price}
-                details={<span>für 1 Gerät · rechnerisch {plan.monthly}€ pro Monat</span>}
+                monthly={plan.monthly}
                 features={homePlanFeatures}
                 whatsappLink={plan.whatsappLink}
                 footerLink={{ href: "/tarife", label: "Für 2 oder 3 Geräte" }}

@@ -205,6 +205,223 @@ body {
   background: radial-gradient(ellipse at 50% 40%, transparent 30%, rgba(0, 0, 0, 0.78) 100%);
 }
 
+/* Homepage hero (components/home/HomeHero.tsx): black base with animated circuit
+   traces, a TV whose four abstract "channels" cross-fade every 3s, and floating cards. */
+/* Featured plan card (components/plans/PlanCard.tsx): a light runs around the border. */
+@property --plan-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.plan-border-animated {
+  background: conic-gradient(
+    from var(--plan-angle),
+    #7c3aed,
+    #c026d3,
+    #a78bfa,
+    #4f46e5,
+    #7c3aed
+  );
+  animation: plan-spin 5s linear infinite;
+}
+
+@keyframes plan-spin {
+  to {
+    --plan-angle: 360deg;
+  }
+}
+
+/* Nearly hidden behind the headline and copy (left), full strength on the right. */
+.hero-circuit {
+  mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0.12) 0%, rgba(0, 0, 0, 0.12) 42%, black 62%);
+  -webkit-mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0.12) 0%, rgba(0, 0, 0, 0.12) 42%, black 62%);
+}
+
+@media (max-width: 1023px) {
+  .hero-circuit {
+    opacity: 0.35;
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+}
+
+.hero-circuit-trace {
+  stroke: rgba(167, 139, 250, 0.16);
+  stroke-width: 1.5;
+}
+
+.hero-circuit-pulse {
+  stroke: #c4b5fd;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-dasharray: 70 930;
+  stroke-dashoffset: 1000;
+  filter: drop-shadow(0 0 6px rgba(167, 139, 250, 0.9));
+  animation: hero-pulse 6s linear infinite;
+}
+
+@keyframes hero-pulse {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.hero-circuit-pad {
+  fill: #0b0814;
+  stroke: rgba(167, 139, 250, 0.35);
+  stroke-width: 1.5;
+}
+
+.hero-circuit-dot {
+  fill: #a78bfa;
+  animation: hero-blink 2.4s ease-in-out infinite;
+}
+
+.hero-scene {
+  opacity: 0;
+  animation: hero-channel 12s linear infinite both;
+}
+
+@keyframes hero-channel {
+  0% {
+    opacity: 0;
+    transform: scale(1.06);
+  }
+  4% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  29%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.hero-scene-a {
+  background: radial-gradient(circle at 75% 30%, #a78bfa 0%, transparent 45%),
+    linear-gradient(135deg, #312e81 0%, #7c3aed 55%, #1e1b4b 100%);
+}
+
+.hero-scene-b {
+  background: radial-gradient(circle at 25% 25%, #f0abfc 0%, transparent 40%),
+    linear-gradient(160deg, #86198f 0%, #6d28d9 60%, #1e1b4b 100%);
+}
+
+.hero-scene-c {
+  background: radial-gradient(circle at 70% 70%, #818cf8 0%, transparent 45%),
+    linear-gradient(200deg, #1e3a8a 0%, #4c1d95 60%, #0b0814 100%);
+}
+
+.hero-scene-d {
+  background: radial-gradient(circle at 30% 70%, #c4b5fd 0%, transparent 40%),
+    linear-gradient(120deg, #4c1d95 0%, #9333ea 50%, #312e81 100%);
+}
+
+.hero-scene-orb {
+  position: absolute;
+  top: 18%;
+  right: 14%;
+  width: 34%;
+  aspect-ratio: 1;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: radial-gradient(circle at 35% 35%, rgba(255, 255, 255, 0.35), transparent 60%);
+  animation: hero-orb 6s ease-in-out infinite alternate;
+}
+
+@keyframes hero-orb {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(-18%, 12%);
+  }
+}
+
+.hero-progress {
+  width: 0;
+  animation: hero-progress 3s linear infinite;
+}
+
+@keyframes hero-progress {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.hero-live-dot {
+  animation: hero-blink 1.4s ease-in-out infinite;
+}
+
+@keyframes hero-blink {
+  50% {
+    opacity: 0.25;
+  }
+}
+
+.hero-float {
+  animation: hero-float 7s ease-in-out infinite alternate;
+}
+
+.hero-float-slow {
+  animation: hero-float 9s ease-in-out infinite alternate-reverse;
+}
+
+.hero-float-alt {
+  animation: hero-float 6s ease-in-out infinite alternate;
+  animation-delay: -3s;
+}
+
+@keyframes hero-float {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-12px);
+  }
+}
+
+.hero-eq span {
+  display: block;
+  width: 3px;
+  height: 100%;
+  border-radius: 2px;
+  background: #fff;
+  transform-origin: bottom;
+  animation: hero-eq 0.9s ease-in-out infinite alternate;
+}
+
+.hero-eq span:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.hero-eq span:nth-child(3) {
+  animation-delay: -0.6s;
+}
+
+.hero-eq span:nth-child(4) {
+  animation-delay: -0.15s;
+}
+
+@keyframes hero-eq {
+  from {
+    transform: scaleY(0.25);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(24px);
@@ -254,5 +471,35 @@ body {
   .hero-beam {
     animation: none;
     opacity: 0;
+  }
+
+  .hero-circuit-pulse {
+    animation: none;
+    opacity: 0;
+  }
+
+  .hero-circuit-dot,
+  .plan-border-animated,
+  .hero-scene-orb,
+  .hero-progress,
+  .hero-live-dot,
+  .hero-float,
+  .hero-float-slow,
+  .hero-float-alt,
+  .hero-eq span {
+    animation: none;
+  }
+
+  /* Without motion, show the first channel only. */
+  .hero-scene {
+    animation: none;
+  }
+
+  .hero-scene:first-child {
+    opacity: 1;
+  }
+
+  .hero-progress {
+    width: 40%;
   }
 }

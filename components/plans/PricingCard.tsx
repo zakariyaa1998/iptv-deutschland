@@ -8,27 +8,17 @@ type PricingCardProps = {
 };
 
 export function PricingCard({ tier, duration, recommended }: PricingCardProps) {
-  const discount = discountPercent(tier.originalPrice, tier.price);
-
   return (
     <PlanCard
-      title={`${duration.label} · ${tier.label}`}
+      title={duration.label}
+      subtitle={tier.label}
       badge={recommended ? "Empfohlen" : undefined}
       featured={Boolean(duration.featured && recommended)}
       price={tier.price}
-      details={
-        <>
-          <span>rechnerisch {tier.monthly}€ pro Monat</span>
-          {/* The struck-through price is the same period booked as monthly plans,
-              labelled as such — not a fictitious former price. */}
-          {discount > 0 ? (
-            <span>
-              <span className="line-through">{tier.originalPrice}€</span> im Monatstarif ·{" "}
-              <span className="font-semibold text-aqua">-{discount}%</span>
-            </span>
-          ) : null}
-        </>
-      }
+      monthly={tier.monthly}
+      // The struck-through price is the same period booked as monthly plans,
+      // labelled as such — not a fictitious former price.
+      compare={{ price: tier.originalPrice, discount: discountPercent(tier.originalPrice, tier.price) }}
       features={homePlanFeatures}
       whatsappLink={tier.whatsappLink}
     />
