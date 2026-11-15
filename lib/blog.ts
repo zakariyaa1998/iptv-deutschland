@@ -363,6 +363,72 @@ export const blogPosts: BlogPost[] = [
     ],
     related: { href: "/fragen-antworten", label: "Weitere Antworten zu Bild und Wiedergabe" },
   },
+  {
+    slug: "iptv-vs-kabel-was-sich-lohnt",
+    keyword: "IPTV oder Kabel",
+    title: "IPTV oder Kabel: Was sich für Ihren Haushalt lohnt",
+    metaTitle: "IPTV oder Kabel: Was sich lohnt",
+    description:
+      "IPTV oder Kabel im Vergleich: Kosten, Empfang, Gerätewahl und Vertragslaufzeit. So finden Sie heraus, was für Ihren Haushalt passt.",
+    publishedAt: "2026-11-13",
+    image: {
+      src: "/images/iptv-geraete-stick-box.jpg",
+      alt: "Streaming-Stick und Box neben dem Fernseher als Alternative zum Kabelanschluss",
+    },
+    intro:
+      "Seit das Nebenkostenprivileg ausgelaufen ist, müssen viele Haushalte selbst entscheiden, wie sie fernsehen. Zwei Wege stehen dabei oft zur Wahl: der klassische Kabelvertrag oder IPTV über das Internet. Dieser Vergleich zeigt, worauf es bei der Entscheidung wirklich ankommt.",
+    sections: [
+      {
+        id: "unterschied",
+        heading: "Der grundlegende Unterschied",
+        paragraphs: [
+          "Beim Kabelfernsehen wird das Signal über das Kabelnetz in Ihre Wohnung geliefert. Bei IPTV kommen die Programme über Ihre Internetverbindung. Das Gerät, mit dem Sie fernsehen, spielt die Sender ab.",
+          "Daraus folgt eine einfache Faustregel: Mit IPTV brauchen Sie einen stabilen Internetanschluss, mit Kabel brauchen Sie einen Kabelanschluss in der Wohnung.",
+        ],
+      },
+      {
+        id: "kosten",
+        heading: "Kosten im Blick behalten",
+        paragraphs: [
+          "Kabelverträge werden meist monatlich berechnet, oft mit einer festen Laufzeit. IPTV-Abos gibt es in unterschiedlichen Laufzeiten, und die Preise hängen vom Anbieter und von der Anzahl der Geräte ab.",
+          "Vergleichen Sie nicht nur den Monatspreis, sondern auch die Mindestlaufzeit, die Kosten für Geräte und mögliche Zusatzpakete.",
+        ],
+        list: [
+          "Monatlicher Preis und Mindestlaufzeit",
+          "Kosten für Receiver oder Stick, falls nötig",
+          "Zusatzpakete für Sport oder Filme",
+        ],
+      },
+      {
+        id: "empfang",
+        heading: "Empfang und Stabilität",
+        paragraphs: [
+          "Ein Kabelanschluss liefert in der Regel ein stabiles Signal, unabhängig von Ihrem Heimnetz. Bei IPTV hängt die Qualität von Ihrer Leitung und Ihrem WLAN ab. Gerade im Wohnzimmer am Ende der Wohnung lohnt sich deshalb ein Blick auf die Verbindung, bevor Sie sich entscheiden.",
+        ],
+      },
+      {
+        id: "entscheidung",
+        heading: "Für wen welche Lösung passt",
+        paragraphs: [
+          "Wer ohnehin einen schnellen Internetanschluss hat und flexibel bleiben möchte, fährt mit IPTV oft gut. Wer dagegen ein sehr stabiles Signal ohne Heimnetz-Fragen wünscht und einen Kabelanschluss bereits vorhanden hat, bleibt vielleicht besser beim Kabel.",
+          "Eine Entscheidung können Sie gut mit einem Probelauf vorbereiten: Testen Sie das Angebot zu einer Zeit, in der Sie normalerweise fernsehen.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: "Ist IPTV günstiger als Kabelfernsehen?",
+        answer:
+          "Das hängt vom Anbieter, der Laufzeit und Ihren Geräten ab. Vergleichen Sie den Gesamtpreis über die gesamte Vertragslaufzeit.",
+      },
+      {
+        question: "Brauche ich für IPTV einen schnellen Anschluss?",
+        answer:
+          "Für HD sollte die Leitung stabil sein, für 4K ist mehr Bandbreite nötig. Prüfen Sie den Empfang am Gerät, nicht nur den Wert auf dem Speedtest.",
+      },
+    ],
+    related: { href: "/preise", label: "Preise und Laufzeiten ansehen" },
+  },
 ];
 
 export function getBlogPost(slug: string): BlogPost | undefined {
